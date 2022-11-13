@@ -37,6 +37,11 @@ html {
     height: 26px;
 }
 
+.logo2 {
+    width: 85px;
+    height: 100%;
+}
+
 .header4 {
     margin: 0px 16px;
     display: flex;
@@ -63,27 +68,33 @@ html {
     border-radius: 20px;
     font-size: 14px;
 }
+
 button, input, optgroup, select, textarea {
     font-size: 100%;
     line-height: normal;
     margin: 0;
 }
-.button1{
+
+.button1 {
     display: flex;
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
 }
+
 button, input {
     overflow: visible;
 }
+
 button, select {
     text-transform: none;
 }
+
 button, [type='button'], [type='reset'], [type='submit'] {
     -webkit-appearance: button;
 }
-.button2{
+
+.button2 {
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -113,7 +124,8 @@ button, [type='button'], [type='reset'], [type='submit'] {
     color: rgb(48, 52, 65);
     margin-right: 4px;
 }
-.button5{
+
+.button5 {
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -143,7 +155,8 @@ button, [type='button'], [type='reset'], [type='submit'] {
     color: rgb(48, 52, 65);
     margin-right: 16px;
 }
-.button7{
+
+.button7 {
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -172,18 +185,21 @@ button, [type='button'], [type='reset'], [type='submit'] {
     border-color: rgb(255, 212, 0);
     color: rgb(48, 52, 65);
 }
-.header7{
+
+.header7 {
     width: 1200px;
     padding: 0 16px;
     margin: 0 auto;
 }
-.header8{
+
+.header8 {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     height: 48px;
 }
-.nav1{
+
+.nav1 {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -191,7 +207,8 @@ button, [type='button'], [type='reset'], [type='submit'] {
     margin: 0;
     padding: 0;
 }
-.nav2{
+
+.nav2 {
     display: flex;
     flex-direction: column;
     -webkit-box-pack: center;
@@ -201,31 +218,38 @@ button, [type='button'], [type='reset'], [type='submit'] {
     margin: 0 0 0 18px;
     padding: 0;
 }
+
 a {
     background-color: transparent;
 }
-.nav5{
+
+.nav5 {
     text-decoration: none;
     cursor: pointer;
     color: #303441;
 }
-.nav7{
+
+.nav7 {
     height: 4px;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-.nav9{
+
+.nav9 {
     width: 100%;
     height: 100%;
 }
-.header9{
+
+.header9 {
     margin: 0px 0px 0px auto;
 }
+
 a:-webkit-any-link {
     cursor: pointer;
 }
-.header11{
+
+.header11 {
     font-size: 14px;
     color: rgb(48, 52, 65);
     text-decoration: none;
