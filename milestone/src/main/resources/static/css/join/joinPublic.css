@@ -1,0 +1,34 @@
+.joinWrap{
+    align-items: center;
+    width: 560px;
+    padding: 20px 0px;
+    margin: 0 auto;
+    margin-top: 56px;
+    margin-bottom: 40px;
+}
+
+.joinHeader{
+    margin-bottom: 24px;
+}
+
+.joinBody{
+    padding: 56px 80px;
+    border: 1px solid #e4e5ed;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.joinTitleWrap{
+    font-size: 30px;
+    color: #303441;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.divisionLine{
+    border-top: 1px dashed #e4e5ed;
+}
+
+
+
+

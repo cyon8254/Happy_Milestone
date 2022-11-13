@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/myPageMain.css">
+    <link rel="stylesheet" href="css/myPageInfo.css">
+    <link rel="stylesheet" href="css/myPageAside.css">
+    <link rel="stylesheet" href="/static/css/public.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header class="header1">
+    <section class="header2">
+        <a href="#" class="logo1">
+            <img src="imgs/logo.png" style="width: 85px; height: 100%;" class="logo2">
+
+            </svg>
+        </a>
+        <div class="header3"></div>
+        <div style="flex-grow: 1;"></div>
+        <div class="header4">
+            <div class="header5"></div>
+        </div>
+        <div class="button1">
+            <button role="button" color="default" class="button2 button3">
+                <span class="button4 button3">보육원 등록</span>
+            </button>
+            <button role="button" color="default" class="button5 button3">
+                <span class="button6 button3">로그인</span>
+            </button>
+            <a role="link" color="yellow" href="#" class="button7 button3">
+                <span class="button8 button3">무료 회원가입</span>
+            </a>
+        </div>
+    </section>
+    <section class="header6">
+        <div class="header7">
+            <div class="header8">
+                <nav>
+                    <ul class="nav1">
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">보육원목록</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">도움이 필요한 보육원</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">기부랭킹</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">FAQ</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">공지사항</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header9 header10">
+                    <a href="#" class="header11 header12">
+                        원하는 서비스를 못 찾겠다면, <b>프로젝트 의뢰</b>하세요! &nbsp;&gt;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<div class="myPageWrap flex">
+    <!-- 어사이드 -->
+    <aside class="flexColNormal" style="width: 300px;">
+        <div class="asideTitle">
+            마이페이지
+        </div>
+        <div class="asideLine"></div>
+        <a href="" class="asideItemWrap flexRow">나의 정보</a>
+        <a href="" class="asideItemWrap flexRow">보육원 정보</a>
+        <a href="" class="asideItemWrap flexRow">일정 관리</a>
+        <a href="" class="asideItemWrap flexRow">기부 활동</a>
+        <a href="" class="asideItemWrap flexRow">찜한 보육원</a>
+        <a href="" class="asideItemWrap flexRow">비밀번호 변경</a>
+        <a href="" class="asideItemWrap flexRow">회원 탈퇴</a>
+    </aside>
+    <!-- 메인 -->
+    <main class="main">
+        <div class="mainWrap flexCol">
+            <div class="mainTitle flexRow">보육원 정보</div>
+            <div class="mainBodyWrap flex">
+                <!-- 프로필 -->
+                <div class="profileWrap flexColNormal">
+                    <div class="profile"></div>
+                    <div class="updateProfileBtnWrap flexCol">
+                        <button class="updateProfileBtn">프로필 변경</button>
+                    </div>
+                </div>
+                <!-- 메인컨텐츠 -->
+                <div class="inputWrap margin-left-40 flexCol">
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원명</div>
+                        </div>
+                        <input class="inputCos" type="text" placeholder="지수박박쥐">
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원 주소</div>
+                        </div>
+                        <div class="margin-bottom-8 flexBetween">
+                            <input class="inputCos" name="address" type="text" placeholder="주소 검색 버튼을 이용해주세요"
+                                   value="">
+                            <button class="certificationBtn" onclick="find()" style="display: none;">주소 검색</button>
+                        </div>
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원 상세 주소</div>
+                        </div>
+                        <div class="flexBetween">
+                            <input class="inputCos" name="addressDetail" type="text" placeholder="상세 주소를 입력해주세요">
+                        </div>
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">원장님 이름</div>
+                        </div>
+                        <input class="inputCos" type="text" placeholder="황지수">
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원 교사 수</div>
+                        </div>
+                        <input class="inputCos" type="number" placeholder="0">
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원 아이들 수</div>
+                        </div>
+                        <input class="inputCos" type="number" placeholder="0">
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">1년 예산</div>
+                        </div>
+                        <input class="inputCos" type="number" placeholder="0">
+                    </div>
+
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">은행</div>
+                        </div>
+                        <div class="margin-bottom-8 relative">
+                            <div class = "moreSelectWrap">
+                                <div class = "moreSelectItem">하나은행</div>
+                                <div class = "moreSelectItem">기업은행</div>
+                                <div class = "moreSelectItem">신한은행</div>
+                                <div class = "moreSelectItem">국민은행</div>
+                                <div class = "moreSelectItem">우리은행</div>
+                                <div class = "moreSelectItem">농협은행</div>
+                            </div>
+                            <div class="inputCos flex" style="padding: 0;">
+                                <div class="inputSpace flexRow">
+                                    <div class="inputText">하나은행</div>
+                                </div>
+                                <div class="arrowWrap">
+                                    <svg height="20" width="20" class="arrowColor">
+                                        <path
+                                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">보육원 계좌 번호</div>
+                        </div>
+                        <input class="inputCos" type="text" placeholder="1234-123456-123">
+                    </div>
+                    <div class="margin-bottom-20">
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">소개글 제목</div>
+                        </div>
+                        <div class="margin-bottom-8">
+                            <input class="inputCos" type="text" placeholder="">
+                        </div>
+                        <div class="margin-bottom-8 flexBetween">
+                            <div class="inputTitle">소개글</div>
+                        </div>
+                        <textarea class="textareaCos"></textarea>
+                    </div>
+                    <div class="flex">
+                        <div style="flex-grow : 1"></div>
+                        <button class="submitBtn">등록하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="footer1">
+    <hr orientation="horizontal" class="footer2">
+    <div class="footer3">
+        <nav class="footer-nav1">
+            <div class="footer-nav2">
+                <p class="nav-text1">고객센터</p>
+                <p class="nav-text2">10:30~18:00 (점심시간 13:00~14:00)</p>
+                <p class="nav-text3">주말, 공휴일 휴무</p>
+                <a role="link" color="default" href="#" target="_blank" class="footer-nav3 footer-nav4">
+                    <span class="nav-text4">1:1 문의</span>
+                </a>
+            </div>
+            <div class="footer-nav2">
+                <p class="nav-text5">마일스톤</p>
+                <ul class="footer4">
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 메인</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">보육원 목록</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">도움이 필요한 보육원</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">기부랭킹</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav2">
+                <p class="nav-text5">마일스톤 정보</p>
+                <ul class="footer4">
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">서비스 소개</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav2">
+                <p class="nav-text5">관련 사이트</p>
+                <ul class="footer4">
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 블로그</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 인스타그램</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 유튜브</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav2">
+                <p class="nav-text5">지원</p>
+                <ul class="footer4">
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">공지사항</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">자주 묻는 질문</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">이용약관</a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" href="#" target="_blank" class="footer-text1">
+                                <b>개인정보처리방침</b>
+                            </a>
+                        </p>
+                    </li>
+                    <li class="footer4">
+                        <p class="nav-text6">
+                            <a color="inherit" target="_self" href="#" class="footer-text1">전문가 센터</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer5">
+            <div class="footer6">
+                <a role="link" color="default" href="#" target="_blank" class="download1">
+                        <span class="img1">
+                            <img alt="google play"
+                                 src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/googleplay.png" width="20"
+                                 height="20">
+                        </span>
+                    <span class="download-text1">Google play</span>
+                </a>
+            </div>
+            <div>
+                <a role="link" color="default" href="#" target="_blank" class="download1">
+                        <span class="img1 ">
+                            <img alt="app store" src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/appstore.png"
+                                 width="16" height="20">
+                        </span>
+                    <span class="download-text1">App Store</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr orientation="horizontal" class="footer2">
+    <div class="footer7">
+        <p class="footer8">(주)마일스톤
+            <span class="footer-text2"></span>
+            경기도 성남시 중원구 하대원동 아튼빌아파트
+            <span class="footer-text2"></span>
+            대표 : 정서림
+            <span class="footer-text2"></span>
+            개인정보관리책임자 : 심민성
+            <span class="footer-text2"></span>
+            사업자등록번호 : 012-34-56789
+            <a role="link" color="default" href="#" target="_blank" class="footer9">
+                <span class="footer-text3">사업자 정보확인</span>
+            </a>
+            <br>통신판매업신고 : 2018-서울서초-2134
+            <span class="footer-text2"></span>
+            유료직업소개사업등록번호 : 제2021-3210195-14-5-00035호
+            <span class="footer-text2"></span>
+            고객센터 : 1234-5678
+            <span class="footer-text2"></span>
+            help@milestone.com
+        </p>
+    </div>
+    <div class="footer10">
+        <p class="footer-text4">
+            (주)마일스톤은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.
+        </p>
+        <p class="footer-text4">
+            (주)마일스톤 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI 등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여
+            엄격히 금지됩니다. [안내 보기]
+        </p>
+        <div class="footer11">
+            <p class="footer-text4">
+                Copyright © 2022 kmong Inc. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/static/js/schoolInfo.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+</html>
