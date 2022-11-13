@@ -1,0 +1,24 @@
+.list {
+    width: 100%;
+}
+
+.listItems {
+    border-bottom: 1px solid rgb(228, 229, 237);
+}
+
+.items-name{
+    padding: 16px;
+    width: 23%;
+}
+.items-location{
+    padding: 16px;
+    width: 40%;
+}
+.items-date{
+    padding: 16px;
+    width: 25%;
+}
+.items-cancel{
+    padding: 16px;
+    width: 12%;
+}
