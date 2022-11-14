@@ -30,12 +30,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,17 +53,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../gb_0900_phj/spring/workspace/app" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> kimeuiyeob
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -68,10 +72,39 @@
       <recent name="C:\Users\Axl Rose\Desktop\spring_milestone\milestone\src\main\resources\static\imgs\main" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring 부트.MilestoneApplication">
+    <configuration name="ConnectionTest.datasourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="milestone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.milestone.milestone.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.milestone.milestone.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.milestone.milestone.mybatis.ConnectionTest" />
+      <option name="METHOD_NAME" value="datasourceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spring_milestone/milestone/src/main/resources/templates/main/main.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="MilestoneApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="milestone" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.milestone.milestone.MilestoneApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConnectionTest.datasourceTest" />
+        <item itemvalue="JavaScript 디버그.main.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,10 +120,8 @@
       <workItem from="1668252186640" duration="1764000" />
       <workItem from="1668253991164" duration="50000" />
       <workItem from="1668254060213" duration="23000" />
-<<<<<<< HEAD
-=======
       <workItem from="1668334520833" duration="748000" />
->>>>>>> kimeuiyeob
+      <workItem from="1668427601864" duration="342000" />
     </task>
     <servers />
   </component>
@@ -119,9 +150,46 @@
     </state>
     <state x="742" y="258" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1668248801038" />
     <state x="742" y="263" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1668253733265" />
-    <state x="461" y="169" key="SettingsEditor" timestamp="1668254040178">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1878" height="184" key="GridCell.Tab.0.bottom" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state width="1878" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.0.center" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.0.left" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.0.right" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.1.bottom" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.1.center" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.1.left" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state width="1878" height="184" key="GridCell.Tab.1.right" timestamp="1668427577420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1878" height="184" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1668427577420" />
+    <state x="558" y="333" width="803" height="693" key="Registry" timestamp="1668427656928">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="558" y="333" width="803" height="693" key="Registry/0.0.1920.1032@0.0.1920.1032" timestamp="1668427656928" />
+    <state x="461" y="166" key="SettingsEditor" timestamp="1668427643300">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="461" y="166" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1668427643300" />
     <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1668254040178" />
     <state x="372" y="177" key="new project wizard" timestamp="1668248766452">
       <screen x="0" y="0" width="1920" height="1032" />

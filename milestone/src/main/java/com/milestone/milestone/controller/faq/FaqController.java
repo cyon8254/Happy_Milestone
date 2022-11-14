@@ -1,4 +1,4 @@
-package com.milestone.milestone.controller.introduce;
+package com.milestone.milestone.controller.faq;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/introduce/*")
-public class IntroduceController {
+@RequestMapping("/faq/*")
+public class FaqController {
 
-    @GetMapping("/introduce")
-    public void introduce(){
+    @GetMapping(value = {"faq", "faq1", "faq2", "faq3", "faq4", "faq5", "faq6"})
+    public void read(){
     }
-
 }
