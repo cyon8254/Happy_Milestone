@@ -1,8 +1,3 @@
-body {
-    padding: 50px;
-    box-sizing: border-box;
-}
-
 .tempDiv {
     padding: 20px;
     width: 500px;
@@ -24,27 +19,34 @@ body {
 }
 
 .prevMonth {
-    background: url('../imgs/arrow\(white\).png') no-repeat;
+    background: url('/imgs/myPage/arrow\(white\).png') no-repeat;
     background-size: 80%;
     width: 25px;
     height: 30px;
     transform: scaleX(-1);
     filter: invert(13%) sepia(47%) saturate(4160%) hue-rotate(356deg) brightness(101%) contrast(107%);
+}
 
+.prevMonth:hover {
+    filter: invert(13%) sepia(47%) saturate(4160%) hue-rotate(356deg) brightness(90%) contrast(107%);
 }
 
 .nowMonth {
     font-size: 200%;
-    color: #ffd400;
+    color: #303441;
     font-weight: 1000;
 }
 
 .nextMonth {
-    background: url('../imgs/arrow\(white\).png') no-repeat;
+    background: url('/imgs/myPage/arrow\(white\).png') no-repeat;
     background-size: 80%;
     width: 25px;
     height: 30px;
     filter: invert(13%) sepia(47%) saturate(4160%) hue-rotate(356deg) brightness(101%) contrast(107%);
+}
+
+.nextMonth:hover {
+    filter: invert(13%) sepia(47%) saturate(4160%) hue-rotate(356deg) brightness(90%) contrast(107%);
 }
 
 .callenderBody {
@@ -53,7 +55,6 @@ body {
 }
 
 .callenderBody th{
-    background-color: #ffd400;
 }
 
 .callenderBody td {

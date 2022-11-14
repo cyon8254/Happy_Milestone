@@ -1,5 +1,5 @@
 .profile{
-    background: url(/static/imgs/normalProfile.png);
+    background: url('/imgs/myPage/normalProfile.png');
     border-radius: 50%;
     background-size: 120px;
     width: 120px;
