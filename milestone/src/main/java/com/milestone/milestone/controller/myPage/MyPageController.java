@@ -27,4 +27,9 @@ public class MyPageController {
     public String schoolInfo() {
         return "/myPage/myPage_schoolInfo";
     };
+
+    @GetMapping("/likeList")
+    public String likeList() {
+        return "/myPage/myPage_likeList";
+    };
 }
