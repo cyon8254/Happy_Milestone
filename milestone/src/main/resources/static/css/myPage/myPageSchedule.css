@@ -83,8 +83,7 @@
     width: 5.5rem;
     height: 5.5rem;
     margin: 1.25rem auto 1.875rem;
-    border: 0.25rem solid #facea8;
-;
+    border: 0.25rem solid #facea8;;
     border-radius: 50%;
     font-size: 3.75rem;
     text-align: center;
@@ -114,3 +113,33 @@
 .modalBtn:hover {
     filter: brightness(90%);
 }
+
+.pageBtns{
+    margin-top: 48px;
+    font-size: 12px;
+}
+
+.pageBtns a {
+    border-radius: 4px;
+    align-items: center;
+    height: 36px;
+    min-width: 36px;
+    color: rgb(154, 155, 167);
+    transition: background-color 0.3s;
+}
+
+.pageBtns a:hover {
+    background-color: rgb(242, 243, 247);
+}
+
+.prevNextBtn{
+    height: 24px;
+    width: 24px;
+    fill: rgb(154, 155, 167);
+}
+
+.page {
+    height: 36px;
+    min-width: 36px;
+}
+

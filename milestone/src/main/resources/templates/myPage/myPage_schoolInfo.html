@@ -18,19 +18,7 @@
 <header th:replace="/fix/header.html :: header"></header>
 <div class="myPageWrap flex">
     <!-- 어사이드 -->
-    <aside class="flexColNormal" style="width: 300px;">
-        <div class="asideTitle">
-            마이페이지
-        </div>
-        <div class="asideLine"></div>
-        <a href="" class="asideItemWrap flexRow">나의 정보</a>
-        <a href="" class="asideItemWrap flexRow">보육원 정보</a>
-        <a href="" class="asideItemWrap flexRow">일정 관리</a>
-        <a href="" class="asideItemWrap flexRow">기부 활동</a>
-        <a href="" class="asideItemWrap flexRow">찜한 보육원</a>
-        <a href="" class="asideItemWrap flexRow">비밀번호 변경</a>
-        <a href="" class="asideItemWrap flexRow">회원 탈퇴</a>
-    </aside>
+    <aside th:replace="/myPage/myPage_aside :: aside"></aside>
     <!-- 메인 -->
     <main class="main">
         <div class="mainWrap flexCol">
