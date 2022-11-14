@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -13,10 +13,17 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="/css/introduce/introduce.css" type="text/css"/>
 
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
+
+<!-- ================================================================================================================ -->
+<body>
+
+<header th:replace="/fix/header.html :: header"></header>
 
 <!-- ================================================================================================================ -->
 <!-- 슬라이드 배너 -->
-<body>
+
 <div class="dov">
     <div class="Banner" style="display: flex; justify-content: center;">
         <div class="Banners">
@@ -28,9 +35,14 @@
                     <h2 style="color: #303441; font-size: 30px; padding-bottom: 10px;
                                   margin-top: -15px;">아이들에게 사랑을 나누세요.</h2>
 
-                    <a class="goMain">
+
+
+
                         <input class="introduceButton" type="button" value="Milestone 이용하기">
-                    </a>
+
+
+
+
 
                 </div>
 
@@ -118,9 +130,13 @@
                     <h4 style="color: #303441; margin-top: -13px; padding-bottom: 20px;">사랑스런 아이들이 모여있어요.
                     </h4>
 
-                    <a class="goSchool">
+
+
+
                         <input class="introduceButton" type="button" value="보육원 목록 이동하기">
-                    </a>
+
+
+
 
                 </div>
             </div>
@@ -161,9 +177,7 @@
                         필요해요.<br>아이들이
                         건강하게 자랄 수 있도록 계속해서<br>많은 관심 부탁드립니다!</h4>
 
-                    <form id="" action="/"/>
                         <input class="introduceButton" type="button" value="도움이 필요한 보육원">
-                    </form>
 
                 </div>
             </div>
@@ -185,9 +199,12 @@
                     <h4 style="color: #303441; margin-top: -13px; padding-bottom: 20px;">기부금액과 기부횟수 누적으로 랭킹이 이루어집니다.
                     </h4>
 
-                    <a class="goRanking">
-                        <input class="introduceButton" type="button" value="랭킹 이동하기">
-                    </a>
+
+
+
+                        <input class="introduceButton" type="button" value="랭킹 이동하기" onClick="location.href='../ranking/ranking'">
+
+
 
                 </div>
             </div>
@@ -227,7 +244,10 @@
 
 <!-- ================================================================================================================ -->
 
+<footer th:replace="/fix/footer.html :: footer"></footer>
+
 </body>
+<!-- ================================================================================================================ -->
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -294,31 +314,9 @@
     observer.observe(dov[5])
     observer.observe(dov[6])
 
-    /* ============================버튼 클릭시 페이지 이동============================== */
+    /* ================================================================================= */
 
-    /*메인페이지 이동*/
-    $("a.goMain").on("click", function (e) {
-        e.preventDefault();
-        location.href = "/?/?"
-    });
 
-    /*보육원 목록 이동*/
-    $("a.goSchool").on("click", function (e) {
-        e.preventDefault();
-        location.href = "/?/?"
-    });
-
-    /*도움이 필요한 보육원 이동*/
-    $("a.helpSchool").on("click", function (e) {
-        e.preventDefault();
-        location.href = "/?/?"
-    });
-
-    /*랭킹 페이지 이동*/
-    $("a.goRanking").on("click", function (e) {
-        e.preventDefault();
-        location.href = "/ranking/ranking"
-    });
 
 
 </script>

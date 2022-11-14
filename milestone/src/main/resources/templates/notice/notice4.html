@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8" />
@@ -10,10 +10,15 @@
 
 <link href="/css/notice/notices.css" rel="stylesheet" />
 
-<!-- ===================================================================================================== -->
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
 
+<!-- ================================================================================================================ -->
+<body>
 
-<body class="">
+<header th:replace="/fix/header.html :: header"></header>
+
+<!-- ================================================================================================================ -->
 
 
 <main role="main" style="padding-top:100px">
@@ -422,20 +427,18 @@
 
                             </ul>
                         </div>
-
-
                     </div>
                 </section>
-
             </article>
-
         </div>
     </div>
 
 </main>
 
 <!-- =========================================================================================================== -->
+<footer th:replace="/fix/footer.html :: footer"></footer>
 
+<!-- ================================================================================================================ -->
 </body>
 
 </html>
