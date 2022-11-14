@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8"/>
@@ -9,9 +9,15 @@
 
 <link href="/css/faq/faqs.css" rel="stylesheet" />
 
-<!-- ===================================================================================================== -->
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
 
-<body class="">
+<!-- ================================================================================================================ -->
+<body>
+
+<header th:replace="/fix/header.html :: header"></header>
+
+<!-- ================================================================================================================ -->
 
 <main role="main" style="padding-top:100px">
     <div class="container-divider" style="border-top : none;"></div>
@@ -25,37 +31,37 @@
                     <ul>
 
                         <li>
-                            <a href="" class="sidenav-item ">
+                            <a href="/faq/faq1" class="sidenav-item ">
                                 <p class="sidenav-item-text">Milestone 어떻게 이용하나요?</p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="" class="sidenav-item ">
+                            <a href="/faq/faq2" class="sidenav-item ">
                                 <p class="sidenav-item-text">Milestone 닉네임은 어떻게 변경하나요?</p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="" class="sidenav-item ">
+                            <a href="/faq/faq3" class="sidenav-item ">
                                 <p class="sidenav-item-text">Milestone 회원가입은 어떻게 진행하나요?</p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="" class="sidenav-item ">
+                            <a href="/faq/faq4" class="sidenav-item ">
                                 <p class="sidenav-item-text">Milestone 휴대폰 재인증은 어떻게 하나요?</p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="" class="sidenav-item ">
+                            <a href="/faq/faq5" class="sidenav-item ">
                                 <p class="sidenav-item-text">Milestone 개인정보는 안전하게 보호되나요?</p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="" class="sidenav-item " style="background-color: #F2F3F7;
+                            <a href="/faq/faq6" class="sidenav-item " style="background-color: #F2F3F7;
                                 color: #333333;
                                 font-weight: 400;
                                 text-decoration: none;">
@@ -107,7 +113,10 @@
         </div>
     </div>
 </main>
+<!-- ================================================================================================================ -->
+<footer th:replace="/fix/footer.html :: footer"></footer>
 
+<!-- ================================================================================================================ -->
 
 </body>
 

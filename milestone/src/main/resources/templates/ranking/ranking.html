@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8"/>
@@ -10,9 +10,16 @@
 
 <link href="/css/ranking/ranking.css" rel="stylesheet"/>
 
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
+
 <!-- ===================================================================================================== -->
 
 <body class="">
+
+<header th:replace="/fix/header.html :: header"></header>
+
+<!-- ===================================================================================================== -->
 
 <div class="css-1sz5ii e6hl9jl1" style="padding-top:70px">
     <div class="txt">
@@ -35,11 +42,12 @@
         <div class="fade-in-box">
             <div class="bigbig">
                 <div class="css-1j8r2w0 ezpuish0">
+
+
                     <div class="css-7hg5zz ezpuish3">기부금 랭킹</div>
                     <div class="css-udcuwn ezpuish2">
                         <article class="css-1sbi2sv eegfgsa0">
-                                <span
-                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
                                     <img src="/imgs/ranking/gold.png" style="position: absolute; width: 32px;"></span>
                             <div class="css-1okqk0z eegfgsa1"><span class="css-r4d2us eegfgsa2">291,331,150원</span>
                                 <div class="css-65gs3l eegfgsa3"><span class="css-1raaqrb eegfgsa4">민성이는 바보</span>
@@ -53,7 +61,9 @@
                         </article>
                     </div>
 
+
                     <!-- ============================================================== -->
+
 
                     <div class="css-x4rf3n ezpuish1">
 
@@ -135,10 +145,15 @@
                             </div>
                         </article>
 
+
+
                     </div>
                 </div>
             </div>
         </div>
+
+
+
         <!-- ==========================두번째 1등 쪽============================== -->
 
         <div class="fade-in-box">
@@ -371,29 +386,22 @@
 
 <!-- =========================================================================================================== -->
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-
-<script>
-
-    let boardNumber = [[${boardNumber}]];
-    let queryString = [[${pagination.criteria.queryString}]];
-
-    $pages.on("click", function(e){
-        e.preventDefault();
-        $(document.pageForm.page).val($(this).attr("href"));
-        document.pageForm.submit();
-    });
-
-    $read.on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/read" + queryString + "&boardNumber=" + $(this).attr("href");
-    });
-
-    $("a.write").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/write" + queryString;
-    });
-
-</script>
+<footer th:replace="/fix/footer.html :: footer"></footer>
 
 </body>
+<!-- =========================================================================================================== -->
+
+
+<script th:inline="javascript"> /*타임리프 JS*/
+
+show();
+
+
+function showRankingMoney() {
+
+
+
+}
+
+
+</script>
