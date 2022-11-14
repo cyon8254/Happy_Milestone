@@ -120,11 +120,10 @@ $nextBtn.on('click', function () {
     callender();
 })
 
-
 /* 달력 바디 호버 이벤트*/
-const $tds = $('td');
-$tds.hover(function () {
-    $(this).find('.daysBackground').css("filter", "brightness(90%)");
-}, function () {
-    $(this).find('.daysBackground').css("filter", "brightness(100%)");
-})
+// const $tds = $('td');
+// $tds.hover(function () {
+//     $(this).find('.daysBackground').css("filter", "brightness(90%)");
+// }, function () {
+//     $(this).find('.daysBackground').css("filter", "brightness(100%)");
+// })
