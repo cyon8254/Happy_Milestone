@@ -5,16 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-//@RequestMapping("/join/*")
-@RequestMapping("/school/*")
+@RequestMapping("/join/*")
 public class JoinController {
 
-//    @GetMapping("join")
-//    public void join(){};
-//
-//    @GetMapping("joinWay")
-//    public void joinWay(){};
-    @GetMapping("/schoolList")
-    public void schoolList(){};
+    @GetMapping("join")
+    public void join(){};
+
+    @GetMapping("joinWay")
+    public void joinWay(){};
+
 
 }
