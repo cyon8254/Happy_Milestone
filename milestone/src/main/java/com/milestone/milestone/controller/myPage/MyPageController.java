@@ -32,4 +32,9 @@ public class MyPageController {
     public String likeList() {
         return "/myPage/myPage_likeList";
     };
+
+    @GetMapping("/withdrawal")
+    public String withdrawal() {
+        return "/myPage/myPage_withdrawal";
+    };
 }
