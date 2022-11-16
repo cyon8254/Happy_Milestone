@@ -14,4 +14,8 @@ public class IntroduceController {
     public void introduce(){
     }
 
+    @GetMapping("/school_singup")
+    public void schoolSignUp(){
+    }
+
 }

@@ -120,7 +120,7 @@ aside{
     transform: translate3d(0, 0, 0);
 }
 
-/* ÁÂ ¿ì ¹öÆ° */
+/* ì¢Œ ìš° ë²„íŠ¼ */
 .emgxp40{
     -webkit-text-size-adjust: 100%;
     overflow: visible;
@@ -554,7 +554,7 @@ aside{
     margin-right: 10px;
 }
 
-/* Ä¶¸°´õ api³Ö°í Áö¿ì¸é µË´Ï´Ù */
+/* ìº˜ë¦°ë” apië„£ê³  ì§€ìš°ë©´ ë©ë‹ˆë‹¤ */
 .calendarContent2>div{
     width: 100%;
     height: 100%;
@@ -612,11 +612,11 @@ aside{
     box-shadow: 2px 2px 13px #dadada;
 }
 
-/* ¸ğ´Ş´İ±â ¹öÆ° ==========================*/
+/* ëª¨ë‹¬ë‹«ê¸° ë²„íŠ¼ ==========================*/
 .sect01 {
     position: relative;
-    width: 30px; /* X »çÀÌÁî */
-    height: 30px; /* X ¼¼·Î Áß¾Ó */
+    width: 30px; /* X ì‚¬ì´ì¦ˆ */
+    height: 30px; /* X ì„¸ë¡œ ì¤‘ì•™ */
     cursor: pointer;
 }
 
