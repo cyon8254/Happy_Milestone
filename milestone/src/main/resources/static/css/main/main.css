@@ -4,11 +4,11 @@ li {
 
 .main1 {
     width: 100%;
+    background-color: white;
 }
 
 .main2 {
     position: relative;
-    margin-bottom: 80px;
     display: grid;
     grid-gap: 80px;
 }
@@ -90,6 +90,19 @@ li {
     color: #ffffff;
     font-size: 20px;
 }
+
+.search4 {
+    background-color: transparent;
+    border: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+    flex: 1;
+    color: #ffffff;
+    font-size: 20px;
+    display: none;
+}
+
 
 .search-icon1 {
     flex-basis: 50px;
@@ -518,7 +531,7 @@ a {
 .help-img1 {
     width: 150px;
     margin-left: 55px;
-    margin-top: 45px;
+    margin-top: 38px;
     height: 150px;
 }
 

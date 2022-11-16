@@ -125,6 +125,10 @@ button, [type='button'], [type='reset'], [type='submit'] {
     margin-right: 4px;
 }
 
+.button2:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .button5 {
     outline: none;
     border-width: 1px;
@@ -156,6 +160,10 @@ button, [type='button'], [type='reset'], [type='submit'] {
     margin-right: 16px;
 }
 
+.button5:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .button7 {
     outline: none;
     border-width: 1px;
@@ -184,6 +192,11 @@ button, [type='button'], [type='reset'], [type='submit'] {
     background-color: rgb(255, 212, 0);
     border-color: rgb(255, 212, 0);
     color: rgb(48, 52, 65);
+}
+
+.button7:hover {
+    background-color: #d7b50c;
+    border-color: #d7b50c;
 }
 
 .header7 {
@@ -239,6 +252,10 @@ a {
 .nav9 {
     width: 100%;
     height: 100%;
+    background-color: #ffd400;
+    position: absolute;
+    right: 4px;
+    display: none;
 }
 
 .header9 {
@@ -255,3 +272,7 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+.header12:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}

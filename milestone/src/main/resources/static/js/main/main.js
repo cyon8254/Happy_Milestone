@@ -1,7 +1,7 @@
 $(".video4 a").click(function () {
     $(".video_modal_popup").addClass("reveal"),
         $(".video_modal_popup .video-wrapper").remove(),
-        $(".video_modal_popup").append("<div class='video-wrapper'><iframe width='1168' height='657' src='https://www.youtube.com/embed/Yw74sDWPH7U/" + $(this).data("video") + "?rel=0&playsinline=1&autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>")
+        $(".video_modal_popup").append("<div class='video-wrapper'><iframe width='1168' height='657' src='https://www.youtube.com/embed/fpDQDDst2HE/" + $(this).data("video") + "?rel=0&playsinline=1&autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe></div>")
 }),
     $(".video_modal_popup").click(function () {
         $(".video_modal_popup .video-wrapper").remove(),
@@ -63,3 +63,21 @@ function wait(ms) {
 
 // 초기 실행
 setTimeout(typing, 1500);
+
+const search1 = $(".search3");
+const search2 = $(".search4");
+const text = $(".search-text1");
+
+search1.on("focus", function () {
+    $(search1).hide();
+    $(search2).show().focus();
+    $(search2).css('outline', 'none');
+    $(text).hide();
+});
+search2.on("blur", function () {
+    $(search2).hide();
+    $(search2).val('');
+    $(search1).show();
+    $(search1).css('outline', 'none');
+    $(text).show();
+});
