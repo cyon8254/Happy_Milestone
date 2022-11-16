@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/school/schoolDetail.css">
+    <title>보육원 상세페이지</title>
     <link rel="stylesheet" type="text/css"
           href="//p25.zdassets.com/hc/theming_assets/9204604/360002309011/style.css?digest=12256508972825">
-
 </head>
+<!-- ======================================헤더/푸터======================================== -->
+
+<link href="/css/school/schoolDetail.css" rel="stylesheet"/>
+<link href="/css/school/calendar.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
+
+<!-- ================================================================================================================ -->
 
 <body>
+<header th:replace="/fix/header.html :: header"></header>
+
 <div class="wholePage">
 
     <section class="wholeSection">
@@ -34,16 +43,15 @@
 
                 <!-- 메인이미지 -->
                 <div class="mainImage">
-                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                    <img id ="mainImage" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
                 </div>
 
 
                 <!-- 작은 이미지들 보이는 div 1-->
                 <div id="list">
-
                     <!-- 좌 버튼 -->
                     <button aria-label="carousel-arrow-button" data-testid="carousel-arrow" direction="prev"
-                            class="css-jrc4xu emgxp40" style="left:1%">
+                            class="css-jrc4xu emgxp40 prevButton" style="left:1%">
                             <span role="img" rotate="0" data-testid="left-icon" class="css-aah4od e181xm9y1">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                                      focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0"
@@ -63,29 +71,29 @@
                             <div class="miniImages">
                                 <!-- 작은 이미지 하나 -->
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
                                 </div>
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">
                                 </div>
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
                                 </div>
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">
                                 </div>
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
                                 </div>
                                 <div class="miniImage">
-                                    <img src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">
+                                    <img class="one" src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 우버튼 -->
-                        <button aria-label="carousel-arrow-button" data-testid="carousel-arrow" direction="next"
-                                class="css-1ogxzj emgxp40" style="left:18.5%">
+                    </div>
+                    <!-- 우버튼 -->
+                    <button aria-label="carousel-arrow-button" data-testid="carousel-arrow" direction="next"
+                            class="css-1ogxzj emgxp40 nextButton" style="right:1%">
                                 <span role="img" rotate="0" data-testid="right-icon" class="css-aah4od e181xm9y1">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                          aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"
@@ -96,8 +104,7 @@
                                         </path>
                                     </svg>
                                 </span>
-                        </button>
-                    </div>
+                    </button>
                 </div>
             </section>
 
@@ -114,7 +121,6 @@
                             <span role="img" color="#116ad4" rotate="0" class="css-axxt53 e181xm9y1"><svg width="24"
                                                                                                           height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                                                                                                           focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                    <span id="latest">최신순</span>
                                 </svg>
                             </span>
                     </div>
@@ -128,7 +134,7 @@
                         <div class="commentsInfo">
                             <!-- 프로필 사진-->
                             <div class="profilePicture">
-                                <img src="	https://kmong.com/img/tools/main_user_gray.png">
+                                <img src="   https://kmong.com/img/tools/main_user_gray.png">
                             </div>
                             <!-- 닉네임,날짜 -->
                             <div class="nameAndDate">
@@ -143,42 +149,32 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 댓글 하나 -->
                     <div class="comment">
-                        <!-- 프로필 사진, 닉네임, 날짜 -->
                         <div class="commentsInfo">
-                            <!-- 프로필 사진-->
                             <div class="profilePicture">
-                                <img src="	https://kmong.com/img/tools/main_user_gray.png">
+                                <img src="   https://kmong.com/img/tools/main_user_gray.png">
                             </div>
-                            <!-- 닉네임,날짜 -->
                             <div class="nameAndDate">
                                 <div class="nickName">천사</div>
                                 <div class="regDate">2022.12.10</div>
                             </div>
                         </div>
-                        <!-- 댓글내용 -->
                         <div class="commentContent">
                             <div class="commentContent2">
                                 <p>아이들이 너무 밝아 보여서 좋아요!</p>
                             </div>
                         </div>
                     </div>
-                    <!-- 댓글 하나 -->
                     <div class="comment">
-                        <!-- 프로필 사진, 닉네임, 날짜 -->
                         <div class="commentsInfo">
-                            <!-- 프로필 사진-->
                             <div class="profilePicture">
-                                <img src="	https://kmong.com/img/tools/main_user_gray.png">
+                                <img src="   https://kmong.com/img/tools/main_user_gray.png">
                             </div>
-                            <!-- 닉네임,날짜 -->
                             <div class="nameAndDate">
                                 <div class="nickName">해피123</div>
                                 <div class="regDate">2022.12.05</div>
                             </div>
                         </div>
-                        <!-- 댓글내용 -->
                         <div class="commentContent">
                             <div class="commentContent2">
                                 <p>다음에 또 봉사활동 하러 가겠습니다😁</p>
@@ -227,31 +223,158 @@
             <!-- 소개, 기부받은 금액, 랭킹 -->
             <section class="introTotalRanking">
                 <div class="introTotalRanking2">
-                    <div class="intro introTotalRanking3">INTRO</div>
+                    <div class="intro introTotalRanking3" id="intro">INTRO</div>
                     <div class="total introTotalRanking3">TOTAL</div>
                     <div class="ranking introTotalRanking3">RANKING</div>
+                    <div id="pseudo"></div>
                 </div>
 
-                <!-- 자바!!!!!!!!!!!!스크립트!!!!!!!!!!!!! -->
                 <div class="rightBox1">
-                    <div class="rightBox2">
-                        <span class="introTitle">아이들을 보듬을 수 있는 새싹보육원!</span>
+                    <!-- INTRO 박스 -->
+                    <div class="rightBox2" id="introRightBox">
+                        <span class="introTitle">안녕하세요, 새싹보육원입니다.</span>
+                        <!-- 보육원 정보 -->
+                        <div class="schoolInfo">
+                            <div class="address">주소 : 서울시 강남구 역삼동</div>
+                            <div class="phone">전화 : 021231234</div>
+                            <div class="childCount">아이들 인원 : 20명</div>
+                        </div>
+
                         <div class="introContent">
-                            작업퀄리티가 정말 좋습니다! 제 주변에 다 물어봤는데 모든 분들이 만족할수준이었습니다.친절하시고 빠른 피드백 감사합니다. 제주변에서도 원하는분이 있으면 바로
-                            소개주고 싶습니다!작업퀄리티가 정말 좋습니다! 제 주변에 다 물어봤는데 모든 분들이 만족할수준이었습니다.친절하시고 빠른 피드백 감사합니다. 제주변에서도
-                            원하는분이 있으면 바로 소개주고 싶습니다!
+                            작업퀄리티가 정말 좋습니다! 제 주변에 다 물어봤는데 모든 분들이 만족할수준이었습니다.친절하시고 빠른 피드백 감사합니다.
+                            <br>제주변에서도 원하는분이 있으면 바로 소개주고 싶습니다!작업퀄리티가 정말 좋습니다! 제 주변에 다 물어봤는데 모든 분들이 만족할수준이었습니다.
+                            <br><br>친절하시고 빠른 피드백 감사합니다. 제주변에서도 원하는분이 있으면 바로 소개주고 싶습니다!
                         </div>
                     </div>
+                    <!-- TOTAL 박스 -->
+                    <div class="rightBox2" id="totalRightBox">
+                        <span class="introTitle totalTitle">최근기부</span>
+                        <div class="totalBox">
+                            <!-- 기부 내역 -->
+                            <table id="userTable">
+                                <!-- 유저 한명 -->
+                                <tr>
+                                    <!-- 프로필 사진 -->
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <!-- 닉네임 -->
+                                    <th  class="userTr userNickname">나는기부왕</th>
+                                    <!-- 기부금액 -->
+                                    <th  class="userTr donation"><span>2,000,000</span>원</th>
+                                </tr>
+
+                                <!-- 주석처리 ============================-->
+                                <tr>
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <th  class="userTr userNickname">천사</th>
+                                    <th  class="userTr donation"><span>700,000</span>원</th>
+                                </tr>
+                                <tr>
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <th  class="userTr userNickname">천사3</th>
+                                    <th  class="userTr donation"><span>1,000,000</span>원</th>
+                                </tr>
+                                <tr>
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <th  class="userTr userNickname">천사4</th>
+                                    <th  class="userTr donation"><span>10,000</span>원</th>
+                                </tr>
+                                <tr>
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <th  class="userTr userNickname">천사5</th>
+                                    <th  class="userTr donation"><span>60,000</span>원</th>
+                                </tr>
+                                <tr>
+                                    <th  class="userTr userProfile">
+                                        <div class="profilePicture">
+                                            <img src="   https://kmong.com/img/tools/main_user_gray.png">
+                                        </div>
+                                    </th>
+                                    <th  class="userTr userNickname">천사</th>
+                                    <th  class="userTr donation"><span>1,000,000</span>원</th>
+                                </tr>
+                                <!-- =================================-->
+                            </table>
+
+                        </div>
+                    </div>
+                    <!-- RANKING 박스 -->
+                    <div class="rightBox2" id="rankingRightBox">
+                        <span class="introTitle rankingTitle">기부랭킹</span>
+                        <div class="rankingBox">
+
+                            <table id="userTable2">
+                                <thead id="rankingTHead" style="border-top:1px solid gray">
+                                <th class="thth"></th>
+                                <th class="thth">닉네임</th>
+                                <th class="thth">기부금</th>
+                                </thead>
+                                <!-- 유저 한명 -->
+                                <tr class="oneUser">
+                                    <!-- 순위 -->
+                                    <th>1</th>
+                                    <!-- 닉네임 -->
+                                    <th  class="userTr userNickname">맑음</th>
+                                    <!-- 금액 -->
+                                    <th  class="userTr donation"><span class="amount">2,000,000</span>원</th>
+                                </tr>
+                                <tr class="oneUser">
+                                    <th>2</th>
+                                    <th  class="userTr userNickname">김코리아아이티아카데미</th>
+                                    <th  class="userTr donation"><span class="amount">1,900,000</span>원</th>
+                                </tr>
+                                <tr class="oneUser">
+                                    <th>3</th>
+                                    <th  class="userTr userNickname">해피123</th>
+                                    <th  class="userTr donation"><span class="amount">1,000,000</span>원</th>
+                                </tr>
+                                <tr class="oneUser">
+                                    <th>4</th>
+                                    <th  class="userTr userNickname">말스톤</th>
+                                    <th  class="userTr donation"><span class="amount">500,000</span>원</th>
+                                </tr>
+                                <tr class="oneUser">
+                                    <th>5</th>
+                                    <th  class="userTr userNickname">기부퀸</th>
+                                    <th  class="userTr donation amount"><span>100,000</span>원</th>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+
                     <div class="donateDIV">
                         <button id="donate">
                             <span>기부하기</span>
                         </button>
                     </div>
-                    <div class="QRgo">
-                        <button class="QRButton">
-                            <span>QR 보러가기</span>
-                        </button>
-                    </div>
+                    <a href="#none" onclick="openModal()">
+                        <div class="QRgo">
+                            <button class="QRButton">
+                                <span>QR 보러가기</span>
+                            </button>
+                        </div>
+                    </a>
                 </div>
             </section>
 
@@ -266,12 +389,34 @@
                     <!-- 예약 가능한 날짜는 검정색 글씨 -->
                     <div class="calendarContent3">
                         <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_escro.png" alt="">
-                        <h5>회색 날짜는 선택하실수 없습니다.</h5>
+                        <h5>지난 날짜는 선택하실수 없습니다.</h5>
                     </div>
                     <!-- 달력 -->
                     <div class="calendarContent2">
-                        <!-- 달력이미지 -->
-                        <img src="/imgs/calendar.png">
+                        <div>
+
+                            <div class="tempDiv">
+                                <div class="callenderWrap">
+                                    <div class="callenderHead">
+                                        <div class="prevMonth"></div>
+                                        <div class="nowMonth"></div>
+                                        <div class="nextMonth"></div>
+                                    </div>
+                                    <table class="callenderBody">
+                                        <tr>
+                                            <th>일</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
@@ -301,8 +446,26 @@
 
 </div>
 
+<!-- QR모달창 -->
+<div id="modal">
+    <!-- X버튼 -->
+    <div class="sect01" onclick="closeModal()">
+        <div class="line-box">
+            <span class="line-01"></span>
+            <span class="line-02"></span>
+        </div>
+    </div>
+    <!-- QR 코드 -->
+    <div id="modalQR">
+        <img src="https://ko.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/basic_market/generator/dist/generator/assets/images/websiteQRCode_noFrame.png">
+    </div>
+    <div id="scanPlz">QR코드를 스캔하세요!</div>
+</div>
+
+<footer th:replace="/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script type="text/javascript" src="js/school/schoolDetail.js"></script>
+<script src="/js/school/schoolDetail.js"></script>
+<script src="/js/school/calendar.js"></script>
 
 </html>

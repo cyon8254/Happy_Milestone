@@ -1,5 +1,7 @@
 /* =================슬라이드 배너====================== */
-
+body {
+    margin: 0;
+}
 .Banners {
     display: flex;
     justify-content: space-between;
