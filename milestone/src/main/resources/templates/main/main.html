@@ -18,68 +18,7 @@
 </head>
 
 <body>
-<header class="header1">
-    <section class="header2">
-        <a href="#" class="logo1">
-            <img src="/imgs/main/logo.png" style="width: 85px; height: 100%;" class="logo2">
-        </a>
-        <div class="header3"></div>
-        <div style="flex-grow: 1;"></div>
-        <div class="header4">
-            <div class="header5"></div>
-        </div>
-        <div class="button1">
-            <button role="button" color="default" class="button2 button3">
-                <span class="button4 button3">보육원 등록</span>
-            </button>
-            <button role="button" color="default" class="button5 button3">
-                <span class="button6 button3">로그인</span>
-            </button>
-            <a role="link" color="yellow" href="#" class="button7 button3">
-                <span class="button8 button3">무료 회원가입</span>
-            </a>
-        </div>
-    </section>
-    <section class="header6">
-        <div class="header7">
-            <div class="header8">
-                <nav>
-                    <ul class="nav1">
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">소개</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">보육원</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">도움이 필요해요</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">기부랭킹</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header9 header10">
-                    <a href="#" class="header11 header12">
-                        원하는 서비스를 못 찾겠다면, <b>프로젝트 의뢰</b>하세요! &nbsp;&gt;
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</header>
+<header th:replace="/fix/header.html :: header"></header>
 <div class="main1">
     <main class="main2">
         <section class="banner1">
@@ -102,7 +41,7 @@
                                         align-items: flex-end; font-size: 1.6rem;">
 
                                             <div>
-                                                <h1 class="text" style="margin-bottom: 8px;"></h1>
+                                                <h1 class="text" style="margin-bottom: 12px; font-size: 21px"></h1>
                                             </div>
 
                                         </div>
@@ -114,9 +53,13 @@
                                 <span style="white-space:pre;min-height:29px"></span>
                                 <span class="search-text2 search-text3">|</span>
                             </div>
-                            <label for="hero-search">
-                                <input id="hero-search" role="search" maxlength="15" autocomplete="off"
+                            <label for="hero-search1">
+                                <input id="hero-search1" role="search" maxlength="15" autocomplete="off"
                                        autocorrect="off" autocapitalize="off" class="search3" value="">
+                            </label>
+                            <label for="hero-search2">
+                                <input id="hero-search2" role="search" maxlength="15" autocomplete="off"
+                                       autocorrect="off" autocapitalize="off" class="search4" value="">
                             </label>
                             <div class="search-icon1">
                                     <span role="img" color="#ffffff" rotate="0" class="search-icon2">
@@ -200,7 +143,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
                                                  src="/imgs/main/rangking_icon01.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -215,7 +158,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
                                                  src="/imgs/main/rangking_icon02.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -230,7 +173,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
                                                  src="/imgs/main/rangking_icon03.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -245,7 +188,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
                                                  src="/imgs/main/rangking_icon04.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -260,7 +203,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
                                                  src="/imgs/main/rangking_icon09.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -275,7 +218,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
                                                  src="/imgs/main/rangking_icon05.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -290,7 +233,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
                                                  src="/imgs/main/rangking_icon06.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -305,7 +248,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
                                                  src="/imgs/main/rangking_icon07.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -320,7 +263,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
                                                  src="/imgs/main/rangking_icon08.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -344,7 +287,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
                                                  src="/imgs/main/rangking_icon09.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -359,7 +302,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
                                                  src="/imgs/main/rangking_icon08.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -374,7 +317,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
                                                  src="/imgs/main/rangking_icon07.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -389,7 +332,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
                                                  src="/imgs/main/rangking_icon06.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -404,7 +347,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
                                                  src="/imgs/main/rangking_icon05.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -419,7 +362,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
                                                  src="/imgs/main/rangking_icon04.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -434,7 +377,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
                                                  src="/imgs/main/rangking_icon03.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -449,7 +392,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
                                                  src="/imgs/main/rangking_icon02.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -464,7 +407,7 @@
                                 <div class="ranking6">
                                         <span
                                                 style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
+                                            <img alt="프로필 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
                                                  src="/imgs/main/rangking_icon01.png" decoding="async" data-nimg="fixed"
                                                  style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
@@ -619,148 +562,11 @@
         </section>
     </main>
 </div>
-<footer class="footer1">
-    <hr orientation="horizontal" class="footer2">
-    <div class="footer3">
-        <nav class="footer-nav1">
-            <div class="footer-nav2">
-                <p class="nav-text1">고객센터</p>
-                <p class="nav-text2">10:30~18:00 (점심시간 13:00~14:00)</p>
-                <p class="nav-text3">주말, 공휴일 휴무</p>
-            </div>
-            <div class="footer-nav2">
-                <p class="nav-text5">마일스톤</p>
-                <ul class="footer4">
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 메인</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">보육원 목록</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">도움이 필요한 보육원</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">기부랭킹</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-nav2">
-                <p class="nav-text5">마일스톤 정보</p>
-                <ul class="footer4">
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">서비스 소개</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-nav2">
-                <p class="nav-text5">관련 사이트</p>
-                <ul class="footer4">
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 블로그</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 인스타그램</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">마일스톤 유튜브</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-nav2">
-                <p class="nav-text5">지원</p>
-                <ul class="footer4">
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">공지사항</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">자주 묻는 질문</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">이용약관</a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" href="#" target="_blank" class="footer-text1">
-                                <b>개인정보처리방침</b>
-                            </a>
-                        </p>
-                    </li>
-                    <li class="footer4">
-                        <p class="nav-text6">
-                            <a color="inherit" target="_self" href="#" class="footer-text1">전문가 센터</a>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="footer5">
-        </div>
-    </div>
-    <hr orientation="horizontal" class="footer2">
-    <div class="footer7">
-        <p class="footer8">(주)마일스톤
-            <span class="footer-text2"></span>
-            경기도 성남시 중원구 하대원동 아튼빌아파트
-            <span class="footer-text2"></span>
-            대표 : 정서림
-            <span class="footer-text2"></span>
-            개인정보관리책임자 : 황지수
-            <span class="footer-text2"></span>
-            사업자등록번호 : 012-34-56789
-            <a role="link" color="default" href="#" target="_blank" class="footer9">
-                <span class="footer-text3">관리자 모드</span>
-            </a>
-            <br>통신판매업신고 : 2018-서울서초-2134
-            <span class="footer-text2"></span>
-            유료직업소개사업등록번호 : 제2021-3210195-14-5-00035호
-            <span class="footer-text2"></span>
-            고객센터 : 1234-5678
-            <span class="footer-text2"></span>
-            help@milestone.com
-        </p>
-    </div>
-    <div class="footer10">
-        <p class="footer-text4">
-            (주)마일스톤은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.
-        </p>
-        <p class="footer-text4">
-            (주)마일스톤 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI 등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히
-            금지됩니다. [안내 보기]
-        </p>
-        <div class="footer11">
-            <p class="footer-text4">
-                Copyright © 2022 kmong Inc. All rights reserved.
-            </p>
-        </div>
-    </div>
-</footer>
+<footer th:replace="/fix/footer.html :: footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="/js/main/main.js"></script>
-<script src="/js/main/slide.js"></script>
 <script src="/js/main/banner.js"></script>
+<script src="/js/fix/header.js"></script>
 </html>
