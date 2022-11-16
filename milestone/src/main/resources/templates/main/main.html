@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
-    <link rel="stylesheet" href="/css/fix/header.css">
-    <link rel="stylesheet" href="/css/main/main.css">
-    <link rel="stylesheet" href="/css/fix/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/main/slide.css"/>
+    <link rel="stylesheet" href="/css/main/main.css"/>
+    <link rel="stylesheet" href="/css/fix/header.css"/>
+    <link rel="stylesheet" href="/css/fix/footer.css"/>
+
 
 </head>
-<body style="margin: 0;">
+
+<body>
 <header class="header1">
     <section class="header2">
         <a href="#" class="logo1">
-            <img src="/imgs/fix/logo.png" class="logo2">
-
-            </svg>
+            <img src="/imgs/main/logo.png" style="width: 85px; height: 100%;" class="logo2">
         </a>
         <div class="header3"></div>
         <div style="flex-grow: 1;"></div>
@@ -41,31 +46,25 @@
                 <nav>
                     <ul class="nav1">
                         <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">보육원목록</a>
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">소개</a>
                             <div class="nav7 nav8">
                                 <div class="nav9 nav10"></div>
                             </div>
                         </li>
                         <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">도움이 필요한 보육원</a>
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">보육원</a>
+                            <div class="nav7 nav8">
+                                <div class="nav9 nav10"></div>
+                            </div>
+                        </li>
+                        <li class="nav2 nav3">
+                            <a color="secondary" href="#" class="nav4 nav5 nav6">도움이 필요해요</a>
                             <div class="nav7 nav8">
                                 <div class="nav9 nav10"></div>
                             </div>
                         </li>
                         <li class="nav2 nav3">
                             <a color="secondary" href="#" class="nav4 nav5 nav6">기부랭킹</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">FAQ</a>
-                            <div class="nav7 nav8">
-                                <div class="nav9 nav10"></div>
-                            </div>
-                        </li>
-                        <li class="nav2 nav3">
-                            <a color="secondary" href="#" class="nav4 nav5 nav6">공지사항</a>
                             <div class="nav7 nav8">
                                 <div class="nav9 nav10"></div>
                             </div>
@@ -83,10 +82,10 @@
 </header>
 <div class="main1">
     <main class="main2">
-        <section class="slide1">
-            <div class="slide2">
+        <section class="banner1">
+            <div class="banner2">
                 <section class="slide-text1">
-                    <h1 class="slide-text2">프리랜서 마켓 NO.1 크몽에서 원하는 전문가를</h1>
+                    <h1 class="slide-text2">보육원 찾기 NO.1 마일스톤에서<br>기부하고싶은 보육원을 찾아보세요!</h1>
                     <form class="search1">
                         <div class="search2">
                             <div class="search-text1">
@@ -94,16 +93,16 @@
 
                                 <!-- =============================================================================== -->
                                 <div style="margin: 0; padding: 0;
-                                    list-style: none; box-sizing: border-box; ">
+                                list-style: none; box-sizing: border-box; ">
 
                                     <div style="  height: 100vh; display: flex;justify-content: center;
-                                        align-items: center;color: white;">
+                                    align-items: center;color: white;">
 
                                         <div style="height: 55px; display: flex; justify-content: center;
-                                            align-items: flex-end; font-size: 1.8rem;">
+                                        align-items: flex-end; font-size: 1.6rem;">
 
                                             <div>
-                                                <h1 class="text" style="margin-bottom: 3px;"></h1>
+                                                <h1 class="text" style="margin-bottom: 8px;"></h1>
                                             </div>
 
                                         </div>
@@ -116,12 +115,16 @@
                                 <span class="search-text2 search-text3">|</span>
                             </div>
                             <label for="hero-search">
-                                <input id="hero-search" role="search" maxlength="15" autocomplete="off" autocorrect="off" autocapitalize="off" class="search3" value="">
+                                <input id="hero-search" role="search" maxlength="15" autocomplete="off"
+                                       autocorrect="off" autocapitalize="off" class="search3" value="">
                             </label>
                             <div class="search-icon1">
                                     <span role="img" color="#ffffff" rotate="0" class="search-icon2">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="search-icon3">
-                                            <path xmlns="http://www.w3.org/2000/svg" d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                             aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"
+                                             class="search-icon3">
+                                            <path xmlns="http://www.w3.org/2000/svg"
+                                                  d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
                                             </path>
                                         </svg>
                                     </span>
@@ -130,61 +133,56 @@
                     </form>
                     <div class="slide-text3">
                         <div class="slide-text4">
-                            <a href="#" class="slide-text5">#<!-- -->로고
+                            <a href="#" class="slide-text5">#
+                                <!-- -->로고
                             </a>
                         </div>
                         <div class="slide-text4">
-                            <a href="#" class="slide-text5">#<!-- -->블로그
+                            <a href="#" class="slide-text5">#
+                                <!-- -->블로그
                             </a>
                         </div>
                         <div class="slide-text4">
-                            <a href="#" class="slide-text5">#<!-- -->상세페이지
+                            <a href="#" class="slide-text5">#
+                                <!-- -->상세페이지
                             </a>
                         </div>
                         <div class="slide-text4">
-                            <a href="#" class="slide-text5">#<!-- -->일러스트
+                            <a href="#" class="slide-text5">#
+                                <!-- -->일러스트
                             </a>
                         </div>
                         <div class="slide-text4">
-                            <a href="#" class="slide-text5">#<!-- -->명함
+                            <a href="#" class="slide-text5">#
+                                <!-- -->명함
                             </a>
                         </div>
                     </div>
                 </section>
-                <section class="slide-image1">
-                    <div data-testid="carousel" class="slide-image2">
-                        <div class="slide-image3" dir="ltr">
-                            <button aria-label="carousel-arrow-button" data-testid="carsousel-arrow" direction="prev" class="slide-button1">
-                                    <span role="img" rotate="0" data-testid="left-icon" class="slide-button2">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="slide-button3">
-                                            <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                            </button>
-                            <div class="slide-image4">
-                                <div class="slide-image5" style="width: 9720px; opacity: 1;  transform: translate3d(-3240px, 0px, 0px);">
-                                </div>
-                            </div>
-                            <button aria-label="carousel-arrow-button" data-testid="carousel-arrow" direction="next" class="slide-button4">
-                                    <span role="img" rotate="0" data-testid="right-icon" class="slide-button5">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="slide-button3">
-                                            <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) ">
-                                            </path>
-                                        </svg>
-                                    </span>
-                            </button>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img class="banner-imgs1"
+                                                                   src="/imgs/main/slide01.png"></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="banner-imgs1"
+                                                                   src="/imgs/main/slide02.png"></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="banner-imgs1"
+                                                                   src="/imgs/main/slide03.png"></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="banner-imgs1"
+                                                                   src="/imgs/main/slide01.png"></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="banner-imgs1"
+                                                                   src="/imgs/main/slide02.png"></a>
                         </div>
                     </div>
-                    <div class="slide-number1">
-                        <span>01</span>
-                        <span class="slide-number2">
-                                <span>/
-                                </span>
-                                 06
-                            </span>
+                    <div>
+                        <div class="swiper-button-next" style="left: 507px; top: 215px;"></div>
+                        <div class="swiper-button-prev" style="left: 0px; top: 215px;"></div>
                     </div>
-                </section>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
         <section class="ranking1">
@@ -200,108 +198,135 @@
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
+                                                 src="/imgs/main/rangking_icon01.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한지민
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
+                                                 src="/imgs/main/rangking_icon02.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        박수진
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
+                                                 src="/imgs/main/rangking_icon03.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        이연희
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
+                                                 src="/imgs/main/rangking_icon04.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한가인
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
+                                                 src="/imgs/main/rangking_icon09.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        이나영
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
+                                                 src="/imgs/main/rangking_icon05.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        김태희
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
+                                                 src="/imgs/main/rangking_icon06.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한채영
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
+                                                 src="/imgs/main/rangking_icon07.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        오연서
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
+                                                 src="/imgs/main/rangking_icon08.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한예슬
                                     </span>
                             </a>
                         </li>
@@ -310,115 +335,142 @@
             </div>
             <div class="ranking2">
                 <div class="ranking-text1">
-                    봉사 랭킹
+                    기부횟수 랭킹
                 </div>
                 <nav>
                     <ul class="ranking3">
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon09.png 1x"
+                                                 src="/imgs/main/rangking_icon09.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한예슬
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon08.png 1x"
+                                                 src="/imgs/main/rangking_icon08.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한가인
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon07.png 1x"
+                                                 src="/imgs/main/rangking_icon07.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한채영
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon06.png 1x"
+                                                 src="/imgs/main/rangking_icon06.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한효주
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon05.png 1x"
+                                                 src="/imgs/main/rangking_icon05.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        김태희
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon04.png 1x"
+                                                 src="/imgs/main/rangking_icon04.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        이나영
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon03.png 1x"
+                                                 src="/imgs/main/rangking_icon03.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        카리나
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon02.png 1x"
+                                                 src="/imgs/main/rangking_icon02.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        한지민
                                     </span>
                             </a>
                         </li>
                         <li class="ranking4">
                             <a href="#" class="ranking5">
                                 <div class="ranking6">
-                                        <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                            <img alt="디자인 카테고리 아이콘" srcset="imgs/rangking_icon.png 1x" src="imgs/rangking_icon.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                        <span
+                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 48px; height: 48px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                            <img alt="디자인 카테고리 아이콘" srcset="/imgs/main/rangking_icon01.png 1x"
+                                                 src="/imgs/main/rangking_icon01.png" decoding="async" data-nimg="fixed"
+                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                         </span>
                                 </div>
                                 <span class="ranking-text2">
-                                        디자인
+                                        이연희
                                     </span>
                             </a>
                         </li>
@@ -433,55 +485,65 @@
             <div class="help2">
                 <article class="help3">
                     <a href="#" class="help4">
-                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;" class="help5">
-                            <div style="border-radius: 8px; background-color: rgb(212, 220, 252); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
-                                <h5 class="help-text1">해준 보육원</h5>
-                                <h3 class="help-text2">해준 보육원</h3>
-                                <img class="help-img1" src="imgs/help.png">
+                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                             class="help5">
+                            <div
+                                    style="border-radius: 8px; background-color: rgb(212, 220, 252); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <h5 class="help-text1">경기도 성남시</h5>
+                                <h2 class="help-text2">해준 보육원</h3>
+                                    <img class="help-img1" src="/imgs/main/baby01.png">
                             </div>
                         </div>
                     </a>
                 </article>
                 <article class="help3">
                     <a href="#" class="help4">
-                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;" class="help5">
-                            <div style="border-radius: 8px; background-color: rgb(244, 246, 159); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
-                                <h5 class="help-text1">해준 보육원</h5>
-                                <h3 class="help-text2">해준 보육원</h3>
-                                <img class="help-img1" src="imgs/help.png">
+                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                             class="help5">
+                            <div
+                                    style="border-radius: 8px; background-color: rgb(244, 246, 159); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <h5 class="help-text1">경기도 성남시</h5>
+                                <h2 class="help-text2">의엽 보육원</h3>
+                                    <img class="help-img1" src="/imgs/main/baby02.png">
                             </div>
                         </div>
                     </a>
                 </article>
                 <article class="help3">
                     <a href="#" class="help4">
-                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;" class="help5">
-                            <div style="border-radius: 8px; background-color: rgb(246, 201, 172); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
-                                <h5 class="help-text1">해준 보육원</h5>
-                                <h3 class="help-text2">해준 보육원</h3>
-                                <img class="help-img1" src="imgs/help.png">
+                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                             class="help5">
+                            <div
+                                    style="border-radius: 8px; background-color: rgb(246, 201, 172); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <h5 class="help-text1">경기도 성남시</h5>
+                                <h2 class="help-text2">지수 보육원</h3>
+                                    <img class="help-img1" src="/imgs/main/baby03.png">
                             </div>
                         </div>
                     </a>
                 </article>
                 <article class="help3">
                     <a href="#" class="help4">
-                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;" class="help5">
-                            <div style="border-radius: 8px; background-color: rgb(215, 209, 251); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
-                                <h5 class="help-text1">해준 보육원</h5>
-                                <h3 class="help-text2">해준 보육원</h3>
-                                <img class="help-img1" src="imgs/help.png">
+                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                             class="help5">
+                            <div
+                                    style="border-radius: 8px; background-color: rgb(215, 209, 251); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <h5 class="help-text1">경기도 성남시</h5>
+                                <h2 class="help-text2">서림 보육원</h3>
+                                    <img class="help-img1" src="/imgs/main/baby04.png">
                             </div>
                         </div>
                     </a>
                 </article>
                 <article class="help3">
                     <a href="#" class="help4">
-                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;" class="help5">
-                            <div style="border-radius: 8px; background-color: rgb(203, 224, 252); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
-                                <h5 class="help-text1">해준 보육원</h5>
-                                <h3 class="help-text2">해준 보육원</h3>
-                                <img class="help-img1" src="imgs/help.png">
+                        <div style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 217px; height: 300px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
+                             class="help5">
+                            <div
+                                    style="border-radius: 8px; background-color: rgb(203, 224, 252); position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <h5 class="help-text1">경기도 성남시</h5>
+                                <h2 class="help-text2">브래드피트 보육원</h3>
+                                    <img class="help-img1" src="/imgs/main/baby05.png">
                             </div>
                         </div>
                     </a>
@@ -500,7 +562,7 @@
                         </h2>
                     </div>
                     <div class="video4">
-                        <a data-video="ruXXj-3T2e4"><img style="border-radius: 8px;" src="imgs/youtube.jpeg"> </a>
+                        <a data-video="ruXXj-3T2e4"><img style="border-radius: 8px;" src="/imgs/main/youtube.jpeg"> </a>
                     </div>
                     <div class="video_modal_popup">
                         <!-- <div class="video_modal_popup-closer"></div> -->
@@ -513,8 +575,12 @@
                         </h3>
                         <h4 class="video-text7">QR 시스템 으로<br>빠르게 결제하고 기부해보세요!</h4>
                         <div class="video-text8">
-                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                    <img alt="카드 0" srcset="imgs/video1.png 1x" src="imgs/video1.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                    <img alt="카드 0" srcset="/imgs/main/video1.png 1x" src="/imgs/main/video1.png"
+                                         decoding="async"
+                                         data-nimg="fixed"
+                                         style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                 </span>
                         </div>
                     </article>
@@ -524,8 +590,12 @@
                         </h3>
                         <h4 class="video-text7">기부한 내 돈, 걱정되지 않나요?<br>실시간 기부 랭킹으로<br>즉시 확인 시켜 드려요!</h4>
                         <div class="video-text8">
-                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                    <img alt="카드 1" srcset="imgs/video2.png 1x" src="imgs/video2.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                    <img alt="카드 1" srcset="/imgs/main/video2.png 1x" src="/imgs/main/video2.png"
+                                         decoding="async"
+                                         data-nimg="fixed"
+                                         style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                 </span>
                         </div>
                     </article>
@@ -535,8 +605,12 @@
                         </h3>
                         <h4 class="video-text7">방문하기 어려웠던 보육원!<br>보육원 봉사 신청으로<br>빠르게 방문 봉사 할수 있습니다.</h4>
                         <div class="video-text8">
-                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                    <img alt="카드 2" srcset="imgs/video3.png 1x" src="imgs/video3.png" decoding="async" data-nimg="fixed" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                <span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 28px; height: 28px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                    <img alt="카드 2" srcset="/imgs/main/video3.png 1x" src="/imgs/main/video3.png"
+                                         decoding="async"
+                                         data-nimg="fixed"
+                                         style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
                                 </span>
                         </div>
                     </article>
@@ -553,9 +627,6 @@
                 <p class="nav-text1">고객센터</p>
                 <p class="nav-text2">10:30~18:00 (점심시간 13:00~14:00)</p>
                 <p class="nav-text3">주말, 공휴일 휴무</p>
-                <a role="link" color="default" href="#" target="_blank" class="footer-nav3 footer-nav4">
-                    <span class="nav-text4">1:1 문의</span>
-                </a>
             </div>
             <div class="footer-nav2">
                 <p class="nav-text5">마일스톤</p>
@@ -645,6 +716,8 @@
                 </ul>
             </div>
         </nav>
+        <div class="footer5">
+        </div>
     </div>
     <hr orientation="horizontal" class="footer2">
     <div class="footer7">
@@ -654,11 +727,11 @@
             <span class="footer-text2"></span>
             대표 : 정서림
             <span class="footer-text2"></span>
-            개인정보관리책임자 : 심민성
+            개인정보관리책임자 : 황지수
             <span class="footer-text2"></span>
             사업자등록번호 : 012-34-56789
             <a role="link" color="default" href="#" target="_blank" class="footer9">
-                <span class="footer-text3">사업자 정보확인</span>
+                <span class="footer-text3">관리자 모드</span>
             </a>
             <br>통신판매업신고 : 2018-서울서초-2134
             <span class="footer-text2"></span>
@@ -674,7 +747,8 @@
             (주)마일스톤은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.
         </p>
         <p class="footer-text4">
-            (주)마일스톤 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI 등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히 금지됩니다. [안내 보기]
+            (주)마일스톤 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI 등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히
+            금지됩니다. [안내 보기]
         </p>
         <div class="footer11">
             <p class="footer-text4">
@@ -684,6 +758,9 @@
     </div>
 </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
-<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="/js/main/main.js"></script>
+<script src="/js/main/slide.js"></script>
+<script src="/js/main/banner.js"></script>
 </html>
