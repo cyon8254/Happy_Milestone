@@ -115,6 +115,10 @@ hr {
     color: inherit;
     cursor: pointer;
 }
+.footer-text1:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
 .nav-text6{
     font-weight: 400;
     font-size: 0.875rem;
