@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/admin/*")
 public class AdminController {
-
-    @GetMapping("banner")
-    public void banner(){};
-
     @GetMapping("community")
     public void community(){};
 
