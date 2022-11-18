@@ -276,3 +276,244 @@ a:-webkit-any-link {
     -webkit-text-decoration: underline;
     text-decoration: underline;
 }
+
+
+/*------------------------------------------------------------------*/
+/*------------------------황지수 로그인 모달---------------------------*/
+/*------------------------------------------------------------------*/
+.loginModalWrap {
+    display: none;
+    z-index: 21;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.loginModalScope {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.loginModalBox {
+    width: 100%;
+    height: 601px;
+    max-width: 1024px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 64px;
+}
+
+.closeWrap{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.closeBackground{
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 50%;
+    color: rgb(48, 52, 65);
+    height: 42px;
+    width: 42px;
+    transition: background-color 0.3s;
+}
+
+.closeBackground:hover{
+    background-color: rgb(228, 229, 237);
+}
+
+.closeBackground:active{
+    outline: 2px solid rgb(228, 229, 237);
+    background-color: #30344133
+}
+
+.imgWrap {
+    width: 600px;
+    height: 601px;
+    position: relative;
+}
+
+.imgText {
+    font-size: 18px;
+    color: #303441;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.loginWrap {
+    height: 100%;
+    padding: 40px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.loginTitle {
+    font-size: 24px;
+    color: rgb(48, 52, 65);
+    margin: 0px 0px 24px;
+    font-weight: 500;
+}
+
+.loginBody{
+    height: 100%;
+}
+
+.loginInputCos {
+    width: 100%;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(48, 52, 65);
+    height: 52px;
+    font-size: 16px;
+    padding: 0px 16px;
+    min-width: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+.loginInputCos::placeholder {
+    color: rgb(200, 201, 207);
+}
+
+.loginInputCos:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+.loginInputCos:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+.warningMsg{
+    display: none;
+    color: rgb(255, 64, 43);
+    font-size: 0.875rem;
+}
+
+.loginButton {
+    background-color: rgb(255, 212, 0);
+    height: 52px;
+    width: 100%;
+    min-width: 80px;
+    max-width: 100%;
+    padding: 0px 24px;
+    font-size: 16px;
+    border: 1px solid rgb(255, 212, 0);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.loginButton:hover{
+    background-color: rgb(245, 193, 38);
+    border: 1px solid rgb(245, 193, 38);
+}
+
+.loginButton:active{
+    background-color: #b88a03;
+    outline: 2px solid rgb(245, 193, 38);
+}
+
+.loginItemsWrap {
+    font-size: 14px;
+    color: rgb(85, 89, 105);
+}
+
+.findLoginInfo {
+    text-decoration: none;
+}
+
+.findLoginInfo:visited {
+    color: rgb(85, 89, 105);
+}
+
+.findLoginInfo:hover {
+    text-decoration: underline;
+}
+
+.checkboxWrap{
+    cursor: pointer;
+}
+
+.checkboxCos {
+    background: url("/imgs/myPage/checkWhite(체크).png");
+    background-size: 14px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgb(200, 202, 210);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.checkboxCos:hover {
+    border: 1px solid rgb(154 155 167);
+}
+
+input[type = 'checkbox']:checked + .checkboxCos {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 212, 0);
+}
+
+.oAuthTitle {
+    font-size: 14px;
+    color: #303441;
+}
+
+.oAuthBox {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.grayLine {
+    height: 1px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    border: none;
+}
+
+.loginFooterText {
+    margin: 12px 0px;
+    color: rgb(48, 52, 65);
+    font-weight: 400;
+}
+
+.joinBtn {
+    border: 1px solid rgb(17, 106, 212);
+    border-radius: 4px;
+    color: rgb(17, 106, 212);
+    padding: 0px 24px;
+    height: 52px;
+    width: 100%;
+    text-decoration: none;
+    transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+}
+
+.joinBtn:hover {
+    background-color: rgba(17, 106, 212, 0.1);
+}
+
+.joinBtn:active {
+    background-color: rgba(17, 106, 212, 0.2);
+}
+
+.joinBtn:active {
+    box-shadow: rgb(17 106 212 / 20%) 0px 0px 1px 2px;
+}
+
+
+
+

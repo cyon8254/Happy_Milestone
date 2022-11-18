@@ -55,11 +55,11 @@
     margin-left: 6px;
 }
 
-button:hover{
+.certificationBtn:hover{
     filter: brightness(90%);
 }
 
-button:active{
+.certificationBtn:active{
     filter: brightness(80%);
 }
 
