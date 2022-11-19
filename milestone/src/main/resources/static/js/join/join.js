@@ -1,14 +1,27 @@
-/*
-* join.html
-* */
-var $allCheckbox = $('.allCheckbox');
-var $smallCheckbox = $('.$smallCheckbox');
-// const $smallAgree = $('.smallAgree');
-// console.log('안녕' + $smallAgree);
-// $smallAgree.on('click',function () {
-//
-//     console.log($(this).find('#checkTest').is(':checked'));
-//     console.log('안녕');
-//     $(this).find('.smallAgreeBackground').css('background-color','#ffd400');
-// })
+let $allCheckbox = $('.allCheckbox');
+let $smallCheckbox = $('.smallCheckbox');
+const $joinBtn = $('.joinBtn');
 
+// let mouseoverEvent = $joinBtn.on('hover',function()){
+//
+// }
+
+$allCheckbox.on('click', function () {
+    $smallCheckbox.prop('checked', $(this).is(':checked'));
+    if ($allCheckbox.is(':checked')) {
+        $joinBtn.attr('disabled', false);
+    } else {
+        $joinBtn.attr('disabled', true);
+    }
+})
+
+$smallCheckbox.on('click', function () {
+    if (!$(this).is(':checked')) {
+        $allCheckbox.prop('checked', false);
+        $joinBtn.attr('disabled', true);
+    }
+    if ($smallCheckbox.filter(':checked').length == $smallCheckbox.length) {
+        $allCheckbox.prop('checked', true);
+        $joinBtn.attr('disabled', false);
+    }
+})

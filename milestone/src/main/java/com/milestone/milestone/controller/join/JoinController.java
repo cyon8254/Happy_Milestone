@@ -11,7 +11,7 @@ public class JoinController {
     @GetMapping("join")
     public void join(){};
 
-    @GetMapping("joinWay")
+    @GetMapping("joinway")
     public void joinWay(){};
 
 
