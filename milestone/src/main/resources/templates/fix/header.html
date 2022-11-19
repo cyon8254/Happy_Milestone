@@ -7,7 +7,7 @@
     <title>header</title>
 </head>
 <body>
-<header class="header1">
+<header class="header1" id="mobile-header1">
     <!--로그인 모달-->
     <section class="loginModalWrap">
         <div class="loginModalScope flexPublic">
@@ -96,22 +96,24 @@
         </div>
     </section>
     <!--진짜 헤더-->
-    <section class="header2">
-        <a href="#" class="logo1">
-            <img src="/imgs/fix/logo.png" style="width: 120px; height: 120%;" class="logo2">
-
-            </svg>
-        </a>
-        <div class="header3"></div>
-        <div style="flex-grow: 1;"></div>
-        <div class="header4">
-            <div class="header5"></div>
+    <section class="header2" id="mobile-header2">
+        <div class="mobile-menu-icon1" id="mobile-menu-icon2">
+            <img id="menu-icon" src="/imgs/fix/menu_icon.png" alt="네비게이션 메뉴 아이콘" style="cursor:pointer">
+            <img id="close-icon" src="/imgs/fix/close_icon.png" alt="닫기 아이콘" style="cursor:pointer">
         </div>
-        <div class="button1">
+        <a href="#" class="logo1" id="mobile-logo1">
+            <img src="/imgs/fix/logo.png" style="width: 120px; height: 120%;" class="logo2">
+        </a>
+        <div class="mobile-menu-icon2" id="mobile-search-icon1">
+            <img id="search-icon" src="/imgs/fix/search.png" alt="검색 아이콘" style="cursor:pointer">
+            <img id="close-icon-right" src="/imgs/fix/close_icon.png" alt="닫기 아이콘" style="cursor:pointer">
+        </div>
+        <div id="mobile-etc1" style="width: 693px;"></div>
+        <div class="button1" id="mobile-button1">
             <button role="button" color="default" class="button2 button3">
                 <span class="button4 button3">보육원 등록</span>
             </button>
-            <button role="button" color="default" class="button5 button3" id="loginBtn">
+            <button role="button" color="default" class="button5 button3">
                 <span class="button6 button3">로그인</span>
             </button>
             <a role="link" color="yellow" href="#" class="button7 button3">
@@ -119,7 +121,108 @@
             </a>
         </div>
     </section>
-    <section class="header6">
+    <div id="wrapper">
+        <div class="topbar" style="position: absolute; top:0;">
+            <!-- 왼쪽 서브 메뉴 -->
+            <div class="left_sub_menu">
+                <div class="sub_menu">
+                    <ul class="big_menu">
+                        <a href="#">
+                            <li>로그인</li>
+                        </a>
+                    </ul>
+                    <ul class="big_menu">
+                        <a href="#">
+                            <li>무료 회원가입</li>
+                        </a>
+                    </ul>
+                    <ul class="big_menu">
+                        <a href="#">
+                            <li>보육원 등록</li>
+                        </a>
+                    </ul>
+                    <ul class="small_menu">
+                        <a href="#">
+                            <li style="font-size: 17px; padding-bottom: 5px; padding-top: 5px;">소개</li>
+                        </a>
+                    </ul>
+                    <ul class="small_menu">
+                        <a href="#">
+                            <li style="font-size: 17px; padding-bottom: 5px; padding-top: 5px;">보육원</li>
+                        </a>
+                    </ul>
+                    <ul class="small_menu">
+                        <a href="#">
+                            <li style="font-size: 17px; padding-bottom: 5px; padding-top: 5px;">도움이 필요해요</li>
+                        </a>
+                    </ul>
+                    <ul class="small_menu">
+                        <a href="#">
+                            <li style="font-size: 17px; padding-bottom: 5px; padding-top: 5px;">기부 랭킹</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper-right">
+        <div class="topbar-right" style="position: absolute; top:0;">
+            <!-- 왼쪽 서브 메뉴 -->
+            <div class="right_sub_menu">
+                <div class="sub_menu-right">
+                    <form class="mobile-search1 mobile-search2">
+                        <div class="mobile-search3 mobile-search4">
+
+                            <label for="mobile-search5" class="mobile-search-lable">
+                                <input id="mobile-search5" role="search" maxlength="15" autocomplete="off"
+                                       autocorrect="off" autocapitalize="off" class="mobile-search6 mobile-search7"
+                                       value="">
+                            </label>
+                            <div class="mobile-search9 mobile-search10">
+                                <span role="img" color="#ffffff" rotate="0" class="mobile-search11 mobile-search12">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                         aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"
+                                         class="mobile-search13 mobile-search14">
+                                        <path xmlns="http://www.w3.org/2000/svg"
+                                              d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mobile-slide-text3">
+                        <div class="mobile-slide-text4">
+                            <a href="#" class="mobile-slide-text5">#
+                                <!-- -->도움이 필요한 보육원
+                            </a>
+                        </div>
+                        <div class="mobile-slide-text4">
+                            <a href="#" class="mobile-slide-text5">#
+                                <!-- -->도움이 필요한 보육원
+                            </a>
+                        </div>
+                        <div class="mobile-slide-text4">
+                            <a href="#" class="mobile-slide-text5">#
+                                <!-- -->도움이 필요한 보육원
+                            </a>
+                        </div>
+                        <div class="mobile-slide-text4">
+                            <a href="#" class="mobile-slide-text5">#
+                                <!-- -->도움이 필요한 보육원
+                            </a>
+                        </div>
+                        <div class="mobile-slide-text4">
+                            <a href="#" class="mobile-slide-text5">#
+                                <!-- -->도움이 필요한 보육원
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="header6" id="mobile-header3">
         <div class="header7">
             <div class="header8">
                 <nav>
@@ -150,7 +253,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header9 header10">
+                <div class="header9 header10" id="mobile-header4">
                     <a href="/faq/faq" class="header11 header12">
                         원하는 서비스를 못 찾겠다면, <b>FAQ를&nbsp</b>확인 하세요! &nbsp;&gt;
                     </a>
