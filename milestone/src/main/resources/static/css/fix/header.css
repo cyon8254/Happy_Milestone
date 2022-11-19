@@ -7,6 +7,52 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+@media screen and (max-width: 768px) {
+    #mobile-header1 {
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    #mobile-header2 {
+        height: 4.5rem;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    #mobile-menu-icon2 {
+        display: block;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    #mobile-logo1 {
+        margin-bottom: 10px;
+    }
+
+    #mobile-button1 {
+        display: none;
+    }
+
+    #mobile-header3 {
+        display: none;
+    }
+
+    #mobile-search-icon1 {
+        display: block;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+
+    #mobile-header4 {
+        display: none;
+    }
+
+    #mobile-etc1 {
+        display: none;
+    }
+}
+
+
 .header1 {
     z-index: 20;
     border-bottom: 1px solid #e4e5ed;
@@ -16,7 +62,6 @@ html {
     top: 0px;
     left: 0;
     right: 0;
-    min-width: 1200px;
 }
 
 .header2 {
@@ -25,15 +70,34 @@ html {
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+    padding-left: 370px;
 }
 
+.mobile-menu-icon1 {
+    display: none;
+}
+
+.mobile-menu-icon2 {
+    display: none;
+}
+#close-icon{
+    position: absolute;
+    bottom: 27px;
+    z-index: 11;
+    right: 23%;
+}
+#close-icon-right{
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
+    z-index: 11;
+}
 .logo1 {
     cursor: pointer;
     text-decoration: none;
-    width: 85px;
     height: 26px;
 }
 
@@ -310,13 +374,13 @@ a:-webkit-any-link {
     margin: 64px;
 }
 
-.closeWrap{
+.closeWrap {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.closeBackground{
+.closeBackground {
     border: 1px solid transparent;
     background-color: transparent;
     border-radius: 50%;
@@ -326,11 +390,11 @@ a:-webkit-any-link {
     transition: background-color 0.3s;
 }
 
-.closeBackground:hover{
+.closeBackground:hover {
     background-color: rgb(228, 229, 237);
 }
 
-.closeBackground:active{
+.closeBackground:active {
     outline: 2px solid rgb(228, 229, 237);
     background-color: #30344133
 }
@@ -367,7 +431,7 @@ a:-webkit-any-link {
     font-weight: 500;
 }
 
-.loginBody{
+.loginBody {
     height: 100%;
 }
 
@@ -397,7 +461,7 @@ a:-webkit-any-link {
     border: 1px solid rgb(118, 118, 118);
 }
 
-.warningMsg{
+.warningMsg {
     display: none;
     color: rgb(255, 64, 43);
     font-size: 0.875rem;
@@ -416,12 +480,12 @@ a:-webkit-any-link {
     transition: background-color 0.3s;
 }
 
-.loginButton:hover{
+.loginButton:hover {
     background-color: rgb(245, 193, 38);
     border: 1px solid rgb(245, 193, 38);
 }
 
-.loginButton:active{
+.loginButton:active {
     background-color: #b88a03;
     outline: 2px solid rgb(245, 193, 38);
 }
@@ -443,7 +507,7 @@ a:-webkit-any-link {
     text-decoration: underline;
 }
 
-.checkboxWrap{
+.checkboxWrap {
     cursor: pointer;
 }
 
