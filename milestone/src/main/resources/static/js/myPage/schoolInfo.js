@@ -31,7 +31,7 @@ const $inputText = $('div.inputText');
 $moreSelectItems.on('click', function () {
     console.log($(this).text());
     $inputText.css("color", '#303441');
-    $inputText.text($(this).text());
+    $inputText.val($(this).text());
     $moreSelectList.hide();
 })
 

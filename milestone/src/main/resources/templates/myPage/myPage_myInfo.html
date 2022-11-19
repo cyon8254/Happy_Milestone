@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/css/myPage/myPageInfo.css">
     <link rel="stylesheet" href="/css/myPage/myPageAside.css">
     <link rel="stylesheet" href="/css/myPage/public.css">
-    <title>Document</title>
+    <link rel="icon" href="/imgs/fix/favicon.png">
+    <title>마일스톤 | 나의 정보</title>
 </head>
 
 <body>
@@ -27,44 +28,50 @@
                 <div class="profileWrap flexColNormal">
                     <div class="profile"></div>
                     <div class="updateProfileBtnWrap flexCol">
-                        <button class="updateProfileBtn">프로필 변경</button>
+                        <label class="updateProfileBtn flexCol">
+                            <div>프로필 변경</div>
+                            <input type="file" name="profile" style="display: none">
+                        </label>
                     </div>
                 </div>
                 <!-- 메인컨텐츠 -->
                 <div class="inputWrap margin-left-40 flexCol">
-                    <div class="margin-bottom-20">
-                        <div class="margin-bottom-8 flexBetween">
-                            <div class="inputTitle">닉네임</div>
+                    <form action="" name="updateForm">
+                        <div class="margin-bottom-20">
+                            <div class="margin-bottom-8 flexBetween">
+                                <div class="inputTitle">닉네임</div>
+                            </div>
+                            <input class="inputCos" name="nickName" type="text" placeholder="지수박박쥐">
+                            <div class="margin-top-6">
+                                <div class="warninMsg" style="display: none;">사용중인 닉네임입니다</div>
+                            </div>
                         </div>
-                        <input class="inputCos" type="text" placeholder="지수박박쥐">
-                        <div class="margin-top-6">
-                            <div class="warninMsg" style="display: none;">사용중인 닉네임입니다</div>
+                        <div class="margin-bottom-20">
+                            <div class="margin-bottom-8 flexBetween">
+                                <div class="inputTitle">이메일</div>
+                            </div>
+                            <div class="margin-bottom-8 flexBetween">
+                                <input class="inputCos" name="email" type="text" style="width: 79%;"
+                                       placeholder="지수박박쥐@naver.com"
+                                >
+                                <button class="certificationBtn">인증번호 받기</button>
+                            </div>
+                            <input class="inputCos" type="text" placeholder="인증번호를 입력해주세요">
+                            <div class="margin-top-6">
+                                <div class="warninMsg" style="display: none;">이메일 형식이 유효하지 않습니다.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="margin-bottom-20">
-                        <div class="margin-bottom-8 flexBetween">
-                            <div class="inputTitle">이메일</div>
+                        <div class="margin-bottom-20">
+                            <div class="margin-bottom-8 flexBetween">
+                                <div class="inputTitle">이름</div>
+                            </div>
+                            <input class="inputCos" name="name" type="text" placeholder="황지수">
                         </div>
-                        <div class="margin-bottom-8 flexBetween">
-                            <input class="inputCos" type="text" style="width: 79%;" placeholder="지수박박쥐@naver.com"
-                            >
-                            <button class="certificationBtn">인증번호 받기</button>
+                        <div class="flex">
+                            <div style="flex-grow : 1"></div>
+                            <button class="submitBtn">등록하기</button>
                         </div>
-                        <input class="inputCos" type="text" placeholder="인증번호를 입력해주세요">
-                        <div class="margin-top-6">
-                            <div class="warninMsg" style="display: none;">이메일 형식이 유효하지 않습니다.</div>
-                        </div>
-                    </div>
-                    <div class="margin-bottom-20">
-                        <div class="margin-bottom-8 flexBetween">
-                            <div class="inputTitle">이름</div>
-                        </div>
-                        <input class="inputCos" type="text" placeholder="황지수">
-                    </div>
-                    <div class="flex">
-                        <div style="flex-grow : 1"></div>
-                        <button class="submitBtn">등록하기</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -72,5 +79,7 @@
 </div>
 <footer th:replace="/fix/footer.html :: footer"></footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/fix/header.js"></script>
+<script src="/js/myPage/thumbnail.js"></script>
 </html>

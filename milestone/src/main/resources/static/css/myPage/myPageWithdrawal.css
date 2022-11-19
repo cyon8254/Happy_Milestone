@@ -164,11 +164,11 @@ input[type = 'checkbox']:checked + .precautionCheckCos {
 }
 
 .withdrawalBtn {
-    cursor: no-drop;
+    cursor: pointer;
     height: 42px;
     border: 1px solid rgb(228, 229, 237);
     border-radius: 4px;
-    background-color: rgb(228, 229, 237);
+    background-color: #fff;
     color: rgb(154, 155, 167);
     min-width: 64px;
     max-width: 100%;
@@ -176,3 +176,19 @@ input[type = 'checkbox']:checked + .precautionCheckCos {
     align-items: center;
     transition: background-color 0.36s;
 }
+
+.withdrawalBtn:disabled {
+    background-color: rgb(228, 229, 237);
+    color: rgb(154, 155, 167);
+    cursor: no-drop;
+}
+
+.withdrawalBtn:not(:disabled):hover {
+    background-color: rgba(48, 52, 65, 0.1);
+}
+
+.withdrawalBtn:not(:disabled):active {
+    background-color: #30344133;
+    outline: 2px solid #30344133;
+}
+

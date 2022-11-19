@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/myPage/*")
+@RequestMapping("/mypage/*")
 public class MyPageController {
 
-    @GetMapping("/myInfo")
+    @GetMapping("/myinfo")
     public String myInfo() {
         return "/myPage/myPage_myInfo";
     };
@@ -23,12 +23,12 @@ public class MyPageController {
         return "/myPage/myPage_schedule";
     };
 
-    @GetMapping("/schoolInfo")
+    @GetMapping("/schoolinfo")
     public String schoolInfo() {
         return "/myPage/myPage_schoolInfo";
     };
 
-    @GetMapping("/likeList")
+    @GetMapping("/likelist")
     public String likeList() {
         return "/myPage/myPage_likeList";
     };
