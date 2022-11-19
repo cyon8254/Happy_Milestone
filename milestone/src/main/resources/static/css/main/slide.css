@@ -12,9 +12,13 @@ body {
     padding: 0;
 }
 
+.banner1 {
+    width: 100%;
+}
+
 .banner2 {
     background-color: #00D3C7;
-    width: 1903px;
+    width: 100%;
     height: 480px;
 }
 
@@ -27,7 +31,7 @@ body {
     width: 540px;
     height: 380px;
     left: 300px;
-    top: 62px;
+    top: 10%;
     border-radius: 8px;
 }
 
@@ -53,11 +57,12 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    width: 540px;
-    height: 380px;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
 }
-.banner-imgs1{
+
+.banner-imgs1 {
     border-radius: 8px;
 }
 
@@ -71,7 +76,6 @@ body {
 .swiper-button-next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     padding: 0;
     border: 0;
     outline: none;
@@ -101,7 +105,8 @@ body {
     z-index: 1;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.76);
-    left: -16px;
+    left: 94%;
+    top: 57%;
 }
 
 .swiper-button-next::after {
@@ -112,7 +117,7 @@ body {
 .swiper-button-prev {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 57%;
     padding: 0;
     border: 0;
     outline: none;
@@ -142,7 +147,7 @@ body {
     z-index: 1;
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.76);
-    left: -16px;
+    left: 0%;
 }
 
 .swiper-button-prev::after {
@@ -151,7 +156,7 @@ body {
 }
 
 .swiper-pagination {
-    left: 447px;
+    left: 83%;
     width: 67px;
     height: 27px;
     display: -webkit-box;
@@ -170,12 +175,14 @@ body {
     grid-gap: 4px;
     z-index: 2;
     right: 24px;
-    bottom: 20px;
+    bottom: 5%;
     color: #ffffff;
     font-size: 13px;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+
 
 .slide-text1 {
     grid-gap: 20px;
@@ -268,7 +275,7 @@ body {
     grid-gap: 8px;
 }
 
-.slide-text3>div {
+.slide-text3 > div {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
