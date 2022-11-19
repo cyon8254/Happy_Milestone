@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/school/*")
 public class schoolController {
 
-    @GetMapping("/schoolList")
+    @GetMapping("/school_list")
     public void schoolList() {
     };
 
-    @GetMapping("/schoolHelp")
+    @GetMapping("/school_help")
     public void schoolHelp() {
     };
 
-    @GetMapping("/schoolDetail")
+    @GetMapping("/school_detail")
     public void schoolDetail() {
     };
 
