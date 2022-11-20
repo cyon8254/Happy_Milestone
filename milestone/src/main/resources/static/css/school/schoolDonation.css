@@ -335,3 +335,39 @@ label{
 input[type=checkbox]{
     cursor: pointer;
 }
+
+/* 미디어쿼리 */
+@media screen and (max-width: 768px) {
+
+    div.wholePage {
+        width: auto;
+        margin: 30px 10px 130px 10px;
+    }
+
+    .wrapper{
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    .long{
+        margin: 0;
+        width: 100%;
+    }
+
+    .title{
+        flex-direction: column;
+    }
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .innerRight {
+        width: 584px;
+    }
+
+    .checkboxMedia, .awesome-checkbox{
+        margin-right: 5px;
+    }
+}

@@ -5,11 +5,11 @@ let check = false;
 let check2 = false;
 
 $(".location").mouseover(function(){
-    $(this).css({"padding-bottom":"10px"})
+    $(this).css({"transform":"translateY(-10px)"})
 })
 
 $(".location").mouseout(function(){
-    $(this).css({"padding-bottom":"0"})
+    $(this).css({"transform":"translateY(0px)"})
 })
 
 $(".wholeLocation").css({"background-color":"transparent"});
