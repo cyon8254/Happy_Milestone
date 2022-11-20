@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>보육원 | 결제</title>
+    <link rel="stylesheet" type="text/css"
+          href="//p25.zdassets.com/hc/theming_assets/9204604/360002309011/style.css?digest=12256508972825">
+</head>
+
+<link href="/css/school/schoolDonation.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="/css/fix/header.css">
+<link rel="stylesheet" href="/css/fix/footer.css">
+<link rel="stylesheet" href="/css/fix/menu.css"/>
+<link rel="icon" href="/imgs/fix/favicon.png">
+
+<body>
+<header th:replace="/fix/header.html :: header"></header>
+
+<div class="wholePage">
+
+    <div class="title">결제하기</div>
+
+    <div class="wrapper">
+        <div class="long">
+            <section class="leftFirst">
+                <div>
+                    <h3 id="miniTitle">주문내역</h3>
+                    <div class="secWrapper">
+                        <div class="schoolImg">
+                            <img data-type="1-1" width="120px" height="auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQahV0-oS2Aq2g6lri5oICW5DbPtgb1Xa1Dew&usqp=CAU">
+                        </div>
+                        <div class="schoolInfo">
+                            <h4 id="schoolName">명륜보육원</h4>
+                            <h5 id="schoolAddress">서울시 강남구 역삼동</h5>
+                        </div>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col width="400px">
+                            <col width="104px">
+                            <col width="104px">
+                            <col width="128px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th style="text-align: left;">기본항목</th>
+                            <th>수량</th>
+                            <th>가격</th>
+                            <th>작업일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="item">촬영 6시간</div>
+                                <ul>
+                                    <li class="OrderGigInfo__option-table-option-list-item wrap" key="822">
+                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_check.svg" alt="check-mark" width="13px" style="margin-right: 12px;">
+                                        <div>
+                                            <span>작업시간(분)</span>
+                                        </div>
+                                        <span>: 360</span>
+                                        <span>분</span>
+                                        <div class="icon-wrapper">
+                                            <img width="24px" aria-hidden="true" data-toggle="tooltip" data-placement="right" src="https://d2v80xjmx68n4w.cloudfront.net/assets/order/info.png" alt="info-mark" data-title="각 패키지 별 작업 가능한 최대 시간입니다." data-original-title="" title="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="OrderGigInfo__option-table-cell">
+                                <div class="OrderGigInfo__option-table-cell-item first-row" style="text-align: center;">
+                                    <button class="order-btn-brand-gray margin-right-5">
+                                        <span>-</span>
+                                    </button>
+                                    <span class="OrderGigInfo__option-table-count">1</span>
+                                    <button class="order-btn-brand-gray margin-left-5">
+                                        <span>+</span>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="OrderGigInfo__option-table-cell-item first-row" style="text-align: center;">1 일</div>
+                            </td>
+                            <td>
+                                <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-price-item first-row" style="text-align: center;">1,360,000원</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="leftSecond">
+                <div class="leftSecondInner">
+                    <div>
+                        <div id="donater">의뢰인 정보</div>
+                        <div>
+                            <ul>
+                                <li>∙본인 확인 후 구매가 가능합니다. (첫 결제 1회 한정)</li>
+                                <li>∙인증된 정보에 따라 실명이 자동 업데이트됩니다</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="terms">
+                        <div class="termsAll">
+                            <div>
+                                <label>
+                                    <input id="" type="checkbox">
+                                    <span class=""></span>
+                                </label>
+                            </div>
+                            <h3 class="OrderAgreeTerms__all-check-label" style="font:inherit; margin-bottom: 0;font-weight: 500;">이용약관 전체 동의</h3>
+                        </div>
+                        <div class="termsAll">
+                            <div class="awesome-checkbox">
+                                <label>
+                                    <input id="authenticationAgeCheckbox" type="checkbox">
+                                    <span class="awesome-checkbox-body"></span>
+                                </label>
+                            </div>
+                            <p id="authenticationAgeMessage" class="OrderAgreeTerms__check-label">
+                                만 14세 이상입니다. (필수)
+                            </p>
+                        </div>
+
+                        <div class="termsAll">
+                            <div class="awesome-checkbox">
+                                <label>
+                                    <input id="authenticationServicePolicyCheckbox" type="checkbox">
+                                    <span class="awesome-checkbox-body white-check small-check"></span>
+                                </label>
+                            </div>
+                            <p id="authenticationServicePolicyMessage" class="OrderAgreeTerms__check-label">
+                                <a class="underline-simple-link" style="color: #555969;" href="https://support.kmong.com/hc/ko/articles/900005915466" target="_blank"> 서비스 이용약관
+                                </a>에 동의합니다.  (필수)
+                            </p>
+                        </div>
+                        <div class="termsAll">
+                            <div class="awesome-checkbox">
+                                <label>
+                                    <input id="authenticationPrivacyPolicyCheckbox" type="checkbox">
+                                    <span class="awesome-checkbox-body white-check small-check"></span>
+                                </label>
+                            </div>
+                            <p id="authenticationPrivacyPolicyMessage" class="OrderAgreeTerms__check-label">
+                                <a class="underline-simple-link" style="color: #555969;" href="https://support.kmong.com/hc/ko/articles/9619995282713" target="_blank"> 개인정보 수집•이용
+                                </a>에 동의합니다.
+                                (필수)
+                            </p>
+                        </div>
+
+                    </div>
+            </section>
+        </div>
+
+        <div class="rightLong">
+            <div class="innerRight">
+                <h5 class="innrRightIn">
+                    <span>총 서비스 금액</span>
+                    <span class="pay">1,360,000<span>원</span></span>
+                </h5>
+                <h5 class="innrRightIn">
+                    <span>쿠폰할인</span>
+                    <span class="coupon">0<span>원</span></span>
+                </h5>
+                <h5 class="innrRightIn">
+                    <span>캐시사용</span>
+                    <span class="cash">0<span>원</span></span>
+                </h5>
+                <div id="justBorder"></div>
+                <h5 class="innrRightIn">
+                    <span>총 결제금액</span>
+                    <span class="totalAmount">1,360,000<span>원</span></span>
+                </h5>
+                <div class="checkOk">
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div id="checkOk2">
+                        주문 내용을 확인하였으며, 결제에 동의합니다. (필수)
+                    </div>
+                </div>
+                <div>
+                    <button class="orderButton"><span id="payButton" style="font-weight:bolder;">결제하기</span></button>
+                </div>
+                <p class="endMent">서비스 제공이 완료된 이후에 전문가에게 결제 대금이 전달됩니다.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<footer th:replace="/fix/footer.html :: footer"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/school/schoolDonation.js"></script>
+<script src="/js/fix/header.js"></script>
+</html>

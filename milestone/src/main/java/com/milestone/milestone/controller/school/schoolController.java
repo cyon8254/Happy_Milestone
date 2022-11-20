@@ -20,4 +20,9 @@ public class schoolController {
     public void schoolDetail() {
     };
 
+    @GetMapping("/school_donation")
+    public void schoolDonation() {
+    };
+
+
 }
