@@ -1,4 +1,5 @@
 function find() {
+    console.log("안녕")
     new daum.Postcode({
         oncomplete: function (data) {
             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
@@ -15,6 +16,7 @@ function find() {
             }
             console.log($("input [name='address']"));
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
+            $("input[name='zipCode']").val(data.zonecode);
             $("input[name='address']").val(addr);
             // 커서를 상세주소 필드로 이동한다.
             $("input[name='addressDetail']")[0].focus();
@@ -26,12 +28,12 @@ function find() {
 const $moreSelect = $('div.inputCos');
 const $moreSelectList = $('div.moreSelectWrap');
 const $moreSelectItems = $('div.moreSelectItem');
-const $inputText = $('div.inputText');
+const $inputBank = $('input[name = "bank"]');
 
 $moreSelectItems.on('click', function () {
     console.log($(this).text());
-    $inputText.css("color", '#303441');
-    $inputText.val($(this).text());
+    $inputBank.css("color", '#303441');
+    $inputBank.val($(this).text());
     $moreSelectList.hide();
 })
 
@@ -46,3 +48,17 @@ document.addEventListener('click', function (e) {
         $moreSelectList.toggle();
     }
 })
+
+/*--------------------------게시글 작성 글자수 제한----------------------------*/
+const $textareaCos = $('.textareaCos');
+const $contentLength = $('.contentLength');
+const maxContent = 500;
+
+$textareaCos.keyup(function(e){
+    $contentLength.text($textareaCos.val().length)
+    if($textareaCos.val().length > maxContent){
+        $textareaCos.val($textareaCos.val().substring(0, maxContent));
+        $contentLength.text(maxContent);
+    }
+})
+

@@ -134,7 +134,7 @@ input[type="radio"]:checked + .radioCos:after {
 }
 
 .precautionCheckCos {
-    background: url("/imgs/myPage/checkWhite(체크).png");
+    background: url("/imgs/myPage/checkWhite.png");
     background-size: 19px;
     background-color: #ffffff;
     border: 1px solid rgb(207, 208, 209);

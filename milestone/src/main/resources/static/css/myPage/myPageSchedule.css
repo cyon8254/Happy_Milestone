@@ -48,6 +48,8 @@
     width: 12%;
 }
 
+/*모달창*/
+
 .modalWrap {
     display: none;
     z-index: 21;
@@ -114,6 +116,8 @@
 .modalBtn:hover {
     filter: brightness(90%);
 }
+
+/*페이지*/
 
 .pageBtns{
     margin-top: 48px;
