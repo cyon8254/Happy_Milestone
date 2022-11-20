@@ -74,8 +74,6 @@ const $closeIconRight = $("#close-icon-right");
 const $searchIcon = $("#search-icon");
 
 $(function () {
-    $leftSubMenu.hide();
-    $leftCloseIcon.hide();
     $menuIcon.click(function () {
         console.info("메뉴 누름");
         $leftSubMenu.fadeToggle(300);
@@ -104,8 +102,6 @@ $(function () {
 /*----------------------------------------------*/
 
 $(function () {
-    $rightSubMenu.hide();
-    $closeIconRight.hide();
     $searchIcon.click(function () {
         console.info("검색 누름");
         $leftCloseIcon.hide();
@@ -148,3 +144,9 @@ $mobileSearch5.on("blur", function () {
 });
 
 
+$(window).load(function () {
+    $leftSubMenu.css('display', 'none');
+    $leftCloseIcon.css('display', 'none');
+    $rightSubMenu.css('display', 'none');
+    $closeIconRight.css('display', 'none');
+})
