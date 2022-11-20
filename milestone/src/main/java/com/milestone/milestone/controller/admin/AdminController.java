@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/admin/*")
 public class AdminController {
-    @GetMapping("community")
+    @GetMapping("talent")
     public void community(){};
 
     @GetMapping("history")

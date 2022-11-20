@@ -577,7 +577,17 @@ input[type = 'checkbox']:checked + .checkboxCos {
 .joinBtn:active {
     box-shadow: rgb(17 106 212 / 20%) 0px 0px 1px 2px;
 }
-
-
+.left_sub_menu{
+    display: none;
+}
+#close-icon{
+    display: none;
+}
+.right_sub_menu{
+    display: none;
+}
+#close-icon-right{
+    display: none;
+}
 
 
