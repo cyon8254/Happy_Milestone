@@ -18,561 +18,562 @@
 
 <header th:replace="/fix/header.html :: header"></header>
 
-    <!-- ================================================================================================================ -->
+
+<!-- ================================================================================================================ -->
 
 
-    <div class="main" style="position: relative;">
+<div class="main" style="position: relative;">
 
-        <div style="display: flex; justify-content: space-between; ">
-            <h3 style="font-size: 23px;">여러분의 재능을 나눠주세요.</h3>
-            <div style="padding-top: 20px">
-                <a role="link" color="yellow" href="#" class="talentButton">
-                    <span class="talentButton1">글 작성하기</span>
-                </a>
+    <div style="display: flex; justify-content: space-between; ">
+        <h3 style="font-size: 23px;">여러분의 재능을 나눠주세요.</h3>
+        <div style="padding-top: 20px">
+            <a role="link" color="yellow" href="#" class="talentButton">
+                <span class="talentButton1">글 작성하기</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="talentChoice">
+
+        <div class="talentChoicebar">
+
+            <div class="all">
+                <div>전체</div>
             </div>
+
+            <div class="education">
+                <div>교육</div>
+            </div>
+
+            <div class="exercise">
+                <div>운동</div>
+            </div>
+
+            <div class="music">
+                <div>음악</div>
+            </div>
+
+            <div class="art">
+                <div>미술</div>
+            </div>
+
+            <div class="program">
+                <div>I.T</div>
+            </div>
+
+            <div id="pseudo"></div>
         </div>
 
-        <div class="talentChoice">
+        <!-- ====================================================================================================== -->
+        <!-- 검색창 -->
 
-            <div class="talentChoicebar">
+        <div class="searchBox realSearhBox">
+            <input type="text" placeholder=" &nbsp;제목을 검색하세요" value="" style="border: solid white;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                 focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+                <path xmlns="http://www.w3.org/2000/svg"
+                      d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
+                </path>
+            </svg>
+        </div>
 
-                <div class="all">
-                    <div>전체</div>
+        <!-- ====================================================================================================== -->
+
+        <section class="loc centerContent">
+            <div class="loactions" style="padding-top: 65px; display: none; height: 150px;">
+                <div class="location wholeLocation"
+                     style="background-color: transparent; border: 1px solid black;">전체
                 </div>
-
-                <div class="education">
-                    <div>교육</div>
-                </div>
-
-                <div class="exercise">
-                    <div>운동</div>
-                </div>
-
-                <div class="music">
-                    <div>음악</div>
-                </div>
-
-                <div class="art">
-                    <div>미술</div>
-                </div>
-
-                <div class="program">
-                    <div>I.T</div>
-                </div>
-
-                <div id="pseudo"></div>
+                <div class="location location2">서울</div>
+                <div class="location location2">경기도</div>
+                <div class="location location2">강원도</div>
+                <div class="location location2">충청도</div>
+                <div class="location location2">전라도</div>
+                <div class="location location2">경상도</div>
+                <div class="location location2">제주도</div>
             </div>
 
-            <!-- ====================================================================================================== -->
-            <!-- 검색창 -->
+            <!-- 드롭다운 -->
 
-            <div class="searchBox realSearhBox">
-                <input type="text" placeholder=" &nbsp;제목을 검색하세요" value="" style="border: solid white;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-                     focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                    <path xmlns="http://www.w3.org/2000/svg"
-                          d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
-                    </path>
-                </svg>
-            </div>
-
-            <!-- ====================================================================================================== -->
-
-            <section class="loc centerContent">
-                <div class="loactions" style="padding-top: 65px; display: none; height: 150px;">
-                    <div class="location wholeLocation"
-                         style="background-color: transparent; border: 1px solid black;">전체
-                    </div>
-                    <div class="location location2">서울</div>
-                    <div class="location location2">경기도</div>
-                    <div class="location location2">강원도</div>
-                    <div class="location location2">충청도</div>
-                    <div class="location location2">전라도</div>
-                    <div class="location location2">경상도</div>
-                    <div class="location location2">제주도</div>
-                </div>
-
-                <!-- 드롭다운 -->
-
-                <div class="dropdown"
-                     style="justify-content: flex-end; position: relative; display: block; padding-left: 13px;">
-                    <button class="dropbtn">
-                        <span class="dropbtn_content placeholder">전체</span>
-                        <span class="dropbtn_click"
-                              style=" font-size : 16px; color : #3b3b3b; float:right;">
+            <div class="dropdown"
+                 style="justify-content: flex-end; position: relative; display: block; padding-left: 13px;">
+                <button class="dropbtn">
+                    <span class="dropbtn_content placeholder">전체</span>
+                    <span class="dropbtn_click"
+                          style=" font-size : 16px; color : #3b3b3b; float:right;">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                          focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0"><polygon
                             id="Triangle"
                             transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) "
                             points="12 9 18 15 6 15"></polygon></svg>
                          </span>
-                    </button>
-                    <div class="dropdown-content" style="position: absolute;">
-                        <div class="dropLoc checkSeoul">서울</div>
-                        <div class="dropLoc checkKyungki">경기도</div>
-                        <div class="dropLoc checkKangwon">강원도</div>
-                        <div class="dropLoc checkChungcheong">충청도</div>
-                        <div class="dropLoc checkJeolla">전라도</div>
-                        <div class="dropLoc checkGyeong">경상도</div>
-                        <div class="dropLoc checkJeju">제주도</div>
-                    </div>
+                </button>
+                <div class="dropdown-content" style="position: absolute;">
+                    <div class="dropLoc checkSeoul">서울</div>
+                    <div class="dropLoc checkKyungki">경기도</div>
+                    <div class="dropLoc checkKangwon">강원도</div>
+                    <div class="dropLoc checkChungcheong">충청도</div>
+                    <div class="dropLoc checkJeolla">전라도</div>
+                    <div class="dropLoc checkGyeong">경상도</div>
+                    <div class="dropLoc checkJeju">제주도</div>
                 </div>
-                <!-- ======================================================== -->
-            </section>
+            </div>
+            <!-- ======================================================== -->
+        </section>
 
-            <!--==============================================================-->
+        <!--==============================================================-->
 
-        </div>
-        <!--==================================================all===========================================-->
-        <!--==================================================all===========================================-->
-        <!--==================================================all===========================================-->
-        <div class="talentBoxAll" id="all">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
+    </div>
+    <!--==================================================all===========================================-->
+    <!--==================================================all===========================================-->
+    <!--==================================================all===========================================-->
+    <div class="talentBoxAll" id="all">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
 
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
 
-                    <div class="talentBox4">
+                <div class="talentBox4">
 
-                        <p class="talentTitle">김의엽킹왕짱</p>
+                    <p class="talentTitle">김의엽킹왕짱</p>
 
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
 
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
                         </div>
-
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
                         </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- =============================================================================================== -->
-        </div>
-
-
-        <!--==================================================education===========================================-->
-        <!--==================================================education===========================================-->
-        <!--==================================================education===========================================-->
-        <div class="talentBoxAll" id="education">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
                         </div>
-
                     </div>
+
                 </div>
-            </article>
+            </div>
+        </article>
 
 
-            <article class="talentBox">
-                <div class="talentBox2">
+        <article class="talentBox">
+            <div class="talentBox2">
 
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
 
-                    <div class="talentBox4">
+                <div class="talentBox4">
 
-                        <p class="talentTitle">김의엽킹왕짱</p>
+                    <p class="talentTitle">김의엽킹왕짱</p>
 
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
 
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
                         </div>
-
-                    </div>
-                </div>
-            </article>
-            <!-- =============================================================================================== -->
-        </div>
-
-        <!--==================================================exercise===========================================-->
-        <!--==================================================exercise===========================================-->
-        <!--==================================================exercise===========================================-->
-        <div class="talentBoxAll" id="exercise">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
                         </div>
-
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
                         </div>
-
                     </div>
+
                 </div>
-            </article>
-            <!-- =============================================================================================== -->
-        </div>
+            </div>
+        </article>
 
-        <!--==================================================music===========================================-->
-        <!--==================================================music===========================================-->
-        <!--==================================================music===========================================-->
-        <div class="talentBoxAll" id="music">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
+        <!-- =============================================================================================== -->
+    </div>
 
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
 
-                    <div class="talentBox4">
+    <!--==================================================education===========================================-->
+    <!--==================================================education===========================================-->
+    <!--==================================================education===========================================-->
+    <div class="talentBoxAll" id="education">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
 
-                        <p class="talentTitle">김의엽킹왕짱</p>
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
 
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
+                <div class="talentBox4">
 
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
                         </div>
-
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
                         </div>
-
-                    </div>
-                </div>
-            </article>
-            <!-- =============================================================================================== -->
-        </div>
-        <!--==================================================art===========================================-->
-        <!--==================================================art===========================================-->
-        <!--==================================================art===========================================-->
-        <div class="talentBoxAll" id="art">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
                         </div>
-
                     </div>
+
                 </div>
-            </article>
+            </div>
+        </article>
 
 
-            <article class="talentBox">
-                <div class="talentBox2">
+        <article class="talentBox">
+            <div class="talentBox2">
 
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
 
-                    <div class="talentBox4">
+                <div class="talentBox4">
 
-                        <p class="talentTitle">김의엽킹왕짱</p>
+                    <p class="talentTitle">김의엽킹왕짱</p>
 
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
 
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
                         </div>
-
-                    </div>
-                </div>
-            </article>
-            <!-- =============================================================================================== -->
-        </div>
-        <!--==================================================program===========================================-->
-        <!--==================================================program===========================================-->
-        <!--==================================================program===========================================-->
-        <div class="talentBoxAll" id="program">
-            <!-- =============================================================================================== -->
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
                         </div>
-
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="talentBox">
-                <div class="talentBox2">
-
-                    <div class="talentBox3">
-                        <img src="../imgs/myPage/normalProfile.png" class="talentImg">
-                    </div>
-
-                    <div class="talentBox4">
-
-                        <p class="talentTitle">김의엽킹왕짱</p>
-
-                        <p class="talentContent">감자탕을 먹읍시다!</p>
-
-                        <div class="talentboxs">
-                            <div class="talentType">
-                                <img src="/imgs/talent/care2.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
-                            </div>
-                            <div class="talentPlace">
-                                <img src="/imgs/talent/pin.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
-                            </div>
-                            <div class="talentTime">
-                                <img src="/imgs/talent/mylove.png"
-                                     style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
-                                11. 18
-                            </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
                         </div>
-
                     </div>
+
                 </div>
-            </article>
-            <!-- =============================================================================================== -->
-        </div>
-        <!-- ======================연필=========================================================== -->
+            </div>
+        </article>
+        <!-- =============================================================================================== -->
+    </div>
+
+    <!--==================================================exercise===========================================-->
+    <!--==================================================exercise===========================================-->
+    <!--==================================================exercise===========================================-->
+    <div class="talentBoxAll" id="exercise">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
 
 
-        <div id="pencil" style="text-decoration: none; color:black">
-            <div color="yellow" class="e190ttj42 css-5l78y0 eklkj752 rightFixButton">
-                <span class="css-1oteowz eklkj751"></span>
-                <span class="css-0 ">
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!-- =============================================================================================== -->
+    </div>
+
+    <!--==================================================music===========================================-->
+    <!--==================================================music===========================================-->
+    <!--==================================================music===========================================-->
+    <div class="talentBoxAll" id="music">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!-- =============================================================================================== -->
+    </div>
+    <!--==================================================art===========================================-->
+    <!--==================================================art===========================================-->
+    <!--==================================================art===========================================-->
+    <div class="talentBoxAll" id="art">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!-- =============================================================================================== -->
+    </div>
+    <!--==================================================program===========================================-->
+    <!--==================================================program===========================================-->
+    <!--==================================================program===========================================-->
+    <div class="talentBoxAll" id="program">
+        <!-- =============================================================================================== -->
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+
+        <article class="talentBox">
+            <div class="talentBox2">
+
+                <div class="talentBox3">
+                    <img src="../imgs/myPage/normalProfile.png" class="talentImg">
+                </div>
+
+                <div class="talentBox4">
+
+                    <p class="talentTitle">김의엽킹왕짱</p>
+
+                    <p class="talentContent">감자탕을 먹읍시다!</p>
+
+                    <div class="talentboxs">
+                        <div class="talentType">
+                            <img src="/imgs/talent/care2.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp운동
+                        </div>
+                        <div class="talentPlace">
+                            <img src="/imgs/talent/pin.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -6px; margin-left: -10px;">&nbsp서울
+                        </div>
+                        <div class="talentTime">
+                            <img src="/imgs/talent/mylove.png"
+                                 style="width: 25px; height: 25px; margin-bottom: -7px; margin-left: -15px;">&nbsp2022.
+                            11. 18
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!-- =============================================================================================== -->
+    </div>
+    <!-- ======================연필=========================================================== -->
+
+
+    <div id="pencil" style="text-decoration: none; color:black">
+        <div color="yellow" class="e190ttj42 css-5l78y0 eklkj752 rightFixButton">
+            <span class="css-1oteowz eklkj751"></span>
+            <span class="css-0 ">
                         <span role="img" rotate="0" class="css-aah4od e181xm9y1">
 
                             <div class="txt">
@@ -584,106 +585,103 @@
 
 
                     </span>
-            </div>
         </div>
-
     </div>
 
-    <!-- ================================================================================================================ -->
-    <!-- 페이지 버튼 -->
+</div>
 
-    <div class="pageBtns flexPublic" style="padding-bottom :100px">
-        <a class="pageBtn flexPublic">
-            <svg class="prevNextBtn flexPublic">
-                <path xmlns="http://www.w3.org/2000/svg"
-                      d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z">
-                </path>
-            </svg>
-        </a>
-        <code class="pageBtn flexPublic page">
-            <div>1</div>
-        </code>
-        <a class="pageBtn flexPublic">
-            <div>2</div>
-        </a>
-        <a class="pageBtn flexPublic">
-            <div>3</div>
-        </a>
-        <a class="pageBtn flexPublic">
-            <svg class="prevNextBtn flexPublic">
-                <path xmlns="http://www.w3.org/2000/svg"
-                      d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"
-                      transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) ">
-                </path>
-            </svg>
-        </a>
-    </div>
-    <!--======================================여기는 모다알알알알 창창창=========================================================-->
-    <!--======================================여기는 모다알알알알 창창창=========================================================-->
-    <!--======================================여기는 모다알알알알 창창창=========================================================-->
+<!-- ================================================================================================================ -->
+<!-- 페이지 버튼 -->
 
-    <div id="talentModal" style="display:flex; justify-content: center;padding-top: 40px;">
+<div class="pageBtns flexPublic" style="padding-bottom :100px">
+    <a class="pageBtn flexPublic">
+        <svg class="prevNextBtn flexPublic">
+            <path xmlns="http://www.w3.org/2000/svg"
+                  d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z">
+            </path>
+        </svg>
+    </a>
+    <code class="pageBtn flexPublic page">
+        <div>1</div>
+    </code>
+    <a class="pageBtn flexPublic">
+        <div>2</div>
+    </a>
+    <a class="pageBtn flexPublic">
+        <div>3</div>
+    </a>
+    <a class="pageBtn flexPublic">
+        <svg class="prevNextBtn flexPublic">
+            <path xmlns="http://www.w3.org/2000/svg"
+                  d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"
+                  transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) ">
+            </path>
+        </svg>
+    </a>
+</div>
+<!--======================================여기는 모다알알알알 창창창=========================================================-->
+<!--======================================여기는 모다알알알알 창창창=========================================================-->
+<!--======================================여기는 모다알알알알 창창창=========================================================-->
 
-        <div class="css-1ioszc5 ei7plsv3">
-            <div id="modal-content" class="css-1i31rsc ei7plsv0">
-                <div class="css-1wv77pg ei7plsv1">
-                    <button role="button" color="default"
-                            data-testid="close-outside-button" class="css-1u9286t eklkj752"><span
-                            class="css-1oteowz eklkj751"><span role="img" color="#e4e5ed" rotate="0"
-                                                               class="css-nh621w e181xm9y1"><svg width="24" height="24"
-                                                                                                 viewBox="0 0 24 24"
-                                                                                                 fill="currentColor"
-                                                                                                 aria-hidden="true"
-                                                                                                 focusable="false"
-                                                                                                 preserveAspectRatio="xMidYMid meet"
-                                                                                                 class="css-7kp13n e181xm9y0">
-                                    <path xmlns="http://www.w3.org/2000/svg"
-                                          d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z">
-                                    </path>
-                                </svg></span></span></button>
+
+<div class="modalWrap">
+    <div class="modalScope flexCol">
+        <div class="modalHead flexCol flexPublic">
+
+            <div style="display:flex; justify-content: space-between;">
+                <div style="padding-top: 15px;">
+                    <div class="css-1gtanqs e1y81j3a3">
+                        <div class="css-14prtx6 e1dh882h2">서울</div>
+                    </div>
                 </div>
-                <section class="css-i7qp e1y81j3a0">
-                    <div class="css-9c1zud e1y81j3a1">
-                        <div>
-                            <div class="css-1gtanqs e1y81j3a3">
-                                <div class="css-14prtx6 e1dh882h2">서울</div>
+                <span class="css-1oteowz eklkj751"><span role="img" color="#e4e5ed" rotate="0"
+                                                         class="css-nh621w e181xm9y1"><svg
+                        width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        focusable="false" style="cursor: pointer"
+                        preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0"><path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path></svg></span></span>
+            </div>
+
+            <div style="display:flex; justify-content: space-between; border-bottom: 1px solid rgb(228, 229, 237); padding-bottom: 15px;margin-top: -15px;">
+                <div style="padding-top: 10px;font-size: 18px;margin-top: 15px;">
+                    제가 음악을 아이들에게 가르치겠습니다.
+                </div>
+                <div>
+                    <a role="link" color="yellow" href="#"
+                       class="css-8x0gm eklkj752"><span class="css-1oteowz eklkj751">글작성 완료</span></a>
+                </div>
+            </div>
+
+            <div>
+
+
+                <div style="display:flex; justify-content: space-between; padding-top: 35px;">
+                    <div class="abc">
+                     <span class="abcd">
+                         <img src="../imgs/talent/normalProfile.png"
+                              style="border-radius: 10px; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block;"></span>
+                        <div class="css-pea598 e1y81j3a5">
+
+                            <div style="padding-top:20px; padding-bottom: 40px; width: 196px">
+                                <img src="../imgs/talent/care.png" style="width:30px; height:30px; ">
+                                <p>운동</p>
                             </div>
-                            <h2 class="css-qe1g4v e1y81j3a2">제가 헬스를 가르치겠습니다.</h2>
+
+                            <div style="padding-bottom: 40px; width: 196px">
+                                <img src="../imgs/talent/pin.png" style="width:30px;height:30px; ">
+                                <p>서울</p>
+                            </div>
+
+                            <div style="padding-bottom: 40px; width: 196px">
+                                <img src="../imgs/talent/mylove.png" style="width:30px;height:30px;">
+                                <p>2022. 11. 20</p>
+                            </div>
                         </div>
-                        <a role="link" color="yellow" href="/custom-project/requests?open=project_requests"
-                           class="css-8x0gm eklkj752"><span class="css-1oteowz eklkj751">글작성 완료</span></a>
+                        </span>
                     </div>
 
-
-                    <div class="css-qi5zkp e1y81j3a4">
-                        <div style="padding-right:50px">
-                            <span class="abc">
-                                <span class="abcd">
-                                    <img src="../imgs/talent/normalProfile.png"
-                                         style="border-radius: 10px;width: 200px; position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block;"></span>
-                            <div class="css-pea598 e1y81j3a5">
-
-                                <div style="padding-top:120px; padding-bottom: 40px; width: 196px">
-                                    <img src="../imgs/talent/care.png" style="width:30px; height:30px; ">
-                                    <p>운동</p>
-                                </div>
-
-                                <div style="padding-bottom: 40px; width: 196px">
-                                    <img src="../imgs/talent/pin.png" style="width:30px;height:30px; ">
-                                    <p>서울</p>
-                                </div>
-
-                                <div style="padding-bottom: 40px; width: 196px">
-                                    <img src="../imgs/talent/mylove.png" style="width:30px;height:30px;">
-                                    <p>2022. 11. 20</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- =============================오른쪽 칸================================================= -->
-
-
+                    <div>
                         <div class="css-1438eek e1y81j3a6">
                             <div class="css-13mgtqc e1y81j3a9">
                                 <h4 class="css-1re8ypy e1y81j3a7">프로젝트의 준비 상황</h4>
@@ -699,45 +697,41 @@
                             </div>
                             <div class="css-13mgtqc e1y81j3a9">
                                 <h4 class="css-1re8ypy e1y81j3a7">요구 사항</h4>
-                                <div class="css-d38zja e1y81j3a8">・ 공사 현장에서 현장 관리자가 구인 글을 등록하면 건설 인력이 지원을 하는 매칭 플랫폼
+                                <div class="css-d38zja e1y81j3a8">・ 공사 현장에서 현장 관리자가 구인 글을 등록하면 건설 인력이 지원을 하는 매칭
+                                    플랫폼
                                     구축<br>・
-                                    건설 인력 뿐 아니라 향후 지게차 기사에 대한 매칭도 진행할 예정<br>・ 결제 시 포인트로 지급하고, 기존 운영 중인 자사몰에서 사용할 수 있도록
+                                    건설 인력 뿐 아니라 향후 지게차 기사에 대한 매칭도 진행할 예정<br>・ 결제 시 포인트로 지급하고, 기존 운영 중인 자사몰에서 사용할
+                                    수 있도록
+                                    계정 연동
+                                    등이 필요<br>・ 하나의 앱에서 회원 유형에 따라 화면이 바뀌어 보이도록 개발
+                                </div>
+
+                                <h4 class="css-1re8ypy e1y81j3a7">요구 사항</h4>
+
+                                <div class="css-d38zja e1y81j3a8">・ 공사 현장에서 현장 관리자가 구인 글을 등록하면 건설 인력이 지원을 하는 매칭
+                                    플랫폼
+                                    구축<br>・
+                                    건설 인력 뿐 아니라 향후 지게차 기사에 대한 매칭도 진행할 예정<br>・ 결제 시 포인트로 지급하고, 기존 운영 중인 자사몰에서 사용할
+                                    수 있도록
                                     계정 연동
                                     등이 필요<br>・ 하나의 앱에서 회원 유형에 따라 화면이 바뀌어 보이도록 개발
                                 </div>
                             </div>
-                            <div class="css-13mgtqc e1y81j3a9">
-                                <h4 class="css-1re8ypy e1y81j3a7">상세 기능</h4>
-                                <div class="css-d38zja e1y81j3a8">1) 의뢰자 (현장 관리자)<br>・ 회원가입/로그인<br>・ 건설 인력 모집 등록, 지원자 확인
-                                    /
-                                    미팅 신청, 채팅 기능, 진행 현황<br>・ 결제, 리뷰/후기, 자사몰에서 포인트 이용, 기타 기능 <br> <br>2) 지원자 (건설 인력)<br>・
-                                    회원가입/로그인<br>・ 의뢰 리스트/지원하기, 프로필 작성하기, 채팅 기능<br>・ 리뷰/후기, 기타 기능<br> <br>3) 관리자<br>・ 회원
-                                    관리 /
-                                    의뢰 관리 / 매칭 관리 / 결제 관리 / 리뷰 관리 / 그 외 기능 등
-                                </div>
-                            </div>
-                            <div class="css-13mgtqc e1y81j3a9">
-                                <h4 class="css-1re8ypy e1y81j3a7">레퍼런스</h4>
-                                <div class="css-d38zja e1y81j3a8">카카오T, 카카오대리운전</div>
-                            </div>
-                            <div class="css-13mgtqc e1y81j3a9">
-                                <h4 class="css-1re8ypy e1y81j3a7">투입인력</h4>
-                                <div class="css-d38zja e1y81j3a8">10.50 MM</div>
-                            </div>
+
                         </div>
+
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
-
 
     <!--======================================여기는 모다알알알알 창창창=========================================================-->
     <!--======================================여기는 모다알알알알 창창창=========================================================-->
     <!--======================================여기는 모다알알알알 창창창=========================================================-->
 
     <!-- ================================================================================================================ -->
-
+</div>
 <footer th:replace="/fix/footer.html :: footer"></footer>
 
 
