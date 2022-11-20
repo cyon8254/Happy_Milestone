@@ -248,14 +248,71 @@ li {
         height: 0px;
     }
     #mobile-video-text2{
-        margin: 0px;
+        margin-left: 10px;
         color: rgb(33, 34, 36);
-        font-size: 20px;
+        font-size: 19px;
         font-weight: bold;
         line-height: normal;
     }
     #mobile-video-text3{
         display: none;
+    }
+    #mobile-video4{
+        position: absolute;
+        width: 376px;
+        left: 56px;
+        bottom: 262px;
+    }
+    #mobile-video-text7-1{
+        display: none;
+    }
+    #mobile-video-text7-2{
+        display: none;
+    }
+    #mobile-video-text7-3{
+        display: none;
+    }
+    #mobile-video-text5-1{
+        height: 64px;
+        bottom: 97px;
+        left: 41px;
+    }
+    #mobile-video-text5-2{
+        height: 64px;
+        right: 355px;
+        bottom: 16px;
+    }
+    #mobile-video-text5-3{
+        height: 64px;
+        right: 751px;
+        top: 64px;
+    }
+    #mobile-video-text6-1{
+        position: absolute;
+        bottom: 17px;
+        left: 41px;
+    }
+    #mobile-video-text6-2{
+        position: absolute;
+        bottom: 17px;
+        left: 41px;
+    }
+    #mobile-video-text6-3{
+        position: absolute;
+        bottom: 17px;
+        left: 41px;
+    }
+    #video-id1{
+        display: none;
+    }
+    #video-id2{
+        display: block;
+        position: absolute;
+        left: 57px;
+        bottom: 263px;
+    }
+    #youtube1{
+        border-radius: 8px;
     }
 }
 
@@ -735,7 +792,7 @@ a {
 .video-text2 {
     margin: 0px;
     color: rgb(33, 34, 36);
-    font-size: 32px;
+    font-size: 31px;
     font-weight: bold;
     line-height: normal;
 }
@@ -753,7 +810,7 @@ a {
     overflow: hidden;
     height: 390px;
     cursor: pointer;
-    margin-left: 144px;
+    margin-left: 152px;
 }
 
 .video5 {
@@ -862,4 +919,7 @@ a {
     bottom: 0;
     background: rgba(0, 0, 0, .5);
     z-index: 9999999
+}
+.video-class2{
+    display: none;
 }
