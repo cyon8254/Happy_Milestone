@@ -1,3 +1,5 @@
+/*----------------유튜브 모달-------------------*/
+
 $(".video4 a").click(function () {
     $(".video_modal_popup").addClass("reveal"),
         $(".video_modal_popup .video-wrapper").remove(),
@@ -64,20 +66,21 @@ function wait(ms) {
 // 초기 실행
 setTimeout(typing, 1500);
 
-const search1 = $(".search3");
-const search2 = $(".search4");
-const text = $(".search-text1");
+/*----------검색창 커서 들어가고 나갔을때-------------*/
+const $search1 = $(".search3");
+const $search2 = $(".search4");
+const $searchText = $(".search-text1");
 
-search1.on("focus", function () {
-    $(search1).hide();
-    $(search2).show().focus();
-    $(search2).css('outline', 'none');
-    $(text).hide();
+$search1.on("focus", function () {
+    $search1.hide();
+    $search2.show().focus();
+    $search2.css('outline', 'none');
+    $searchText.hide();
 });
-search2.on("blur", function () {
-    $(search2).hide();
-    $(search2).val('');
-    $(search1).show();
-    $(search1).css('outline', 'none');
-    $(text).show();
+$search2.on("blur", function () {
+    $search2.hide();
+    $search2.val('');
+    $search1.show();
+    $search1.css('outline', 'none');
+    $searchText.show();
 });

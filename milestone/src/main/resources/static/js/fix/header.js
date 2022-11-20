@@ -1,34 +1,34 @@
-const navText1 = $("#nav-text1");
-const navText2 = $("#nav-text2");
-const navText3 = $("#nav-text3");
-const navText4 = $("#nav-text4");
-const yellow1 = $("#yellow1");
-const yellow2 = $("#yellow2");
-const yellow3 = $("#yellow3");
-const yellow4 = $("#yellow4");
+const $navText1 = $("#nav-text1");
+const $navText2 = $("#nav-text2");
+const $navText3 = $("#nav-text3");
+const $navText4 = $("#nav-text4");
+const $yellow1 = $("#yellow1");
+const $yellow2 = $("#yellow2");
+const $yellow3 = $("#yellow3");
+const $yellow4 = $("#yellow4");
 
 
 // noinspection DuplicatedCode,DuplicatedCode
 $(document).ready(function () {
-    $(navText1).hover(function () {
-        $(yellow1).show();
+    $navText1.hover(function () {
+        $yellow1.show();
     }, function () {
-        $(yellow1).hide();
+        $yellow1.hide();
     });
-    $(navText2).hover(function () {
-        $(yellow2).show();
+    $navText2.hover(function () {
+        $yellow2.show();
     }, function () {
-        $(yellow2).hide();
+        $yellow2.hide();
     });
-    $(navText3).hover(function () {
-        $(yellow3).show();
+    $navText3.hover(function () {
+        $yellow3.show();
     }, function () {
-        $(yellow3).hide();
+        $yellow3.hide();
     });
-    $(navText4).hover(function () {
-        $(yellow4).show();
+    $navText4.hover(function () {
+        $yellow4.show();
     }, function () {
-        $(yellow4).hide();
+        $yellow4.hide();
     });
 });
 
@@ -62,56 +62,89 @@ $closeBackground.on('click', function () {
 })
 
 
+/*----------------------------------------------*/
+/*--------------반응형 헤더 메뉴----------------*/
+/*----------------------------------------------*/
+
+const $leftCloseIcon = $("#close-icon");
+const $menuIcon = $("#menu-icon");
+const $leftSubMenu = $(".left_sub_menu");
+const $rightSubMenu = $(".right_sub_menu");
+const $closeIconRight = $("#close-icon-right");
+const $searchIcon = $("#search-icon");
+
 $(function () {
-    $(".left_sub_menu").hide();
-    $("#close-icon").hide();
-    $("#menu-icon").click(function () {
+    $leftSubMenu.hide();
+    $leftCloseIcon.hide();
+    $menuIcon.click(function () {
         console.info("메뉴 누름");
-        $(".left_sub_menu").fadeToggle(300);
-        $("#menu-icon").hide();
-        $("#close-icon").show();
-        $(".right_sub_menu").hide();
+        $leftSubMenu.fadeToggle(300);
+        $menuIcon.hide();
+        $leftCloseIcon.show();
+        $rightSubMenu.hide();
     });
-    $("#close-icon").click(function () {
+    $leftCloseIcon.click(function () {
         console.info("닫기 누름");
-        $(".left_sub_menu").fadeToggle(300);
-        $("#menu-icon").show();
-        $("#close-icon").hide();
+        $leftSubMenu.fadeToggle(300);
+        $menuIcon.show();
+        $leftCloseIcon.hide();
     });
 
     $(window).on('resize', function () {
         if (window.innerWidth >= 768) {
-            $(".left_sub_menu").hide();
-            $("#menu-icon").show();
-            $("#close-icon").hide();
+            $leftSubMenu.hide();
+            $menuIcon.show();
+            $leftCloseIcon.hide();
         }
     });
 });
+
+/*----------------------------------------------*/
+/*--------------반응형 헤더 검색----------------*/
+/*----------------------------------------------*/
 
 $(function () {
-    $(".right_sub_menu").hide();
-    $("#close-icon-right").hide();
-    $("#search-icon").click(function () {
+    $rightSubMenu.hide();
+    $closeIconRight.hide();
+    $searchIcon.click(function () {
         console.info("검색 누름");
-        $("#close-icon").hide();
-        $(".left_sub_menu").hide();
-        $(".right_sub_menu").fadeToggle(300);
-        $("#search-icon").hide();
-        $("#close-icon-right").show();
+        $leftCloseIcon.hide();
+        $leftSubMenu.hide();
+        $rightSubMenu.fadeToggle(300);
+        $searchIcon.hide();
+        $closeIconRight.show();
     });
-    $("#close-icon-right").click(function () {
+    $closeIconRight.click(function () {
         console.info("닫기 누름");
-        $("#menu-icon").show();
-        $(".right_sub_menu").fadeToggle(300);
-        $("#search-icon").show();
-        $("#close-icon-right").hide();
+        $menuIcon.show();
+        $rightSubMenu.fadeToggle(300);
+        $searchIcon.show();
+        $closeIconRight.hide();
     });
 
     $(window).on('resize', function () {
         if (window.innerWidth >= 768) {
-            $(".right_sub_menu").hide();
-            $("#search-icon").show();
-            $("#close-icon-right").hide();
+            $rightSubMenu.hide();
+            $searchIcon.show();
+            $closeIconRight.hide();
         }
     });
 });
+
+/*----------------------------------------------*/
+/*------------반응형 헤더 검색 텍스트-----------*/
+/*----------------------------------------------*/
+
+const $mobileSearch5 = $("#mobile-search5");
+const $mobileText1 = $("#mobile-auto-text1");
+
+$mobileSearch5.on("focus", function () {
+    console.log("누름");
+    $mobileText1.hide();
+});
+$mobileSearch5.on("blur", function () {
+    console.log("떠남");
+    $mobileText1.show();
+});
+
+
