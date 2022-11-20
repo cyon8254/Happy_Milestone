@@ -233,12 +233,38 @@ $(".wholeLocation").css({"border":"solid 1px black"});
 
 /*===================모달 창===========================*/
 
-$("#pencil").click(function() {
+/*$("#pencil").click(function() {
     $("#talentModal").css({"display": "block"})
 
 });
 
 
-$(".css-1u9286t").click(function() {
-    $("#talentModal").css({"display": "none"})
-});
+
+/*========================지수모달==========================*/
+
+
+let $cancels = $('#pencil');
+let $modalWrap = $('.modalWrap');
+let body = $('body');
+let $modalBtn = $('.modalBtn');
+let modalWrap = document.querySelector('.modalWrap');
+
+
+
+$cancels.on('click',function(){
+    $modalWrap.show();
+    body.css('overflow','hidden');
+})
+
+
+$(".css-1oteowz").click(function() {
+    $(".modalWrap").css({"display": "none"})
+})
+
+document.addEventListener('click',function(e){
+    if(e.target == modalWrap || e.target == $modalBtn[1]){
+        $modalWrap.hide();
+        body.css('overflow','auto');
+    }
+    console.log(e.target);
+})
