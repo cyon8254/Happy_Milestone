@@ -83,18 +83,21 @@ html {
 .mobile-menu-icon2 {
     display: none;
 }
-#close-icon{
+
+#close-icon {
     position: absolute;
     bottom: 27px;
     z-index: 11;
     right: 23%;
 }
-#close-icon-right{
+
+#close-icon-right {
     position: absolute;
     bottom: 18px;
     right: 10px;
     z-index: 11;
 }
+
 .logo1 {
     cursor: pointer;
     text-decoration: none;
@@ -577,17 +580,39 @@ input[type = 'checkbox']:checked + .checkboxCos {
 .joinBtn:active {
     box-shadow: rgb(17 106 212 / 20%) 0px 0px 1px 2px;
 }
-.left_sub_menu{
-    display: none;
-}
-#close-icon{
-    display: none;
-}
-.right_sub_menu{
-    display: none;
-}
-#close-icon-right{
+
+.left_sub_menu {
     display: none;
 }
 
+#close-icon {
+    display: none;
+}
+
+.right_sub_menu {
+    display: none;
+}
+
+#close-icon-right {
+    display: none;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.mobile-auto-text1 {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.mobile-text {
+    font-size: 21px;
+    margin-bottom: 11px;
+}
 

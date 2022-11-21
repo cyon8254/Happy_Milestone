@@ -10,7 +10,7 @@ $(".video4 a").click(function () {
             $(".video_modal_popup").removeClass("reveal")
     });
 /* ============================슬라이드 배너 글자 텍스트 애니메이션============================== */
-const $text = document.querySelector(".text");
+const text = document.querySelector(".text");
 
 // 글자 모음
 const letters = [
@@ -32,7 +32,7 @@ const typing = async () => {
 
     while (letter.length) {
         await wait(speed);
-        $text.innerHTML += letter.shift();
+        text.innerHTML += letter.shift();
     }
 
     // 잠시 대기
@@ -50,7 +50,7 @@ const remove = async () => {
         await wait(speed);
 
         letter.pop();
-        $text.innerHTML = letter.join("");
+        text.innerHTML = letter.join("");
     }
 
     // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
@@ -65,7 +65,6 @@ function wait(ms) {
 
 // 초기 실행
 setTimeout(typing, 1500);
-
 /*----------검색창 커서 들어가고 나갔을때-------------*/
 const $search1 = $(".search3");
 const $search2 = $(".search4");
