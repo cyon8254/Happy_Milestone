@@ -60,7 +60,8 @@ body {
 /*========================재능기부 선택===============================*/
 .talentChoice {
     display: flex;
-    padding-bottom: 15px
+    padding-bottom: 15px;
+    justify-content: space-between;
 }
 
 .talentChoicebar {
@@ -102,7 +103,6 @@ body {
 
 .program {
     padding-left: 25px;
-    padding-right: 400px;
     cursor: pointer;
 }
 
@@ -713,7 +713,7 @@ a {
     display: flex;
     flex-direction: column;
     row-gap: 28px;
-    overflow-y: scroll;
+   /* overflow-y: scroll;*/
 }
 
 .css-13mgtqc {
@@ -909,3 +909,271 @@ a {
 .modalBtn:hover {
     filter: brightness(90%);
 }
+
+/*==============카테고리=====================*/
+
+.inputCos {
+    width: 400px;
+    height: 42px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+}
+
+.moreSelectWrap{
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 400px;
+    background-color: #fff;
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 7px -4px;
+}
+.moreSelectItem{
+    padding: 12px;
+    font-size: 15px;
+    color: #303441;
+    width: 100%;
+
+}
+
+.moreSelectItem:hover{
+    background-color: rgb(247, 245, 250);
+}
+
+.arrowWrap {
+    padding: 9px;
+}
+
+.arrowColor {
+    fill: rgb(200, 202, 210);
+}
+
+/*=================두번째 지역=======================*/
+
+#inputCos {
+    width: 400px;
+    height: 42px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+}
+
+#moreSelectWrap{
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 400px;
+    background-color: #fff;
+    padding: 4px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 7px -4px;
+}
+.place{
+    padding: 12px;
+    font-size: 15px;
+    color: #303441;
+    width: 100%;
+
+}
+
+.place:hover{
+    background-color: rgb(247, 245, 250);
+}
+
+input[name = "talent"] {
+    outline: none;
+    width: 100%;
+    background-color: rgb(250, 250, 252);
+    border: none;
+}
+
+input[name = "talent"]::placeholder {
+    color: rgb(200, 201, 207);
+}
+
+#talentText {
+    width: 400px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+    height: 125px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.inputCos:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#inputCos:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#kim2:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+#kim2:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
+#kim2 {
+    width: 400px;
+    height: 42px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+}
+
+#dateTime {
+    width: 400px;
+    height: 42px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+}
+
+#dateTime:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+#dateTime:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+
+#talentText:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#talentText:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#kimeuiyeob::-webkit-scrollbar {
+    padding-right: 4px;
+    width: 4px;
+}
+
+#kimeuiyeob::-webkit-scrollbar-thumb {
+    height: 85%;
+    background: rgb(200, 201, 207);
+    border-radius: 10px;
+}
+#kimeuiyeob {
+    width: 370px;
+    height: 80px;
+    border: none;
+    background-color: rgb(250, 250, 252);
+    resize: none;
+}
+
+#kimeuiyeob:hover {
+    border:none;
+}
+#kimeuiyeob:focus {
+    outline: none;
+}
+
+
+div.dropdown{
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.dropdown{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.dropdown-label{
+    font-size : 12px;
+    margin : 10px;
+    font-weight : bold;
+    color : rgb(50, 50, 50);
+}
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+}
+
+.dropbtn_icon{
+    font-family : 'Material Icons';
+}
+
+.dropbtn_content{
+    color: #d7d9e0;
+}
+.dropbtn{
+    overflow: hidden;
+    display: flex;
+    min-width: 64px;
+    height: 40px;
+    display : block;
+    border: 1px solid #e3e5ed;
+    border-radius : 4px;
+    background-color: #ffffff;
+    font-weight: 400;
+    color : #303441;
+    padding: 0 12px;
+    width :auto;
+    text-align: left;
+    cursor : pointer;
+    font-size : 14px;
+    z-index :1;
+    position : relative;
+}
+
+
+.dropdown-content{
+    display : none;
+    font-weight: 400;
+    background-color: #fcfcfc;
+    min-width : 90px;
+    border-radius: 8px;
+    height : 160px;
+    overflow : scroll;
+    box-shadow: 0px 0px 10px 3px rgba(190, 190, 190, 0.6);
+    width: 30%;
+}
+.dropdown-content::-webkit-scrollbar{
+    width : 5px;
+    height : 10px;
+}
+.dropdown-content::-webkit-scrollbar-thumb{
+    border-radius : 2px;
+    background-color :rgb(194, 194, 194)
+}
+
+.dropdown-content div{
+    display : block;
+    text-decoration : none;
+    color : rgb(37, 37, 37);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+.dropdown-content div:hover{
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+.dropdown-content.show{
+    display : block;
+}
+
