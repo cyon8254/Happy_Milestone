@@ -3,6 +3,7 @@ const $filter = $('.card-toolbar-item').eq(0);
 const $filterDropdown = $('.menu-sub-dropdown');
 const $filters = $('.card-toolbar-item');
 const $filtersLast = $('.card-toolbar-itemBox').children().last()
+
 let check1 = false;
 
 $body.on('click', function (e) {
@@ -79,10 +80,13 @@ $filters.on('mouseout', function () {
 })
 
 $filtersLast.on('click', function () {
-    deleteModal.classList.toggle('show');
-
-    if (deleteModal.classList.contains('show')) {
-        body.style.overflow = 'hidden';
+    if ($('input:checkbox[name=check]:checked').length == 0) {
+        alert('선택을 안하면 삭제를 못해요 아 미운사람');
+    } else {
+        if (deleteModal.classList.contains('show')) {
+            body.style.overflow = 'hidden';
+        }
+        deleteModal.classList.toggle('show');
     }
 })
 /* ---------------------필터 서브-------------- */
@@ -285,20 +289,6 @@ $pageNumberLink.on('mouseout', function () {
     $(this).css('background-color', '#fff');
     $(this).css('color', '#5e6278');
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

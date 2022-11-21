@@ -153,7 +153,7 @@ const mobileTyping = async () => {
     const $mobileLetter = mobileLetters[j].split("");
 
     while ($mobileLetter.length) {
-        await mobileWait(speed);
+        await mobileWait(mobileSpeed);
         $mobileText.innerHTML += $mobileLetter.shift();
     }
 
