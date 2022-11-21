@@ -7,59 +7,6 @@
     url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Bold.eot?#iefix) format('embedded-opentype');
 }
 
-/* 반응형============================================ */
-@media screen and (max-width: 768px) {
-
-    div.wholePage {
-        margin-bottom: 150px;
-    }
-
-    section.centerContent{
-        width:100%;
-        margin-top: 20px;
-    }
-
-    div.loactions{
-        display: none;
-    }
-
-    .dropdown{
-        display: block;
-    }
-
-    .totalCount{
-        margin: 10px 10px 10px 0;
-    }
-
-    div.rightBox{
-        margin-left: 0%;
-    }
-
-    a.donationButton {
-        height: 66px;
-        padding: 7px 11px;
-    }
-
-    .totalCount2{
-        display: none;
-        margin: 10px 10px 10px 0;
-    }
-
-    .centerContent{
-        display: flex;
-    }
-
-    div.dropdown{
-        margin: 10px 10px 10px 0;
-    }
-
-    .schoolLocation1{
-        margin-top: 11%;
-    }
-
-}
-/* ============================================ */
-
 
 div.dropdown{
     display: flex;
@@ -92,6 +39,7 @@ div.dropdown{
     color: #d7d9e0;
 }
 .dropbtn{
+    overflow: hidden;
     display: flex;
     min-width: 64px;
     height: 40px;
@@ -427,3 +375,61 @@ article{
     height: 13px;
     opacity: 1;
 }
+
+
+/* 반응형============================================ */
+@media screen and (max-width: 768px) {
+
+    div.wholePage {
+        margin-bottom: 150px;
+    }
+
+    section.centerContent{
+        width:100%;
+        margin-top: 20px;
+    }
+
+    div.loactions{
+        display: none;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+    .totalCount{
+        margin: 10px 10px 10px 0;
+    }
+
+    div.rightBox{
+        margin-left: 0%;
+    }
+
+    a.donationButton {
+        height: 66px;
+        padding: 7px 11px;
+    }
+
+    .totalCount2{
+        display: none;
+        margin: 10px 10px 10px 0;
+    }
+
+    .centerContent{
+        display: flex;
+    }
+
+    div.dropdown{
+        margin: 10px 10px 10px 0;
+    }
+
+    .schoolLocation1{
+        margin-top: 11%;
+    }
+
+    .realSearhBox{
+        width: 205px;
+    }
+
+}
+/* ============================================ */

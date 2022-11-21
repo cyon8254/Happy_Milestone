@@ -92,6 +92,7 @@ div.dropdown{
     color: #d7d9e0;
 }
 .dropbtn{
+    overflow: hidden;
     display: flex;
     min-width: 64px;
     height: 40px;

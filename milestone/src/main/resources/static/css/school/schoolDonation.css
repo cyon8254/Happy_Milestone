@@ -7,18 +7,19 @@
     url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Bold.eot?#iefix) format('embedded-opentype');
 }
 
+
 body{
     margin:0;
 }
 
 .wholePage{
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 150px;
+    width: 1200px;
+    margin-bottom: 100px;
 }
 
 .title{
-    width: 1170px;
+    width: 100%;
     display: flex;
     margin: 32px auto 16px auto;
     font-weight: 500;
@@ -28,14 +29,14 @@ body{
 }
 
 .wrapper{
-    width: 1170px;
+    width: 100%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
 .long{
-    width: 784px;
+    width: 100%px;
     margin-right: 16px;
 }
 
@@ -49,7 +50,6 @@ body{
 
 .secWrapper{
     display: flex;
-    margin-bottom: 24px;
 }
 
 h3#miniTitle{
@@ -57,12 +57,13 @@ h3#miniTitle{
     font-size: 15px;
     font-weight: bold;
     line-height: 1.5438;
-    margin: 0 0 16px 0;
+    margin: 0 0 6px 0;
     color: #303441;
 }
 
 .schoolImg{
     margin-right: 12px;
+    margin-left: 12px;
     border-radius: 4px;
 }
 
@@ -72,13 +73,15 @@ h3#miniTitle{
 }
 
 .schoolInfo{
+    margin-left: 1%;
     display: flex;
     flex-direction: column;
 }
 
 #schoolName{
     font: inherit;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 500;
     line-height: 1.5438;
     margin: 0 0 4px 0;
     word-break: keep-all;
@@ -198,7 +201,6 @@ li.wrap>img{
 }
 
 .rightLong{
-    width: 370px;
     position: relative;
 }
 
@@ -328,13 +330,42 @@ label{
     width: 40%;
 }
 
-#schoolAddress{
-    font:inherit;
-}
-
 input[type=checkbox]{
     cursor: pointer;
 }
+
+.schoolAddress{
+    font:inherit;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font: inherit;
+    font-size:13px
+}
+
+/* .schoolAddressDetail{
+    font:inherit;
+    margin-bottom: 0px;
+} */
+
+.amountInput{
+    color:#525252;
+    height: 30px;
+    width: 290px;
+    font:inherit;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: right;
+}
+
+.amountInput::placeholder{
+    text-align: left;
+    color:#8e8e8e;
+}
+
+.amountInput[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 
 /* 미디어쿼리 */
 @media screen and (max-width: 768px) {
@@ -364,10 +395,31 @@ input[type=checkbox]{
     }
 
     .innerRight {
-        width: 462px;
+        width: 100%;
     }
 
     .checkboxMedia, .awesome-checkbox{
         margin-right: 5px;
+    }
+
+    .schoolImg>img{
+        width: 200px;
+    }
+
+    .schoolImg{
+        display: flex;
+        margin-left:0px;
+    }
+
+    #schoolName{
+        font-size: 20px;
+    }
+
+    h3#miniTitle{
+        margin: 0 0 10px 0;
+    }
+
+    .leftFirst{
+        display: flex;
     }
 }
