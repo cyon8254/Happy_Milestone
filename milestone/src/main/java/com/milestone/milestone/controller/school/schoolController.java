@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/school/*")
 public class schoolController {
 
-    @GetMapping("/school_list")
+    @GetMapping("/school-list")
     public void schoolList() {
     };
 
-    @GetMapping("/school_help")
+    @GetMapping("/school-help")
     public void schoolHelp() {
     };
 
-    @GetMapping("/school_detail")
+    @GetMapping("/school-detail")
     public void schoolDetail() {
     };
 
-    @GetMapping("/school_donation")
+    @GetMapping("/school-donation")
     public void schoolDonation() {
     };
 
