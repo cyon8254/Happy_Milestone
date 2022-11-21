@@ -55,18 +55,17 @@ $(".heartWrap").click(function(){
 })
 
 $("span.heart").mouseover(function(){
-    $(this).css({"background-color":"rgb(102 102 102 / 29%)"})
+    /*$(this).css({"background-color":"rgb(102 102 102 / 29%)"})*/
     $(this).css({"border-radius":"3px"})
     $(this).css({"transition":"all .2s ease"})
 })
 $("span.heart").mouseout(function(){
-    $(this).css({"background-color":"transparent"})
+    /*$(this).css({"background-color":"transparent"})*/
     $(this).css({"border-radius":"3px"})
     $(this).css({"transition":"all .2s ease"})
 })
 
 
-/* ============1117추가================= */
 /*  페이지 이동  */
 const $pageNumberLink = $('.page-number-link');
 
@@ -106,7 +105,7 @@ $("button.dropbtn").on('click',function(){
     }else{
         $(".dropdown-content").hide();
         checkDrop=false;
-
+        var count=0;
         /* 눌린 값들 불러와서 검색창에 띄우기 */
         var changedPlaceHolder="";
         console.log("saveLocal : "+saveLocal);
@@ -114,25 +113,38 @@ $("button.dropbtn").on('click',function(){
             saveLocal.forEach(element => {
                 changedPlaceHolder += "-"+element;
             });
+            console.log("changedPlaceHolder : "+changedPlaceHolder);
 
             placeHolderArr = changedPlaceHolder.split("-");
-            var text="";
+            console.log("placeHolderArr : "+placeHolderArr);
 
+            var text="";
             /* 저장한 지역들 placeholder에 띄워줌 */
             placeHolderArr.forEach(element => {
-                /* element와 일치하는 className이 있으면 해당 값 가져옴 */
-                for(var i =0; i<6; i++){
+                /* element와 일치하는 html의 className이 있으면 해당 값 가져옴 */
+                for(var i =0; i<7; i++){
                     if(element == $(".dropLoc").eq(i).attr('class').split(" ")[1]){
-                        text += " "+ $(".dropLoc").eq(i).text();
+                        console.log("element : "+element)
+                        if(count<2){
+                            text += " "+ $(".dropLoc").eq(i).text();
+                            count++;
+                        }else{
+                            count++;
+                        }
                     }
                 }
             });
-            $(".placeholder").text(text);
+            if(count>2){
+                $(".placeholder").text(text.split(" ")[1]+", "+text.split(" ")[2]+" 외 "+(count-2)+"건");
+            }else{
+                $(".placeholder").text(text);
+            }
         }else{
             $(".placeholder").text("전체");
         }
     }
 })
+
 
 
 /* 드롭다운 버튼 선택(중복가능) */
