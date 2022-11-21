@@ -8,6 +8,7 @@ const $yellow3 = $("#yellow3");
 const $yellow4 = $("#yellow4");
 
 
+
 // noinspection DuplicatedCode,DuplicatedCode
 $(document).ready(function () {
     $navText1.hover(function () {
@@ -131,8 +132,64 @@ $(function () {
 /*------------반응형 헤더 검색 텍스트-----------*/
 /*----------------------------------------------*/
 
+const $mobileText = document.querySelector(".mobile-text");
+
+// 글자 모음
+const mobileLetters = [
+    "한동석 강사님",
+    "사랑합니다.",
+    "의엽이 보육원",
+    "해준이 보육원",
+    "서림이 보육원",
+    "지수 킹왕짱"
+];
+
+// 글자 입력 속도
+const mobileSpeed = 100;
+let j = 0;
+
+// 타이핑 효과
+const mobileTyping = async () => {
+    const $mobileLetter = mobileLetters[j].split("");
+
+    while ($mobileLetter.length) {
+        await mobileWait(speed);
+        $mobileText.innerHTML += $mobileLetter.shift();
+    }
+
+    // 잠시 대기
+    await mobileWait(800);
+
+    // 지우는 효과
+    mobileRemove();
+}
+
+// 글자 지우는 효과
+const mobileRemove = async () => {
+    const $mobileLetter = mobileLetters[j].split("");
+
+    while ($mobileLetter.length) {
+        await mobileWait(mobileSpeed);
+
+        $mobileLetter.pop();
+        $mobileText.innerHTML = $mobileLetter.join("");
+    }
+
+    // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
+    j = !mobileLetters[j+1] ? 0 : j + 1;
+    mobileTyping();
+}
+
+// 딜레이 기능 ( 마이크로초 )
+function mobileWait(ms) {
+    return new Promise(res => setTimeout(res, ms))
+}
+
+// 초기 실행
+setTimeout(mobileTyping, 1500);
+
 const $mobileSearch5 = $("#mobile-search5");
-const $mobileText1 = $("#mobile-auto-text1");
+const $mobileText1 = $("#mobile-auto-text2");
 
 $mobileSearch5.on("focus", function () {
     console.log("누름");
