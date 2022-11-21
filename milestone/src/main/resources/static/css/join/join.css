@@ -162,3 +162,11 @@ a:visited {
     background-color: #30344155;
     outline: 2px solid #30344133;
 }
+
+input[id="certification"]:disabled{
+    cursor: no-drop;
+}
+
+input[id="certification"]:disabled:hover{
+    border: 1px solid rgb(228, 229, 237);
+}

@@ -70,10 +70,9 @@ html {
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-    padding-left: 19.5%;
 }
 
 .mobile-menu-icon1 {
@@ -465,7 +464,6 @@ a:-webkit-any-link {
 }
 
 .warningMsg {
-    display: none;
     color: rgb(255, 64, 43);
     font-size: 0.875rem;
 }
