@@ -3,7 +3,8 @@ const $modalIcon = $('.modalIcon');
 const $modalWrap = $('.modalWrap');
 const $modalContent = $('.modalContent');
 const $detailMsg = $('.detailMsg');
-
+const $exclamationMark = $('.exclamationMark');
+$exclamationMark.show();
 
 $submitBtn.on('click', function (e) {
     e.preventDefault();
