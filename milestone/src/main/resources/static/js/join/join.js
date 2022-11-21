@@ -5,6 +5,7 @@ const $certification = $('#certification');
 let emailFlag = false;
 let emailCheckFlag = false;
 let $warningMsg;
+let tempEmail;
 
 function email_check(email) {
     var regex = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -14,6 +15,7 @@ function email_check(email) {
 $certificationBtn.on('click', function () {
     var email = $(this).prev().val();
     $warningMsg = $(this).parent().next();
+    $certification.attr("disabled", true);
     if (email == '' || email == 'undefined') {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
@@ -33,16 +35,27 @@ $certificationBtn.on('click', function () {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
         $warningMsg.find(".warningMsg").text('입력하신 이메일로 인증번호가 전송되었습니다.');
+        tempEmail = email;
+        $certification.attr("disabled", false)
         $certification.focus();
         emailFlag = true;
     }
 });
 
-$certification.on('click', function () {
-    if (!$email.val()) {
-        $email.focus();
+$email.on('blur', function () {
+    var email = $(this).val();
+    $warningMsg = $(this).parent().next();
+    $nextWarningMsg = $(this).closest('.inputWrap').next().find('.warningMsg').parent()
+    console.log(email)
+    console.log(tempEmail)
+    if (!(email == tempEmail)) {
+        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+        $warningMsg.find(".warningMsg").text('이메일이 변경 되었습니다 인증을 다시 받아주세요');
+        emailFlag = false;
+        $nextWarningMsg.hide();
+        $certification.attr("disabled", true);
     }
-})
+});
 
 $certification.on('blur', function () {
     emailCheckFlag = false;
@@ -217,13 +230,6 @@ let allConditionClear = emailCheckFlag && passwordCheckFlag && nameCheckFlag && 
 
 function joinSubmit() {
     allConditionClear = emailCheckFlag && passwordCheckFlag && nameCheckFlag && nickNameCheckFlag && $allCheckboxFlag;
-    console.log("emailCheckFlag : " + emailCheckFlag);
-    console.log("passwordCheckFlag : " + passwordCheckFlag);
-    console.log("nameCheckFlag : " + nameCheckFlag);
-    console.log("nickNameCheckFlag : " + nickNameCheckFlag);
-    console.log("$allCheckboxFlag : " + $allCheckboxFlag);
-    console.log(allConditionClear);
-    console.log("안녕");
     if (allConditionClear) {
         $joinBtn.attr('disabled', false);
     } else {

@@ -34,11 +34,16 @@
     width: 100%;
 }
 
-.inputAction {
-    font-weight: 400;
-    color: rgb(17, 106, 212);
-    cursor: pointer;
-    font-size: 14px;
+.warningMsg{
+    color: rgb(255, 64, 43);
+}
+
+input[id="certification"]:disabled{
+    cursor: no-drop;
+}
+
+input[id="certification"]:disabled:hover{
+    border: 1px solid rgb(228, 229, 237);
 }
 
 .inputCos {
@@ -143,4 +148,8 @@ input[name = "bank"]::placeholder {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.submitBtn:disabled:hover{
+
 }

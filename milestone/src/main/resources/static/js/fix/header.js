@@ -62,8 +62,6 @@ const $body = $('body');
 
 
 document.addEventListener('click', function (e) {
-    console.log(e.target)
-    console.log($loginModalScope[0])
     if (e.target == $loginModalScope[0]) {
         $loginModalWrap.hide();
         $body.css('overflow', 'auto');

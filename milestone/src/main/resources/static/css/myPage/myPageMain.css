@@ -1,32 +1,32 @@
-.myPageWrap{
+.myPageWrap {
     width: 1200px;
     padding: 0 16px;
     margin: 40px auto;
     min-height: 600px;
 }
 
-.main{
+.main {
     width: calc(100% - 300px);
 }
 
-.mainWrap{
+.mainWrap {
     margin-left: 24px;
 }
 
-.mainTitle{
+.mainTitle {
     font-size: 18px;
     color: rgb(48, 52, 65);
 }
 
-.mainBodyWrap{
+.mainBodyWrap {
     margin-top: 20px;
     padding: 40px;
     border: 1px solid rgb(228, 229, 237);
     font-size: 15px;
 }
 
-.submitBtn{
-    border: none;
+.submitBtn {
+    cursor: pointer;
     background-color: #ffd400;
     border: 1px solid #ffd400;
     border-radius: 4px;
@@ -38,17 +38,24 @@
     transition: filter 0.2s;
 }
 
-.submitBtn:hover{
+.submitBtn:disabled {
+    cursor: no-drop;
+    background-color: #E4E5ED;
+    border: 1px solid #E4E5ED;
+    color: #9A9BA7;
+}
+
+.submitBtn:not(:disabled):hover {
     background-color: rgb(245, 193, 38);
     border: 1px solid rgb(245, 193, 38);
 }
 
-.submitBtn:active{
+.submitBtn:not(:disabled):active {
     background-color: #b88a03;
     outline: 2px solid rgb(245, 193, 38);
 }
 
-.moreSelectWrap{
+.moreSelectWrap {
     display: none;
     position: absolute;
     top: 42px;
@@ -61,7 +68,7 @@
     z-index: 1;
 }
 
-.moreSelectItem{
+.moreSelectItem {
     padding: 12px;
     font-size: 15px;
     color: #303441;
@@ -69,6 +76,6 @@
 
 }
 
-.moreSelectItem:hover{
+.moreSelectItem:hover {
     background-color: rgb(247, 245, 250);
 }
