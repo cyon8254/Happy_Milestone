@@ -1,4 +1,4 @@
-const $file = $(`input[type='file']`);
+const $file = $(`#profileasfdafsd`);
 const $thumbnail = $(`.profile`);
 
 $file.on('change',function(e){
