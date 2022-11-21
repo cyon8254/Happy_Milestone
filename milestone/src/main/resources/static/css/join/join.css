@@ -154,11 +154,11 @@ a:visited {
     cursor: pointer;
 }
 
-.certificationBtn:hover {
+.certificationBtn:not(:disabled):hover {
     background-color: #30344133;
 }
 
-.certificationBtn:active {
+.certificationBtn:not(:disabled):active {
     background-color: #30344155;
     outline: 2px solid #30344133;
 }
