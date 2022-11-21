@@ -109,13 +109,28 @@
             <img id="close-icon-right" src="/imgs/fix/close_icon.png" alt="닫기 아이콘" style="cursor:pointer">
         </div>
         <div id="mobile-etc1" style="width: 693px;"></div>
-        <div class="button1" id="mobile-button1">
+        <div class="button1 login-header-button1" id="mobile-button1">
             <button role="button" color="default" class="button2 button3" style="display: none;">
                 <span class="button4 button3">보육원 등록</span>
             </button>
-            <button role="button" color="default" class="button2 button3">
+            <button role="button" color="default" class="button2 button3" id="message-button">
                 <span class="button4 button3">알림</span>
             </button>
+            <div class="message1" id="message-id1">
+                <div class="message2">
+                    <ul class="message3">
+                        <li>봉사 알림</li>
+                    </ul>
+                </div>
+                <div class="message4">
+                    <li class="message7">모든 메시지를 확인했습니다.</li>
+                </div>
+                <ul class="message5">
+                    <a href="#" class="message8">
+                        <li class="message6">받은 전체 메시지 확인</li>
+                    </a>
+                </ul>
+            </div>
             <button role="button" color="default" id = "loginBtn" class="button5 button3" style="display: none;">
                 <span class="button6 button3">로그인</span>
             </button>
@@ -125,14 +140,39 @@
             <a role="link" color="yellow" href="#" class="button7 button3" style="display: none;">
                 <span class="button8 button3">무료 회원가입</span>
             </a>
-            <div class="profile1 profile2">
+            <div class="profile1 profile2" id="profile1">
                 <a role="link" color="default" href="#" class="profile3 profile4" aria-expanded="false">
                     <span class="profile5 profile6">
                         <div size="32" shape="0" role="article" class="profile7 profile8">
-                            <img src="/imgs/fix/login.png" alt="avatar" shape="0" loading="lazy" class="profile9 profile10">
+                            <img src="/imgs/fix/login.png" alt="avatar" shape="0" loading="lazy" class="profile9 profile10" id="login-profile9">
                         </div>
                     </span>
                 </a>
+                <div class="profile-menu1" id="login-profile-menu1">
+                    <div class="profile-menu2">
+                        <ul class="profile-menu3">
+                            <a href="#">
+                                <li>프로필관리</li>
+                            </a>
+                        </ul>
+                        <ul class="profile-menu3">
+                            <a href="#">
+                                <li>나의 찜목록</li>
+                            </a>
+                        </ul>
+                        <ul class="profile-menu3">
+                            <a href="#">
+                                <li>마이페이지</li>
+                            </a>
+                        </ul>
+
+                        <ul class="profile-menu3">
+                            <a href="#">
+                                <li>로그아웃</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

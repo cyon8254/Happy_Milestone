@@ -6,8 +6,24 @@ const $yellow1 = $("#yellow1");
 const $yellow2 = $("#yellow2");
 const $yellow3 = $("#yellow3");
 const $yellow4 = $("#yellow4");
+let $profile = $("#login-profile9");
+let $myMenu = $("#login-profile-menu1");
+let $message = $("#message-button");
+let $myMessage = $("#message-id1");
 
+$profile.on("click", function(){
+    $myMenu.fadeToggle(300);
+});
+$(window).scroll(function(){
+    $myMenu.hide();
+});
 
+$message.on("click", function(){
+    $myMessage.fadeToggle(300);
+});
+$(window).scroll(function(){
+    $myMessage.hide();
+});
 
 // noinspection DuplicatedCode,DuplicatedCode
 $(document).ready(function () {
@@ -176,7 +192,7 @@ const mobileRemove = async () => {
     }
 
     // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
-    j = !mobileLetters[j+1] ? 0 : j + 1;
+    j = !mobileLetters[j + 1] ? 0 : j + 1;
     mobileTyping();
 }
 
@@ -206,4 +222,5 @@ $(window).load(function () {
     $leftCloseIcon.css('display', 'none');
     $rightSubMenu.css('display', 'none');
     $closeIconRight.css('display', 'none');
-})
+
+});

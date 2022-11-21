@@ -616,7 +616,7 @@ input[type = 'checkbox']:checked + .checkboxCos {
     margin-bottom: 11px;
 }
 
-.profile3{
+.profile3 {
     outline: none;
     border-width: 1px;
     border-style: solid;
@@ -646,7 +646,7 @@ input[type = 'checkbox']:checked + .checkboxCos {
     color: rgb(48, 52, 65);
 }
 
-.profile7{
+.profile7 {
     width: 32px;
     height: 32px;
     background-color: rgb(228, 229, 237);
@@ -656,7 +656,7 @@ input[type = 'checkbox']:checked + .checkboxCos {
     border-radius: 50%;
 }
 
-.profile9{
+.profile9 {
     display: block;
     width: 100%;
     height: 100%;
@@ -664,4 +664,154 @@ input[type = 'checkbox']:checked + .checkboxCos {
     border-radius: 50%;
     opacity: 1;
     border-style: none;
+}
+
+.login-header-button1 {
+    margin-left: 114px;
+}
+
+.profile-menu1 {
+    position: fixed;
+    top: 6%;
+    width: 8%;
+    z-index: 10;
+    background: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    bottom: 50px;
+    height: 21.5%;
+    margin-bottom: -70px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0px 24px 0 rgb(0 0 0 / 6%), 0 1px 0px 0 rgb(0 0 0 / 2%);
+    color: #000000;
+    right: 19.3%;
+    border-radius: 8px;
+}
+
+.profile-menu2 {
+    margin-top: 3%;
+}
+
+.profile-menu1 > .profile-menu2 li:hover {
+    background-color: #e1e1e1;
+}
+
+.profile-menu1 > .profile-menu2 li {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.profile-menu2 > h2 {
+    padding-bottom: 4px;
+    border-bottom: 3px solid #797979;
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 35px;
+}
+
+.profile-menu2 .fas {
+    color: #ff5858;
+    font-size: 20px;
+    line-height: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+.profile-menu3 {
+    cursor: pointer;
+}
+
+#login-profile-menu1 {
+    display: none;
+}
+
+.message1 {
+    position: fixed;
+    top: 8%;
+    width: 21%;
+    z-index: 10;
+    background: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    bottom: 50px;
+    height: 21.5%;
+    margin-bottom: -70px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0px 24px 0 rgb(0 0 0 / 6%), 0 1px 0px 0 rgb(0 0 0 / 2%);
+    color: #000000;
+    right: 19.3%;
+    border-radius: 8px;
+}
+
+.message2 {
+    margin-top: 3%;
+}
+
+.message1 > .message2 li {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 9px;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.message2 > h2 {
+    padding-bottom: 4px;
+    border-bottom: 3px solid #797979;
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 35px;
+}
+
+.message2 .fas {
+    color: #ff5858;
+    font-size: 20px;
+    line-height: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+.message4 {
+    overflow-y: scroll;
+    height: 50%;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.message5 {
+
+    text-align: center;
+    font-size: 15px;
+}
+
+.message6 {
+    padding-top: 10px;
+    color: black;
+    padding-bottom: 12px;
+    border-radius: 0 0 8px 8px;
+}
+.message7{
+    font-size: 13px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.message8 :hover{
+    background-color: #e1e1e1;
+}
+.message1{
+   display: none;
 }
