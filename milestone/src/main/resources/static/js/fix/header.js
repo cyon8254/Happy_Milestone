@@ -13,6 +13,7 @@ let $myMessage = $("#message-id1");
 
 $profile.on("click", function(){
     $myMenu.fadeToggle(300);
+    $myMessage.hide();
 });
 $(window).scroll(function(){
     $myMenu.hide();
@@ -20,6 +21,7 @@ $(window).scroll(function(){
 
 $message.on("click", function(){
     $myMessage.fadeToggle(300);
+    $myMenu.hide();
 });
 $(window).scroll(function(){
     $myMessage.hide();
