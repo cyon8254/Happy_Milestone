@@ -109,7 +109,7 @@ input[name = "bank"]::placeholder {
     color: #303441;
     border: 1px solid rgb(228, 229, 237);
     border-radius: 4px;
-    padding: 14px 16px;
+    padding: 14px 16px 23px;
     height: 200px;
     resize: none;
 }
