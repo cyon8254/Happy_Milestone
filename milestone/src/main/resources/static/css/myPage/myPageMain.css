@@ -51,13 +51,14 @@
 .moreSelectWrap{
     display: none;
     position: absolute;
-    top: 46px;
+    top: 42px;
     left: 0;
     width: 100%;
     background-color: #fff;
     padding: 4px 0;
     border-radius: 4px;
     box-shadow: 0px 2px 7px -4px;
+    z-index: 1;
 }
 
 .moreSelectItem{
