@@ -4,6 +4,7 @@ const $submitBtn = $('.submitBtn');
 const $email = $('#email');
 let emailFlag = false;
 let $warningMsg;
+const existingEmail = $email.val();
 
 function email_check(email) {
     var regex = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -11,8 +12,15 @@ function email_check(email) {
 }
 
 $email.on('blur', function () {
+    $submitBtn.attr("disabled", true);
     var email = $(this).val();
     $warningMsg = $(this).next();
+
+    if (existingEmail == $email.val()) {
+        $warningMsg.hide();
+        return;
+    }
+
     if (email == '' || email == 'undefined') {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
@@ -32,6 +40,7 @@ $email.on('blur', function () {
     $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
     $warningMsg.find(".warningMsg").text('사용 가능한 이메일입니다.');
     emailFlag = true;
+    joinSubmit();
 });
 
 /*----------------------------닉네임 유효성 검사----------------------------*/
@@ -111,14 +120,14 @@ $certificationBtn.on('click', function () {
     $(this).prev().val(phone);
     $warningMsg = $(this).parent().next();
 
-    if (phone == '' || phone == 'undefined') {
-        $warningMsg.show();
-        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-        $warningMsg.find(".warningMsg").text('전화번호를 입력해 주세요');
-        $email.focus();
-        phoneFlag = false;
-        return;
-    }
+    // if (phone == '' || phone == 'undefined') {
+    //     $warningMsg.show();
+    //     $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+    //     $warningMsg.find(".warningMsg").text('전화번호를 입력해 주세요');
+    //     $email.focus();
+    //     phoneFlag = false;
+    //     return;
+    // }
     if (!phoneCheck.test(phone) || !phone.startsWith("010")) {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
@@ -141,15 +150,13 @@ $phone.on('blur', function () {
     var phone = $(this).val();
     phone = phone.replace(/-/g, "");
     $warningMsg = $(this).parent().next();
-    $nextWarningMsg = $(this).closest('.inputWrap').next().find('.warningMsg').parent()
+    $nextWarningMsg = $(this).parent().next()
     console.log(existingPhone)
     console.log(phone)
-    if(!(existingPhone == phone)){
-        console.log("바뀜")
-        $certificationBtn.attr("disabled",false)
-    }else{
-        console.log("안바뀜")
-        $certificationBtn.attr("disabled",true)
+    if (!(existingPhone == phone)) {
+        $certificationBtn.attr("disabled", false)
+    } else {
+        $certificationBtn.attr("disabled", true)
     }
     if (tempPhone && !(phone == tempPhone)) {
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
@@ -163,23 +170,24 @@ $phone.on('blur', function () {
 });
 /*인증번호*/
 $certification.on('blur', function () {
+    $certification.attr("disabled", true);
     phoneCheckFlag = false;
     if (phoneFlag) {
-        $warningMsg = $(this).closest(".inputWrap").find(".warningMsg");
+        $warningMsg = $(this).next();
         if (!$certification.val()) {
-            $warningMsg.closest(".flexRow").show();
-            $warningMsg.css("color", "rgb(255, 64, 43)");
-            $warningMsg.text("인증번호를 입력해 주세요")
+            $warningMsg.show();
+            $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+            $warningMsg.find(".warningMsg").text("인증번호를 입력해 주세요")
         } else if ("1234" == $certification.val()) {
             $warningMsg.closest(".flexRow").show();
             phoneCheckFlag = true;
-            $warningMsg.css("color", "rgb(79 189 18)");
-            $warningMsg.text("인증번호가 일치합니다.")
+            $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
+            $warningMsg.find(".warningMsg").text("인증번호가 일치합니다.")
             joinSubmit();
         } else {
-            $warningMsg.closest(".flexRow").show();
-            $warningMsg.css("color", "rgb(255, 64, 43)");
-            $warningMsg.text("인증번호가 일치하지 않습니다.")
+            $warningMsg.show();
+            $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+            $warningMsg.find(".warningMsg").text("인증번호가 일치하지 않습니다.")
         }
     }
 })
@@ -188,7 +196,7 @@ $certification.on('blur', function () {
 
 function joinSubmit() {
 
-    if (!(emailFlag == $('#email').val())) {
+    if (!(existingEmail == $('#email').val())) {
         if (!emailFlag) {
             console.log("이메일")
             return;
