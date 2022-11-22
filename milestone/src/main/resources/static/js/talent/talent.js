@@ -231,14 +231,6 @@ $(".location").mouseout(function(){
 $(".wholeLocation").css({"background-color":"transparent"});
 $(".wholeLocation").css({"border":"solid 1px black"});
 
-/*===================모달 창===========================*/
-
-/*$("#pencil").click(function() {
-    $("#talentModal").css({"display": "block"})
-
-});
-
-
 
 /*========================지수모달==========================*/
 
@@ -259,6 +251,7 @@ $cancels.on('click',function(){
 
 $(".css-1oteowz").click(function() {
     $(".modalWrap").css({"display": "none"})
+    body.css('overflow','auto');
 })
 
 document.addEventListener('click',function(e){
@@ -511,6 +504,6 @@ $(".dropLoc").on('click',function(){
             break;
     }
     console.log(saveLocal);
-});
 
+});
 
