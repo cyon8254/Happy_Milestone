@@ -15,7 +15,7 @@ body{
 .wholePage{
     margin: 0 auto;
     width: 1200px;
-    margin-bottom: 100px;
+    margin-bottom: 65px;
 }
 
 .title{
@@ -41,6 +41,7 @@ body{
 }
 
 .leftFirst{
+    height: 355px;
     margin: 0;
     border-radius: 4px;
     padding: 24px;
@@ -349,7 +350,7 @@ input[type=checkbox]{
 
 .amountInput{
     color:#525252;
-    height: 30px;
+    height: 47px;
     width: 290px;
     font:inherit;
     padding-right: 10px;
@@ -366,6 +367,14 @@ input[type=checkbox]{
     -webkit-appearance: none;
 }
 
+.amountInput:hover {
+    border: 1px solid rgb(57, 57, 57);
+}
+
+.amountInput:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
 
 /* 미디어쿼리 */
 @media screen and (max-width: 768px) {
