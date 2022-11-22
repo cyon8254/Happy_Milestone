@@ -12,11 +12,11 @@ public class AdminController {
     @GetMapping("talent")
     public void community(){};
 
-    @GetMapping("history")
+    @GetMapping("money")
     public void history(){};
 
-    @GetMapping("schedule")
-    public void schedule(){};
+    @GetMapping("service")
+    public void service(){};
 
     @GetMapping("notice")
     public void notice(){};
@@ -26,6 +26,12 @@ public class AdminController {
 
     @GetMapping("user")
     public void user(){};
+
+    @GetMapping("evolution")
+    public void evolution(){};
+
+    @GetMapping("reason")
+    public void reason(){};
 
 
 
