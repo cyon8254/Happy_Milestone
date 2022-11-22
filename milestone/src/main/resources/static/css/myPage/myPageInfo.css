@@ -37,11 +37,11 @@
     color: rgb(255, 64, 43);
 }
 
-input[id="certification"]:disabled{
+#certification:disabled{
     cursor: no-drop;
 }
 
-input[id="certification"]:disabled:hover{
+#certification:disabled:hover{
     border: 1px solid rgb(228, 229, 237);
 }
 
@@ -69,11 +69,11 @@ input[id="certification"]:disabled:hover{
     margin-left: 6px;
 }
 
-.certificationBtn:hover {
+.certificationBtn:not(:disabled):hover {
     background-color: rgba(48, 52, 65, 0.1);
 }
 
-.certificationBtn:active {
+.certificationBtn:not(:disabled):active {
     background-color: #30344133;
     outline: 2px solid #30344133;
 }

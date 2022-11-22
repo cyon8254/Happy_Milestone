@@ -20,25 +20,15 @@
         <div class="joinTitleWrap" style="margin-top: 0; word-spacing: -5px;">
             딱 이것만 체크하면 가입완료!
         </div>
-        <form action="" id="joinForm" name = "joinForm">
-            <div class="inputWrap flexCol padding-bottom-8">
+        <form action="" id="joinForm" name="joinForm">
+            <div class="inputWrap flexCol">
                 <div class="flexRow margin-bottom-8">
                     <div class="inputTitleWrap">이메일</div>
                     <div class="essential">*</div>
                 </div>
-                <div class="flexBetween">
-                    <input class="inputCos" name="email" id="email" type="email" placeholder="이메일을 입력해 주세요.">
-                    <button type="button" class="certificationBtn"><span>인증번호 받기</span></button>
-                </div>
+                <input class="inputCos" name="email" id="email" type="email" placeholder="이메일을 입력해 주세요.">
                 <div class="flexRow margin-top-4" style="display: none;">
                     <div class="warningMsg">이메일 형식이 유효하지 않습니다.</div>
-                </div>
-            </div>
-            <div class="inputWrap flexCol">
-                <input class="inputCos" name="certification" id="certification" type="text"
-                       placeholder="인증번호를 입력해 주세요." disabled>
-                <div class="flexRow margin-top-4" style="display: none;">
-                    <div class="warningMsg">인증번호가 일치하지 않습니다.</div>
                 </div>
             </div>
             <div class="inputWrap flexCol padding-bottom-8">
@@ -74,9 +64,29 @@
                     <div class="inputTitleWrap">닉네임</div>
                     <div class="essential">*</div>
                 </div>
-                <input class="inputCos" name="nickName" id = "nickName" type="text" placeholder="닉네임 입력해 주세요.">
+                <input class="inputCos" name="nickName" id="nickName" type="text" placeholder="닉네임 입력해 주세요.">
                 <div class="flexRow margin-top-4" style="display: none;">
                     <div class="warningMsg">이미 마일스톤에 등록된 닉네임입니다.</div>
+                </div>
+            </div>
+            <div class="inputWrap flexCol padding-bottom-8">
+                <div class="flexRow margin-bottom-8">
+                    <div class="inputTitleWrap">휴대전화</div>
+                    <div class="essential">*</div>
+                </div>
+                <div class="flexBetween">
+                    <input class="inputCos" name="phone" id="phone" type="text" placeholder="전화번호를 입력해 주세요.">
+                    <button type="button" class="certificationBtn"><span>인증번호 받기</span></button>
+                </div>
+                <div class="flexRow margin-top-4" style="display: none;">
+                    <div class="warningMsg">전화번호를 정확히 입력해 주세요</div>
+                </div>
+            </div>
+            <div class="inputWrap flexCol">
+                <input class="inputCos" name="certification" id="certification" type="text"
+                       placeholder="인증번호를 입력해 주세요." disabled>
+                <div class="flexRow margin-top-4" style="display: none;">
+                    <div class="warningMsg">인증번호가 일치하지 않습니다.</div>
                 </div>
             </div>
         </form>

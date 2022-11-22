@@ -1,13 +1,28 @@
-.imgBox{
-    width: 100%;
-
+.imgBox {
+    display: none;
+    border: 1px solid rgb(228, 229, 237);
+    width: 600px;
+    border-radius: 4px;
 }
 
-.imgsWrap{
+.imgsWrap {
     margin: 8px;
 }
 
+.imgList {
+    overflow: auto;
+}
+
+.imgList::-webkit-scrollbar {
+    height: 8px;
+}
+
+.imgList::-webkit-scrollbar-thumb {
+    background: rgb(200, 201, 207);
+    border-radius: 4px;
+}
+
 /*------------------------------------------------------*/
-.tempImgBackground{
+.tempImgBackground {
     margin: 8px 8px 6px;
 }
