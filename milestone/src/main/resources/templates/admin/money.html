@@ -6,24 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이정표 | 관리자페이지</title>
+    <!-- <link rel="stylesheet" href="mileStoneManager_donateHistory.css"> -->
     <link rel="stylesheet" href="/css/admin/all.css">
-    <!-- <link rel="stylesheet" href="mileStoneManager_community.css"> -->
 </head>
 
 <body onload="showClock()">
-<!-- 삭제 모달창 -->
-<div class="delete-modal">
-    <div class="delete-modal-body">
-        <div class="delete-modal-top">
-            !
-        </div>
-        <div class="delete-modal-middle">삭제하시겠습니까?</div>
-        <div class="delete-modal-bottom">
-            <div class="delete-modal-delete">네,삭제합니다!</div>
-            <div class="delete-modal-cancel">아니요,취소</div>
-        </div>
-    </div>
-</div>
 <!-- 사이드 -->
 <div id='sidebar'>
     <div id='sidebar_header'>
@@ -188,12 +175,13 @@
     <div class="main">
         <div id="toolbar">
             <div id="toolbarTitle">
-                <span id="toolbarTitleText">재능기부 목록</span>
-                <span id="toolbarTitleSub">홈 - 재능기부 관리 - 재능기부 목록</span>
+                <span id="toolbarTitleText">금액 기부</span>
+                <span id="toolbarTitleSub">홈 - 기부 관리 - 금액 기부</span>
             </div>
         </div>
         <!-- 메인 컨텐츠 -->
         <div id="content-container-hover">
+
             <div id="content-container">
                 <div class="card">
                     <!-- 카드 헤더 -->
@@ -219,7 +207,7 @@
                                         <div class="menu-sub-dropdown-wrap">
                                             <div class="menu-sub-dropdown-item-margin">
                                                 <div class="menu-sub-dropdown-item-title-margin">
-                                                    <div class="menu-sub-dropdown-item-title">조회순:</div>
+                                                    <div class="menu-sub-dropdown-item-title">기부 금액:</div>
                                                 </div>
                                                 <div class="menu-sub-dropdown-option">
                                                     <label class="menu-sub-dropdown-option-box">
@@ -230,10 +218,30 @@
                                                         <div class="menu-sub-dropdown-option-arrow"></div>
                                                         <div class="menu-sub-dropdown-option-sub">
                                                             <div class="menu-sub-dropdown-option-sub-item">
-                                                                오름차순
+                                                                많은순
                                                             </div>
                                                             <div class="menu-sub-dropdown-option-sub-item">
-                                                                내림차순
+                                                                적은순
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="menu-sub-dropdown-item-title-margin">
+                                                    <div class="menu-sub-dropdown-item-title">기부 날짜:</div>
+                                                </div>
+                                                <div class="menu-sub-dropdown-option">
+                                                    <label class="menu-sub-dropdown-option-box">
+                                                        <input type="checkbox">
+                                                        <div class="menu-sub-dropdown-option-text">
+                                                            옵션 선택
+                                                        </div>
+                                                        <div class="menu-sub-dropdown-option-arrow"></div>
+                                                        <div class="menu-sub-dropdown-option-sub">
+                                                            <div class="menu-sub-dropdown-option-sub-item">
+                                                                최신순
+                                                            </div>
+                                                            <div class="menu-sub-dropdown-option-sub-item">
+                                                                오래된순
                                                             </div>
                                                         </div>
                                                     </label>
@@ -247,10 +255,7 @@
                                         </div>
                                     </div>
                                 </button>
-                                <button class="card-toolbar-item">
-                                    <div id="out-img"></div>
-                                    게시글 삭제
-                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -260,257 +265,203 @@
                         <table>
                             <thead class="card-body-title-box">
                             <tr class="card-body-line">
-                                <th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                    <label class="card-body-title-user-checkbox">
-                                        <div class="check-img"></div>
-                                        <input class="notice-checked-all" type="checkbox">
-                                    </label>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="card-body-title-height">
-                                        작성자
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="card-body-title-height">
-                                        닉네임
-                                    </div>
-                                </th>
                                 <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="card-body-title-height">
-                                        재능기부 타이틀
-                                    </div>
+                                    기부자
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    기부 보육원
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    기부 금액
                                 </th>
                                 <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="card-body-title-height">
-                                        작성일
-                                    </div>
+                                    기부 날짜
                                 </th>
                             </tr>
                             </thead>
                             <tbody class="card-body-main-box">
                             <tr>
-                                <th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                    <label class="card-body-title-user-checkbox">
-                                        <div class="check-img"></div>
-                                        <input class="notice-checked" type="checkbox">
-                                    </label>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
+                                <th class="card-body-title-padding" style="width: 29%;">
                                     <div class="donater-info">
                                         <div class="donater-info-img1"></div>
                                         <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
                                         </div>
                                     </div>
                                 </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
+                                <th class="card-body-title-padding" style="width: 23%;">
                                     <div class="donate-info-height">
-                                        AxlRose
+                                        코끼리 보육원
                                     </div>
                                 </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
+                                <th class="card-body-title-padding" style="width: 23%;">
                                     <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
+                                        300,000
                                     </div>
                                 </th>
                                 <th class="card-body-title-padding" style="width: 25%;">
                                     <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th>
-                                <th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                    <label class="card-body-title-user-checkbox">
-                                        <div class="check-img"></div>
-                                        <input class="notice-checked" type="checkbox">
-                                    </label>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th><th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                <label class="card-body-title-user-checkbox">
-                                    <div class="check-img"></div>
-                                    <input class="notice-checked" type="checkbox">
-                                </label>
-                            </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th><th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                <label class="card-body-title-user-checkbox">
-                                    <div class="check-img"></div>
-                                    <input class="notice-checked" type="checkbox">
-                                </label>
-                            </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th><th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                <label class="card-body-title-user-checkbox">
-                                    <div class="check-img"></div>
-                                    <input class="notice-checked" type="checkbox">
-                                </label>
-                            </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th><th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                <label class="card-body-title-user-checkbox">
-                                    <div class="check-img"></div>
-                                    <input class="notice-checked" type="checkbox">
-                                </label>
-                            </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
-                                    </div>
-                                </th><th class="card-body-title-checkbox-padding" style="width: 11%;">
-                                <label class="card-body-title-user-checkbox">
-                                    <div class="check-img"></div>
-                                    <input class="notice-checked" type="checkbox">
-                                </label>
-                            </th>
-                                <th class="card-body-title-padding" style="width: 22%;">
-                                    <div class="donater-info">
-                                        <div class="donater-info-img1"></div>
-                                        <div class="donater-info-text">
-                                            <div class="donater-name">황지수</div>
-                                            <div>hjs@maple.com</div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 18%;">
-                                    <div class="donate-info-height">
-                                        AxlRose
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 29%;">
-                                    <div class="donate-info-height">
-                                        <div class="donate-info-text">
-                                            요즘 아이들은 어떤 음식 좋아하나요?
-                                        </div>
-                                    </div>
-                                </th>
-                                <th class="card-body-title-padding" style="width: 25%;">
-                                    <div class="donate-info-height">
-                                        2022년 10월 2일 오후 3시 32분
+                                        2022년 11월 21일 23시 50분
                                     </div>
                                 </th>
                             </tr>
-
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="card-body-title-padding" style="width: 29%;">
+                                    <div class="donater-info">
+                                        <div class="donater-info-img1"></div>
+                                        <div class="donater-info-text">
+                                            <div class="donater-name">박해준</div>
+                                            <div>phj@milestone.com</div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        코끼리 보육원
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 23%;">
+                                    <div class="donate-info-height">
+                                        300,000
+                                    </div>
+                                </th>
+                                <th class="card-body-title-padding" style="width: 25%;">
+                                    <div class="donate-info-height">
+                                        2022년 11월 21일 23시 50분
+                                    </div>
+                                </th>
+                            </tr>
                             </tbody>
                         </table>
                         <!-- 카드 푸터 -->
@@ -578,6 +529,6 @@
 </script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/admin/public.js"></script>
-<script src="/js/admin/talent.js"></script>
+<script src="/js/admin/history.js"></script>
 
 </html>
