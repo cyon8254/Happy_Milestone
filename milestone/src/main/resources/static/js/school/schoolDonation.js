@@ -4,7 +4,8 @@ $(".orderButton").hover(function(){
     $(this).css({"background-color":"#ffd400"})
 })
 
-/* 숫자 콤마(,) 찍기 */
+
+/* 숫자 콤마(,) 찍고 바로 출력 */
 const amountInput = document.querySelector('.amountInput');
 
 amountInput.addEventListener('keyup', function(e) {
@@ -15,6 +16,12 @@ amountInput.addEventListener('keyup', function(e) {
     }else {
         const formatValue = value.toLocaleString('ko-KR');
         amountInput.value = formatValue;
+        printAmount()
     }
-
 })
+
+function printAmount(){
+    var amount = document.getElementById('amountInputMoney').value;
+    console.log(amount);
+    document.getElementById("totalAmountMoney").innerText = amount;
+}
