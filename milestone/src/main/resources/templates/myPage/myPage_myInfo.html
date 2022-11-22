@@ -39,6 +39,15 @@
                     <form action="" name="updateForm">
                         <div class="margin-bottom-20">
                             <div class="margin-bottom-8 flexBetween">
+                                <div class="inputTitle">이메일</div>
+                            </div>
+                            <input class="inputCos" name="email" id="email" type="email" value="ghkdwltn5@naver.com" placeholder="">
+                            <div class="margin-top-6" style="display: none;">
+                                <div class="warningMsg">이름을 정확히 입력해 주세요.</div>
+                            </div>
+                        </div>
+                        <div class="margin-bottom-20">
+                            <div class="margin-bottom-8 flexBetween">
                                 <div class="inputTitle">이름</div>
                             </div>
                             <input class="inputCos" name="name" id="name" type="text" value="황지수" placeholder="">
@@ -63,6 +72,9 @@
                                 <input class="inputCos" name="phone" id="phone" type="text" style="width: 79%;"
                                        value = "01012341234" placeholder="">
                                 <button type="button" class="certificationBtn" disabled>인증번호 받기</button>
+                            </div>
+                            <div class="margin-top-6" style="display: none;">
+                                <div class="warningMsg">이메일 형식이 유효하지 않습니다.</div>
                             </div>
                             <input class="inputCos" type="text" name="certification" id="certification"
                                    placeholder="인증번호를 입력해주세요" disabled>
