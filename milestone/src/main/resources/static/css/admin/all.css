@@ -1413,7 +1413,7 @@ main {
 .main {
     display: flex;
     flex-direction: column;
-    height: 97%;
+    height: 100%;
     margin: 0 0 0 265px;
     padding-top: 70px;
 }
@@ -1920,6 +1920,7 @@ input[type='checkbox'] {
 
 .card-body-main-box > tr > th {
     font-weight: 500;
+    width: 30%;
 }
 
 .donater-info {

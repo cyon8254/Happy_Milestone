@@ -33,6 +33,4 @@ public class AdminController {
     @GetMapping("reason")
     public void reason(){};
 
-
-
 }
