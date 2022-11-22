@@ -14,9 +14,15 @@ amountInput.addEventListener('keyup', function(e) {
     if(isNaN(value)) {
         amountInput.value = 0;
     }else {
-        const formatValue = value.toLocaleString('ko-KR');
-        amountInput.value = formatValue;
-        printAmount()
+        if(value<5000000000){
+            const formatValue = value.toLocaleString('ko-KR');
+            amountInput.value = formatValue;
+            printAmount();
+        }else{
+            alert('500,000,000원 까지 입력가능합니다.');
+            amountInput.value = 0;
+            printAmount();
+        }
     }
 })
 
