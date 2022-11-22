@@ -60,6 +60,7 @@ div.dropdown{
 
 
 .dropdown-content{
+    z-index: 999;
     display : none;
     font-weight: 400;
     background-color: #fcfcfc;
@@ -246,7 +247,7 @@ article{
     padding: 14px 24px 14px 28px;
 }
 
-.schoolName>h2{
+h2.schoolName{
     font:inherit;
     font-size: 20px;
     font-weight: 600;
@@ -381,12 +382,15 @@ article{
 @media screen and (max-width: 768px) {
 
     div.wholePage {
-        margin-bottom: 150px;
+        margin-bottom: 50px;
     }
 
     section.centerContent{
         width:100%;
         margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
     }
 
     div.loactions{
@@ -403,6 +407,7 @@ article{
 
     div.rightBox{
         margin-left: 0%;
+        width: 40%;
     }
 
     a.donationButton {
@@ -415,10 +420,6 @@ article{
         margin: 10px 10px 10px 0;
     }
 
-    .centerContent{
-        display: flex;
-    }
-
     div.dropdown{
         margin: 10px 10px 10px 0;
     }
@@ -427,8 +428,24 @@ article{
         margin-top: 11%;
     }
 
+    .schoolLocation2{
+        margin-bottom: 3px;
+        display: inline-block;
+    }
+
     .realSearhBox{
         width: 205px;
+    }
+
+    article{
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 0px;
+    }
+
+    .schoolImg{
+        width: 100%;
+        margin-bottom: 10px;
     }
 
 }

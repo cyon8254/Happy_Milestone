@@ -98,29 +98,37 @@ $(".ranking").click(function(){
 /* QR 보러가기 모달창 */
 function openModal(){
     $("#modal").css({"display":"block"})
-    $("#backgroundColor").css({"background-color":"rgba(0, 0, 0, 0.8);"})
+    document.body.style.overflow = "hidden";
 }
+
 function closeModal(){
     $("#modal").css({"display":"none"})
+    document.body.style.overflow = "unset";
 }
-
+/* 외부영역 클릭시 모달 닫기 */
+$(document).mouseup(function (e){
+    if($("#modal").has(e.target).length === 0){
+        $("#modal").hide();
+        document.body.style.overflow = "unset";
+    }
+});
 
 /* 슬라이드 */
-/* 사진인덱스 */
-var i = 0;
+/* 클릭인덱스 */
+/*var i = 0;*/
 /* 좌클릭 */
-$(".prevButton").click(function() {
+/*$(".prevButton").click(function() {
     if (i > 0) {
         i = i - 1;
         $(".images").stop().animate({
             "left": -171 * i + "px"
         }, "slow");
     }
-});
+});*/
 
 
 /* 우클릭 */
-$(".nextButton").click(function() {
+/*$(".nextButton").click(function() {
     if (i < 2) {
         i = i + 1;
         console.log(i);
@@ -134,8 +142,11 @@ $(".nextButton").click(function() {
         }
     }
 
-});
+});*/
 
+
+/* 사진 클릭시 큰 사진으로 바뀜 */
+var mainImage = document.querySelector('#mainImage');
 
 /* 사진 클릭시 큰 사진으로 바뀜 */
 var mainImage = document.querySelector('#mainImage');

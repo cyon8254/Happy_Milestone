@@ -407,17 +407,24 @@ input[type=checkbox]{
         width: 100%;
     }
 
+    .amountInput1 {
+        width: 90%;
+    }
+
+
     .checkboxMedia, .awesome-checkbox{
         margin-right: 5px;
     }
 
     .schoolImg>img{
-        width: 200px;
+        margin-bottom: 25px;
+        width: 100%;
     }
 
     .schoolImg{
         display: flex;
-        margin-left:0px;
+        margin:0;
+        width: 100%;
     }
 
     #schoolName{
@@ -430,5 +437,13 @@ input[type=checkbox]{
 
     .leftFirst{
         display: flex;
+    }
+
+    .secWrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .leftFirst {
+        height: auto;
     }
 }
