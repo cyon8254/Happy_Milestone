@@ -7,59 +7,6 @@
     url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Bold.eot?#iefix) format('embedded-opentype');
 }
 
-/* 반응형============================================ */
-@media screen and (max-width: 768px) {
-
-    div.wholePage {
-        margin-bottom: 150px;
-    }
-
-    section.centerContent{
-        width:100%;
-        margin-top: 20px;
-    }
-
-    div.loactions{
-        display: none;
-    }
-
-    .dropdown{
-        display: block;
-    }
-
-    .totalCount{
-        margin: 10px 10px 10px 0;
-    }
-
-    div.rightBox{
-        margin-left: 0%;
-    }
-
-    a.donationButton {
-        height: 66px;
-        padding: 7px 11px;
-    }
-
-    .totalCount2{
-        display: none;
-        margin: 10px 10px 10px 0;
-    }
-
-    .centerContent{
-        display: flex;
-    }
-
-    div.dropdown{
-        margin: 10px 10px 10px 0;
-    }
-
-    .schoolLocation1{
-        margin-top: 11%;
-    }
-
-}
-/* ============================================ */
-
 
 div.dropdown{
     display: flex;
@@ -113,6 +60,7 @@ div.dropdown{
 
 
 .dropdown-content{
+    z-index: 999;
     display : none;
     font-weight: 400;
     background-color: #fcfcfc;
@@ -300,7 +248,7 @@ article{
     padding: 14px 24px 14px 28px;
 }
 
-.schoolName>h2{
+h2.schoolName{
     font:inherit;
     font-size: 20px;
     font-weight: 600;
@@ -429,3 +377,77 @@ article{
     height: 13px;
     opacity: 1;
 }
+
+
+/* 반응형============================================ */
+@media screen and (max-width: 768px) {
+
+    div.wholePage {
+        margin-bottom: 50px;
+    }
+
+    section.centerContent{
+        width:100%;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    div.loactions{
+        display: none;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+    .totalCount{
+        margin: 10px 10px 10px 0;
+    }
+
+    div.rightBox{
+        margin-left: 0%;
+        width: 40%;
+    }
+
+    a.donationButton {
+        height: 66px;
+        padding: 7px 11px;
+    }
+
+    .totalCount2{
+        display: none;
+        margin: 10px 10px 10px 0;
+    }
+
+    div.dropdown{
+        margin: 10px 10px 10px 0;
+    }
+
+    .schoolLocation1{
+        margin-top: 11%;
+    }
+
+    .schoolLocation2{
+        margin-bottom: 3px;
+        display: inline-block;
+    }
+
+    .realSearhBox{
+        width: 205px;
+    }
+
+    article{
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 0px;
+    }
+
+    .schoolImg{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+}
+/* ============================================ */
