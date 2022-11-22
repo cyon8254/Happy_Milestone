@@ -1692,7 +1692,6 @@ main {
 }
 
 .card-toolbar-item {
-    cursor: pointer;
     margin-left: 9.75px;
     padding: 11px 20.5px;
     color: #009ef7;
@@ -1843,6 +1842,7 @@ main {
     height: 44px;
     box-sizing: border-box;
     color: #7e8299;
+    cursor: pointer;
 }
 
 #out-img {
@@ -2094,4 +2094,41 @@ footer {
 
 #footer-company-info {
     text-align: right;
+}
+
+#hover1 {
+    cursor: pointer;
+}
+#hover2 {
+    cursor: pointer;
+}
+#hover3 {
+    cursor: pointer;
+}
+#hover4 {
+    cursor: pointer;
+}
+#hover5 {
+    cursor: pointer;
+}
+#hover6 {
+    cursor: pointer;
+}
+#hover7 {
+    cursor: pointer;
+}
+#hover8 {
+    cursor: pointer;
+}
+#hover9 {
+    cursor: pointer;
+}
+#hover10 {
+    cursor: pointer;
+}
+#hover11 {
+    cursor: pointer;
+}
+#hover12 {
+    cursor: pointer;
 }
