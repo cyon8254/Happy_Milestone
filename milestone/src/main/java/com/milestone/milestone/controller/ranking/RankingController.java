@@ -15,4 +15,12 @@ public class RankingController {
     public void ranking(){
     }
 
+    @GetMapping("/myPageTest1")
+    public void myPageTest1(){
+    }
+
+    @GetMapping("/myPageTest2")
+    public void myPageTest2(){
+    }
+
 }
