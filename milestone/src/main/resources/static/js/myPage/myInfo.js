@@ -2,28 +2,21 @@ const $submitBtn = $('.submitBtn');
 
 /*----------------------------이메일 유효성 검사----------------------------*/
 const $email = $('#email');
-const existingEmail = $email.val();
-const $certificationBtn = $('.certificationBtn');
-const $certification = $('#certification');
 let emailFlag = false;
-let emailCheckFlag = false;
 let $warningMsg;
-let tempEmail;
 
 function email_check(email) {
     var regex = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     return (email != '' && email != 'undefined' && regex.test(email));
 }
 
-$certificationBtn.on('click', function () {
-    var email = $(this).prev().val();
-    $warningMsg = $(this).parent().next().next();
-    $certification.attr("disabled", true);
+$email.on('blur', function () {
+    var email = $(this).val();
+    $warningMsg = $(this).next();
     if (email == '' || email == 'undefined') {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
         $warningMsg.find(".warningMsg").text('이메일을 입력해 주세요');
-        $email.focus();
         emailFlag = false;
         return;
     }
@@ -31,55 +24,15 @@ $certificationBtn.on('click', function () {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
         $warningMsg.find(".warningMsg").text('이메일 형식이 유효하지 않습니다.');
-        $email.focus();
         emailFlag = false;
         return false;
-    } else {
-        $warningMsg.show();
-        $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
-        $warningMsg.find(".warningMsg").text('입력하신 이메일로 인증번호가 전송되었습니다.');
-        tempEmail = email;
-        $certification.attr("disabled", false)
-        $certification.focus();
-        emailFlag = true;
     }
-});
 
-$email.on('blur', function () {
-    var email = $(this).val();
-    $warningMsg = $(this).parent().next().next();
-    $submitBtn.attr("disabled", true);
-    // $nextWarningMsg = $(this).closest('.inputWrap').next().find('.warningMsg').parent()
-    if (!(email == tempEmail)) {
-        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-        $warningMsg.find(".warningMsg").text('이메일이 변경 되었습니다 인증을 다시 받아주세요');
-        emailFlag = false;
-        // $nextWarningMsg.hide();
-        $certification.attr("disabled", true);
-    }
+    $warningMsg.show();
+    $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
+    $warningMsg.find(".warningMsg").text('사용 가능한 이메일입니다.');
+    emailFlag = true;
 });
-
-$certification.on('blur', function () {
-    emailCheckFlag = false;
-    if (emailFlag) {
-        $warningMsg = $(this).next();
-        if (!$certification.val()) {
-            $warningMsg.show();
-            $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-            $warningMsg.find(".warningMsg").text("인증번호를 입력해 주세요")
-        } else if ("1234" == $certification.val()) {
-            $warningMsg.hide();
-            emailCheckFlag = true;
-            // $warningMsg.css("color", "rgb(79 189 18)");
-            // $warningMsg.text("인증번호가 일치합니다.")
-        } else {
-            $warningMsg.show();
-            $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-            $warningMsg.find(".warningMsg").text("인증번호가 일치하지 않습니다.")
-        }
-    }
-    joinSubmit();
-})
 
 /*----------------------------닉네임 유효성 검사----------------------------*/
 const $nickName = $('#nickName');
@@ -128,6 +81,7 @@ var nameCheck = /^[가-힣]{2,15}$/;
 $name.on('blur', function () {
     $submitBtn.attr("disabled", true);
     nameCheckFlag = false;
+    if (!$name.val()) return;
     if (!nameCheck.test($name.val())) {
         $name.next().show();
         $name.next().find('.warningMsg').text("이름을 정확히 입력해 주세요.");
@@ -139,13 +93,103 @@ $name.on('blur', function () {
     joinSubmit();
 })
 
-function joinSubmit() {
-    console.log("안녕")
-    console.log("안녕 1 : " + !(existingEmail == $('#email').val()))
-    console.log("안녕 2 : " + emailFlag)
+/*----------------------------전화번호 유효성 검사----------------------------*/
+const $phone = $('#phone');
+const existingPhone = $phone.val().replace(/-/g, "");
+const $certificationBtn = $('.certificationBtn');
+const $certification = $('#certification');
+let phoneFlag = false;
+let phoneCheckFlag = false;
+let tempPhone;
 
-    if (!(existingEmail == $('#email').val())) {
-        if (!emailCheckFlag) {
+var phoneCheck = /^[0-9]{11,11}$/;
+
+$certificationBtn.on('click', function () {
+    $certification.attr("disabled", true);
+    var phone = $(this).prev().val();
+    phone = phone.replace(/-/g, "");
+    $(this).prev().val(phone);
+    $warningMsg = $(this).parent().next();
+
+    if (phone == '' || phone == 'undefined') {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+        $warningMsg.find(".warningMsg").text('전화번호를 입력해 주세요');
+        $email.focus();
+        phoneFlag = false;
+        return;
+    }
+    if (!phoneCheck.test(phone) || !phone.startsWith("010")) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+        $warningMsg.find(".warningMsg").text('전화번호를 정확히 입력해 주세요');
+        $phone.focus();
+        phoneFlag = false;
+        return false;
+    } else {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
+        $warningMsg.find(".warningMsg").text('입력하신 전화번호로 인증번호가 전송되었습니다.');
+        tempPhone = phone;
+        $certification.attr("disabled", false)
+        $certification.focus();
+        phoneFlag = true;
+    }
+});
+
+$phone.on('blur', function () {
+    var phone = $(this).val();
+    phone = phone.replace(/-/g, "");
+    $warningMsg = $(this).parent().next();
+    $nextWarningMsg = $(this).closest('.inputWrap').next().find('.warningMsg').parent()
+    console.log(existingPhone)
+    console.log(phone)
+    if(!(existingPhone == phone)){
+        console.log("바뀜")
+        $certificationBtn.attr("disabled",false)
+    }else{
+        console.log("안바뀜")
+        $certificationBtn.attr("disabled",true)
+    }
+    if (tempPhone && !(phone == tempPhone)) {
+        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+        $warningMsg.find(".warningMsg").text('전화번호가 변경 되었습니다 인증을 다시 받아주세요');
+        phoneFlag = false;
+        tempPhone = "";
+        $nextWarningMsg.hide();
+        $nextWarningMsg.prev().val("");
+        $certification.attr("disabled", true);
+    }
+});
+/*인증번호*/
+$certification.on('blur', function () {
+    phoneCheckFlag = false;
+    if (phoneFlag) {
+        $warningMsg = $(this).closest(".inputWrap").find(".warningMsg");
+        if (!$certification.val()) {
+            $warningMsg.closest(".flexRow").show();
+            $warningMsg.css("color", "rgb(255, 64, 43)");
+            $warningMsg.text("인증번호를 입력해 주세요")
+        } else if ("1234" == $certification.val()) {
+            $warningMsg.closest(".flexRow").show();
+            phoneCheckFlag = true;
+            $warningMsg.css("color", "rgb(79 189 18)");
+            $warningMsg.text("인증번호가 일치합니다.")
+            joinSubmit();
+        } else {
+            $warningMsg.closest(".flexRow").show();
+            $warningMsg.css("color", "rgb(255, 64, 43)");
+            $warningMsg.text("인증번호가 일치하지 않습니다.")
+        }
+    }
+})
+
+/*수정하기 최종확인*/
+
+function joinSubmit() {
+
+    if (!(emailFlag == $('#email').val())) {
+        if (!emailFlag) {
             console.log("이메일")
             return;
         }
@@ -162,7 +206,13 @@ function joinSubmit() {
             return;
         }
     }
-    if (!(existingName == $('#name').val()) || !(existingNickName == $('#nickName').val()) || !(existingEmail == $('#email').val())) {
+    if (!(existingPhone == $('#phone').val().replace(/-/g, ""))) {
+        if (!phoneCheckFlag) {
+            console.log("핸드폰")
+            return;
+        }
+    }
+    if (!(existingName == $('#name').val()) || !(existingNickName == $('#nickName').val()) || !(existingEmail == $('#email').val()) || !(existingPhone == $('#phone').val().replace(/-/g, ""))) {
         $submitBtn.attr("disabled", false)
     }
 }

@@ -28,9 +28,9 @@
                 <div class="profileWrap flexColNormal">
                     <div class="profile"></div>
                     <div class="updateProfileBtnWrap flexCol">
-                        <label class="updateProfileBtn flexCol">
+                        <label class="updateProfileBtn flexPublic">
                             <div>프로필 변경</div>
-                            <input type="file" name="profile" id = "profile" style="display: none">
+                            <input type="file" name="profile" id="profile" style="display: none">
                         </label>
                     </div>
                 </div>
@@ -39,39 +39,40 @@
                     <form action="" name="updateForm">
                         <div class="margin-bottom-20">
                             <div class="margin-bottom-8 flexBetween">
+                                <div class="inputTitle">이름</div>
+                            </div>
+                            <input class="inputCos" name="name" id="name" type="text" value="황지수" placeholder="">
+                            <div class="margin-top-6" style="display: none;">
+                                <div class="warningMsg">이름을 정확히 입력해 주세요.</div>
+                            </div>
+                        </div>
+                        <div class="margin-bottom-20">
+                            <div class="margin-bottom-8 flexBetween">
                                 <div class="inputTitle">닉네임</div>
                             </div>
-                            <input class="inputCos" name="nickName" id = "nickName" type="text" placeholder="지수박박쥐">
+                            <input class="inputCos" name="nickName" id="nickName" type="text" value = "지수박박쥐" placeholder="">
                             <div class="margin-top-6" style="display: none;">
                                 <div class="warningMsg">사용중인 닉네임입니다</div>
                             </div>
                         </div>
                         <div class="margin-bottom-20">
                             <div class="margin-bottom-8 flexBetween">
-                                <div class="inputTitle">이메일</div>
+                                <div class="inputTitle">휴대전화</div>
                             </div>
                             <div class="margin-bottom-8 flexBetween">
-                                <input class="inputCos" name="email" id = "email" type="text" style="width: 79%;"
-                                       placeholder="지수박박쥐@naver.com">
-                                <button type = "button" class="certificationBtn">인증번호 받기</button>
+                                <input class="inputCos" name="phone" id="phone" type="text" style="width: 79%;"
+                                       value = "01012341234" placeholder="">
+                                <button type="button" class="certificationBtn" disabled>인증번호 받기</button>
                             </div>
-                            <input class="inputCos" type="text" name = "certification" id = "certification" placeholder="인증번호를 입력해주세요" disabled>
+                            <input class="inputCos" type="text" name="certification" id="certification"
+                                   placeholder="인증번호를 입력해주세요" disabled>
                             <div class="margin-top-6" style="display: none;">
                                 <div class="warningMsg">이메일 형식이 유효하지 않습니다.</div>
                             </div>
                         </div>
-                        <div class="margin-bottom-20">
-                            <div class="margin-bottom-8 flexBetween">
-                                <div class="inputTitle">이름</div>
-                            </div>
-                            <input class="inputCos" name="name" id = "name" type="text" placeholder="황지수">
-                            <div class="margin-top-6" style="display: none;">
-                                <div class="warningMsg">이름을 정확히 입력해 주세요.</div>
-                            </div>
-                        </div>
                         <div class="flex">
                             <div style="flex-grow : 1"></div>
-                            <button class="submitBtn" disabled>등록하기</button>
+                            <button class="submitBtn" disabled>수정하기</button>
                         </div>
                     </form>
                 </div>

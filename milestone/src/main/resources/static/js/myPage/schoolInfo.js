@@ -64,6 +64,33 @@ $textareaCos.keyup(function (e) {
 
 /*-----------------------------------사진 슬라이드-------------------------------*/
 /*사진 추가 썸네일*/
+// const $fileTest = $(`#schoolImg`);
+// const $thumbnail = $(`.profile`);
+//
+// $fileTest.on('change',function(e){
+//     var reader = new FileReader();
+//     let text = "";
+//     reader.readAsDataURL(e.target.files[0]);
+//     reader.onload = function(e){
+//         console.log("안들어왔니?");
+//         let url = e.target.result;
+//         text += `<div class = "imgsWrap">`;
+//         if(url.includes('image')){
+//             text += `<img src="` + url +`" width="136" height="100">`;
+//             // $thumbnail.css('background-image', "url('" + url + "')");
+//         }else{
+//             text += `<img src="/imgs/fix/normalProfile.png" width="136" height="100">`;
+//             // $thumbnail.css('background-image', "url('imgs/fix/normalProfile.png')");
+//         }
+//         text += `</div>`;
+//         console.log(text);
+//         console.log("text");
+//         $('.imgList').append(text);
+//     }
+//
+// })
+
+/*사진 추가 썸네일*/
 const $fileTest = $(`#schoolImg`);
 const $thumbnail = $(`.profile`);
 
@@ -72,83 +99,25 @@ $fileTest.on('change',function(e){
     let text = "";
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = function(e){
-        console.log("안들어왔니?");
         let url = e.target.result;
-        text += `<div>`;
+        text += `<div class = "imgsWrap">`;
         if(url.includes('image')){
-            text += `<img src="` + url +`" width="155" height="116">`;
+            text += `<img src="` + url +`" width="136" height="100">`;
             // $thumbnail.css('background-image', "url('" + url + "')");
         }else{
-            text += `<img src="/imgs/fix/normalProfile.png" width="155" height="116">`;
+            text += `<img src="/imgs/fix/normalProfile.png" width="136" height="100">`;
             // $thumbnail.css('background-image', "url('imgs/fix/normalProfile.png')");
         }
         text += `</div>`;
-        console.log(text);
-        console.log("text");
-        $('.imgBox').append(text);
-    }
-    $('.imgBox').append(text);
-})
-// console.log($file);
-
-/*사진 추가----------------*/
-// let $schoolImg = $('#schoolImg')
-// let arrayFile = [];
-//
-// $schoolImg.on('change', function () {
-//     let formData = new FormData();
-//     let $inputFile = $('#schoolImg');
-//     let files = $inputFile[0].files;
-//     console.log(Array.from(files));
-//
-//     Array.from(files).forEach(file => arrayFile.push(file));
-//     const dataTransfer = new DataTransfer();
-//     arrayFile.forEach(file => dataTransfer.items.add(file));
-//     $(this)[0].files = dataTransfer.files;
-//
-//     console.log($(this)[0].files);
-//
-// })
-
-/* 슬라이드 */
-/* 사진인덱스 */
-var i = 0;
-/* 좌클릭 */
-$(".prevButton").click(function () {
-    if (i > 0) {
-        i = i - 1;
-        $(".images").stop().animate({
-            "left": -150 * i + "px"
-        }, "slow");
-    }
-});
-
-
-/* 우클릭 */
-$(".nextButton").click(function () {
-    if (i < 2) {
-        i = i + 1;
-        console.log(i);
-        $(".images").stop().animate({
-            "left": -150 * i + "px"
-        }, "slow");
-        if (i == 2) {
-            $(".images").stop().animate({
-                "left": -150 * i + "px"
-            }, "slow");
+        $('.imgList').append(text);
+        if($('.imgsWrap').length > 0){
+            $('.imgBox').show();
+        }else{
+            $('.imgBox').hide();
         }
     }
 
-});
-
-
-/* 사진 클릭시 큰 사진으로 바뀜 */
-var mainImage = document.querySelector('#mainImage');
-
-$(".one").click(function () {
-    $("#mainImage").attr('src', $(this).attr('src'));
 })
-
 
 /*-----------------------------------유효성 검사-------------------------------*/
 

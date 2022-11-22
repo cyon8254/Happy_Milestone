@@ -30,9 +30,9 @@
                 <div class="profileWrap flexColNormal">
                     <div class="profile"></div>
                     <div class="updateProfileBtnWrap flexCol">
-                        <label class="updateProfileBtn flexCol">
+                        <label class="updateProfileBtn flexPublic">
                             <div>프로필 변경</div>
-                            <input type="file" name="profile" id = "profile" style="display: none">
+                            <input type="file" name="profile" id="profile" style="display: none">
                         </label>
                     </div>
                 </div>
@@ -43,94 +43,14 @@
                             <div class="margin-bottom-8 flexBetween">
                                 <div class="inputTitle">보육원 대표 사진</div>
                             </div>
-                            <input type="file" class = "tempImgBackground" name = "schoolImg" id = "schoolImg">
-                            <div class = "flexRow imgBox">
+                            <input type="file" class="tempImgBackground" name="schoolImg" id="schoolImg" multiple>
+                            <div class="imgBox">
+                                <div class="flexRow">
+                                    <div class="imgList flexRow">
 
+                                    </div>
+                                </div>
                             </div>
-<!--                            &lt;!&ndash; 이미지 &ndash;&gt;-->
-<!--                            <section id="imgsSection">-->
-
-<!--                                &lt;!&ndash; 메인이미지 &ndash;&gt;-->
-<!--                                <div class="mainImage">-->
-<!--                                    <input type="file" width="100%">-->
-<!--&lt;!&ndash;                                    <img id="mainImage" width="100%"&ndash;&gt;-->
-<!--&lt;!&ndash;                                         src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">&ndash;&gt;-->
-<!--                                </div>-->
-
-<!--                                &lt;!&ndash; 작은 이미지들 보이는 div 1&ndash;&gt;-->
-<!--                                <div id="list">-->
-<!--                                    &lt;!&ndash; 좌 버튼 &ndash;&gt;-->
-<!--                                    <button type = "button" aria-label="carousel-arrow-button" data-testid="carousel-arrow"-->
-<!--                                            direction="prev"-->
-<!--                                            class="css-jrc4xu emgxp40 prevButton" style="left:1%">-->
-<!--                                            <span role="img" rotate="0" data-testid="left-icon"-->
-<!--                                                  class="css-aah4od e181xm9y1">-->
-<!--                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"-->
-<!--                                                     aria-hidden="true"-->
-<!--                                                     focusable="false" preserveAspectRatio="xMidYMid meet"-->
-<!--                                                     class="css-7kp13n e181xm9y0"-->
-<!--                                                     style="padding-top: 3px;">-->
-<!--                                                    <path xmlns="http://www.w3.org/2000/svg"-->
-<!--                                                          d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z">-->
-<!--                                                    </path>-->
-<!--                                                </svg>-->
-<!--                                            </span>-->
-<!--                                    </button>-->
-<!--                                    <div class="imgsWrap">-->
-<!--                                        &lt;!&ndash; 작은 이미지들 보이는 div 2&ndash;&gt;-->
-<!--                                        <div class="images">-->
-<!--                                            &lt;!&ndash; 긴 div &ndash;&gt;-->
-<!--                                            <div class="longImages">-->
-<!--                                                &lt;!&ndash; 작은 이미지들 &ndash;&gt;-->
-<!--                                                <div class="miniImages">-->
-<!--                                                    &lt;!&ndash; 작은 이미지 하나 &ndash;&gt;-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/QlD1o1641276709.jpg">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="miniImage">-->
-<!--                                                        <img class="one"-->
-<!--                                                             src="https://d2v80xjmx68n4w.cloudfront.net/gigs/x4YZO1667465133.jpg">-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash; 우버튼 &ndash;&gt;-->
-<!--                                    <button type = "button" aria-label="carousel-arrow-button" data-testid="carousel-arrow"-->
-<!--                                            direction="next"-->
-<!--                                            class="css-1ogxzj emgxp40 nextButton" style="right:1%">-->
-<!--                                        <span role="img" rotate="0" data-testid="right-icon"-->
-<!--                                              class="css-aah4od e181xm9y1">-->
-<!--                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"-->
-<!--                                                 aria-hidden="true" focusable="false"-->
-<!--                                                 preserveAspectRatio="xMidYMid meet"-->
-<!--                                                 class="css-7kp13n e181xm9y0" style="padding-top: 3px;">-->
-<!--                                                <path xmlns="http://www.w3.org/2000/svg"-->
-<!--                                                      d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"-->
-<!--                                                      transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) ">-->
-<!--                                                </path>-->
-<!--                                            </svg>-->
-<!--                                        </span>-->
-<!--                                    </button>-->
-<!--                                </div>-->
-<!--                            </section>-->
                         </div>
                         <div class="margin-bottom-20">
                             <div class="margin-bottom-8 flexBetween">
@@ -161,7 +81,8 @@
                             <div class="margin-bottom-8 flexBetween">
                                 <div class="inputTitle">연락처</div>
                             </div>
-                            <input class="inputCos" name="phone" id="phone" type="number" placeholder="- 를 제외한 숫자만 입력해 주세요">
+                            <input class="inputCos" name="phone" id="phone" type="number"
+                                   placeholder="- 를 제외한 숫자만 입력해 주세요">
                         </div>
                         <div class="margin-bottom-20">
                             <div class="margin-bottom-8 flexBetween">
