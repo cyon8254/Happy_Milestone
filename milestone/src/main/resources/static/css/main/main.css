@@ -10,11 +10,14 @@ li {
     #mobile-mySwiper {
         width: 440px;
         height: 280px;
-        left: -30%;
+        left: 0%;
         top: 9%;
         border-radius: 8px;
     }
 
+    #mobile-banner1{
+        width: 482px;
+    }
     #mobile-banner2 {
         background-color: #00D3C7;
         width: 100%;
@@ -240,6 +243,7 @@ li {
     }
     #mobile-video1{
         padding-top: 0px;
+        width: 482px;
     }
     #mobile-video-text1{
         text-align: center;

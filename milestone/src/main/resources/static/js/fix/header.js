@@ -27,6 +27,17 @@ $(window).scroll(function(){
     $myMessage.hide();
 });
 
+$(document).mouseup(function (e){
+    if($myMenu.has(e.target).length === 0){
+        $myMenu.hide();
+    }
+});
+$(document).mouseup(function (e){
+    if($myMessage.has(e.target).length === 0){
+        $myMessage.hide();
+    }
+});
+
 // noinspection DuplicatedCode,DuplicatedCode
 $(document).ready(function () {
     $navText1.hover(function () {
