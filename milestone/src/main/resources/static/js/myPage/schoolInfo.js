@@ -74,12 +74,12 @@ $fileTest.on('change',function(e){
     reader.onload = function(e){
         console.log("안들어왔니?");
         let url = e.target.result;
-        text += `<div>`;
+        text += `<div class = "imgsWrap">`;
         if(url.includes('image')){
-            text += `<img src="` + url +`" width="155" height="116">`;
+            text += `<img src="` + url +`" width="155" height="100">`;
             // $thumbnail.css('background-image', "url('" + url + "')");
         }else{
-            text += `<img src="/imgs/fix/normalProfile.png" width="155" height="116">`;
+            text += `<img src="/imgs/fix/normalProfile.png" width="155" height="100">`;
             // $thumbnail.css('background-image', "url('imgs/fix/normalProfile.png')");
         }
         text += `</div>`;

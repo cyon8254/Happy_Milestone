@@ -1,98 +1,10 @@
-#imgsSection{
-    position: relative;
-    border: 1px solid rgb(228, 229, 237);
-}
-
-.mainImage{
+.imgBox{
     width: 100%;
+
 }
 
 .imgsWrap{
-    width: 593px;
-    overflow: hidden;
-}
-
-.images{
-    line-height: normal;
-    -webkit-text-size-adjust: 100%;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    font-family: 'Metro Sans',sans-serif;
-    box-sizing: border-box;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: auto;
-    display: flex;
-    gap: 0px;
-    margin-left: 0px;
-    width: 3260px;
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-}
-
-.longImages{
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    transition: .3s ease-out;
-}
-
-.miniImages{
-    outline: none;
-    width: 3260px;
-    display: flex;
-}
-
-.miniImage{
-    overflow: hidden;
-    height: 109px;
-    margin-bottom: 4px;
-}
-
-.miniImage>img{
-    cursor: pointer;
-    margin: 8px 8px 6px;
-    width: 134px;
-}
-
-#list{
-    line-height: normal;
-    -webkit-text-size-adjust: 100%;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    font-family: 'Metro Sans',sans-serif;
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    transform: translate3d(0, 0, 0);
-}
-
-/* 좌 우 버튼 */
-.emgxp40{
-    -webkit-text-size-adjust: 100%;
-    overflow: visible;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    border: 0px;
-    width: 40px;
-    height: 40px;
-    color: rgb(48, 52, 65);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgb(0 0 0 / 18%) 0px 2px 4px;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.76);
+    margin: 8px;
 }
 
 /*------------------------------------------------------*/
