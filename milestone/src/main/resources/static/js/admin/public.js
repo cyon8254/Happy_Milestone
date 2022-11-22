@@ -61,3 +61,52 @@ function showClock() {
 
     setTimeout(showClock, 1000);
 }
+
+
+/*--------------------------------------------------*/
+const $reset1 = $("#reset1");
+const $option1 = $("#option1");
+const $option2 = $("#option2");
+const $reset2 = $("#reset2");
+const $option3 = $("#option3");
+const $option4 = $("#option4");
+const $reset3 = $("#reset3");
+const $option5 = $("#option5");
+const $option6 = $("#option6");
+const $reset4 = $("#reset4");
+const $option7 = $("#option7");
+const $reset5 = $("#reset5");
+const $option8 = $("#option8");
+const $reset6 = $("#reset6");
+const $option9 = $("#option9");
+const $option10 = $("#option10");
+const $reset7 = $("#reset7");
+const $option11 = $("#option11");
+
+$reset1.click(function(){
+    $option1.text("옵션 선택");
+    $option2.text("옵션 선택");
+});
+
+$reset2.click(function(){
+    $option3.text("옵션 선택");
+    $option4.text("옵션 선택");
+});
+
+$reset3.click(function(){
+    $option5.text("옵션 선택");
+    $option6.text("옵션 선택");
+});
+$reset4.click(function(){
+    $option7.text("옵션 선택");
+});
+$reset5.click(function(){
+    $option8.text("옵션 선택");
+});
+$reset6.click(function(){
+    $option9.text("옵션 선택");
+    $option10.text("옵션 선택");
+});
+$reset7.click(function(){
+    $option11.text("옵션 선택");
+});
