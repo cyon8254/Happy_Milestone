@@ -2,7 +2,7 @@ const $submitBtn = $('.submitBtn');
 
 /*----------------------------이메일 유효성 검사----------------------------*/
 const $email = $('#email');
-let emailFlag = false;
+let emailCheckFlag = false;
 let $warningMsg;
 const existingEmail = $email.val();
 
@@ -11,45 +11,85 @@ function email_check(email) {
     return (email != '' && email != 'undefined' && regex.test(email));
 }
 
-$email.on('blur', function () {
-    $submitBtn.attr("disabled", true);
-    var email = $(this).val();
+$email.on("keyup", function () {
     $warningMsg = $(this).next();
-
     if (existingEmail == $email.val()) {
         $warningMsg.hide();
-        return;
     }
+    joinSubmit();
+})
+
+$email.on('blur', function () {
+    var email = $(this).val();
+    $warningMsg = $(this).next();
+    $warningMsg.hide();
+    if (existingEmail == $email.val()) return;
 
     if (email == '' || email == 'undefined') {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
         $warningMsg.find(".warningMsg").text('이메일을 입력해 주세요');
-        emailFlag = false;
+        emailCheckFlag = false;
         return;
     }
     if (!email_check(email)) {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
         $warningMsg.find(".warningMsg").text('이메일 형식이 유효하지 않습니다.');
-        emailFlag = false;
+        emailCheckFlag = false;
         return false;
     }
 
-    $warningMsg.show();
-    $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
-    $warningMsg.find(".warningMsg").text('사용 가능한 이메일입니다.');
-    emailFlag = true;
+    // $warningMsg.show();
+    // $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
+    // $warningMsg.find(".warningMsg").text('사용 가능한 이메일입니다.');
+    emailCheckFlag = true;
     joinSubmit();
 });
+
+/*----------------------------이름 유효성 검사----------------------------*/
+const $name = $('#name');
+const existingName = $name.val();
+let nameCheckFlag = false;
+
+var nameCheck = /^[가-힣]{2,15}$/;
+
+$name.on('keyup', function () {
+    $warningMsg = $(this).next();
+    if (existingName == $name.val()) {
+        $warningMsg.hide();
+    }
+    joinSubmit();
+})
+
+$name.on('blur', function () {
+    nameCheckFlag = false;
+    if (!$name.val()) return;
+    if (!nameCheck.test($name.val())) {
+        $name.next().show();
+        $name.next().find('.warningMsg').text("이름을 정확히 입력해 주세요.");
+    } else {
+        $name.next().hide();
+        $name.next().find('.warningMsg').text("");
+        nameCheckFlag = true;
+    }
+    joinSubmit();
+})
 
 /*----------------------------닉네임 유효성 검사----------------------------*/
 const $nickName = $('#nickName');
 const existingNickName = $nickName.val();
 let nickNameCheckFlag = false;
 
+$nickName.on('keyup', function () {
+    $warningMsg = $(this).next();
+    joinSubmit();
+    if (existingNickName == $nickName.val()) {
+        $warningMsg.hide();
+    }
+})
+
 $nickName.on('blur', function () {
-    $submitBtn.attr("disabled", true);
     nickNameCheckFlag = false;
     /*특수문자 포함되었는지 검사*/
     var nickNameCheck = /[#?!@$%^&*-]/;
@@ -80,28 +120,6 @@ $nickName.on('blur', function () {
     joinSubmit();
 })
 
-/*----------------------------이름 유효성 검사----------------------------*/
-const $name = $('#name');
-const existingName = $name.val();
-let nameCheckFlag = false;
-
-var nameCheck = /^[가-힣]{2,15}$/;
-
-$name.on('blur', function () {
-    $submitBtn.attr("disabled", true);
-    nameCheckFlag = false;
-    if (!$name.val()) return;
-    if (!nameCheck.test($name.val())) {
-        $name.next().show();
-        $name.next().find('.warningMsg').text("이름을 정확히 입력해 주세요.");
-    } else {
-        $name.next().hide();
-        $name.next().find('.warningMsg').text("");
-        nameCheckFlag = true;
-    }
-    joinSubmit();
-})
-
 /*----------------------------전화번호 유효성 검사----------------------------*/
 const $phone = $('#phone');
 const existingPhone = $phone.val().replace(/-/g, "");
@@ -114,24 +132,16 @@ let tempPhone;
 var phoneCheck = /^[0-9]{11,11}$/;
 
 $certificationBtn.on('click', function () {
+    joinSubmit();
     $certification.attr("disabled", true);
     var phone = $(this).prev().val();
     phone = phone.replace(/-/g, "");
-    $(this).prev().val(phone);
     $warningMsg = $(this).parent().next();
-
-    // if (phone == '' || phone == 'undefined') {
-    //     $warningMsg.show();
-    //     $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-    //     $warningMsg.find(".warningMsg").text('전화번호를 입력해 주세요');
-    //     $email.focus();
-    //     phoneFlag = false;
-    //     return;
-    // }
+    $(this).prev().val(phone);
     if (!phoneCheck.test(phone) || !phone.startsWith("010")) {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-        $warningMsg.find(".warningMsg").text('전화번호를 정확히 입력해 주세요');
+        $warningMsg.find(".warningMsg").text('전화번호를 정확히 입력해 주세요.');
         $phone.focus();
         phoneFlag = false;
         return false;
@@ -141,26 +151,30 @@ $certificationBtn.on('click', function () {
         $warningMsg.find(".warningMsg").text('입력하신 전화번호로 인증번호가 전송되었습니다.');
         tempPhone = phone;
         $certification.attr("disabled", false)
+        $submitBtn.attr("disabled", false);
         $certification.focus();
         phoneFlag = true;
     }
 });
 
-$phone.on('blur', function () {
+$phone.on('keyup', function () {
+    joinSubmit();
     var phone = $(this).val();
     phone = phone.replace(/-/g, "");
     $warningMsg = $(this).parent().next();
     $nextWarningMsg = $(this).parent().next()
-    console.log(existingPhone)
-    console.log(phone)
-    if (!(existingPhone == phone)) {
+    if (existingPhone != phone) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
+        $warningMsg.find(".warningMsg").text('전화번호가 변경 되었습니다. 인증을 다시 받아주세요.');
         $certificationBtn.attr("disabled", false)
     } else {
+        $warningMsg.hide();
         $certificationBtn.attr("disabled", true)
     }
     if (tempPhone && !(phone == tempPhone)) {
         $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
-        $warningMsg.find(".warningMsg").text('전화번호가 변경 되었습니다 인증을 다시 받아주세요');
+        $warningMsg.find(".warningMsg").text('전화번호가 변경 되었습니다. 인증을 다시 받아주세요.');
         phoneFlag = false;
         tempPhone = "";
         $nextWarningMsg.hide();
@@ -170,7 +184,8 @@ $phone.on('blur', function () {
 });
 /*인증번호*/
 $certification.on('blur', function () {
-    $certification.attr("disabled", true);
+    joinSubmit();
+    $certification.attr("disabled", false);
     phoneCheckFlag = false;
     if (phoneFlag) {
         $warningMsg = $(this).next();
@@ -183,7 +198,7 @@ $certification.on('blur', function () {
             phoneCheckFlag = true;
             $warningMsg.find(".warningMsg").css("color", "rgb(79 189 18)");
             $warningMsg.find(".warningMsg").text("인증번호가 일치합니다.")
-            joinSubmit();
+
         } else {
             $warningMsg.show();
             $warningMsg.find(".warningMsg").css("color", "rgb(255, 64, 43)");
@@ -193,34 +208,53 @@ $certification.on('blur', function () {
 })
 
 /*수정하기 최종확인*/
+let joinSubmitCheck = false;
 
 function joinSubmit() {
-
-    if (!(existingEmail == $('#email').val())) {
-        if (!emailFlag) {
-            console.log("이메일")
-            return;
-        }
-    }
-    if (!(existingNickName == $('#nickName').val())) {
-        if (!nickNameCheckFlag) {
-            console.log("닉네임")
-            return;
-        }
-    }
-    if (!(existingName == $('#name').val())) {
-        if (!nameCheckFlag) {
-            console.log("이름")
-            return;
-        }
-    }
-    if (!(existingPhone == $('#phone').val().replace(/-/g, ""))) {
-        if (!phoneCheckFlag) {
-            console.log("핸드폰")
-            return;
-        }
-    }
-    if (!(existingName == $('#name').val()) || !(existingNickName == $('#nickName').val()) || !(existingEmail == $('#email').val()) || !(existingPhone == $('#phone').val().replace(/-/g, ""))) {
+    /*나의 정보중 바뀐정보가 있다면*/
+    /*수정하기 버튼 활성화*/
+    if (existingName != $name.val() || existingNickName != $nickName.val() || existingEmail != $email.val() || existingPhone != $phone.val().replace(/-/g, "")) {
         $submitBtn.attr("disabled", false)
+    } else {
+        $submitBtn.attr("disabled", true)
     }
+
+    /*정보가 바뀌었고 검사가 통과했을 때에는 무시*/
+    /*이메일*/
+    if (existingEmail != $email.val()) {
+        if (!(emailCheckFlag)) {
+            $email.focus();
+            return;
+        }
+    }
+    /*이름*/
+    if (existingName != $name.val()) {
+        if (!(nameCheckFlag)) {
+            $name.focus();
+            return;
+        }
+    }
+    /*닉네임*/
+    if (existingNickName != $nickName.val()) {
+        if (!(nickNameCheckFlag)) {
+            $nickName.focus();
+            return;
+        }
+    }
+    /*휴대전화*/
+    if (existingPhone != $phone.val().replace(/-/g, "")) {
+        if (!(phoneCheckFlag)) {
+            $phone.focus();
+            return;
+        }
+    }
+
+    return true;
 }
+
+$submitBtn.on('click', function (e) {
+    e.preventDefault();
+    if (joinSubmit()) {
+        updateForm.submit();
+    }
+})

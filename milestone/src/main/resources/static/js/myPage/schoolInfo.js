@@ -1,3 +1,4 @@
+/*--------------------------다음 우편 api------------------------------*/
 function find() {
     new daum.Postcode({
         oncomplete: function (data) {
@@ -13,12 +14,13 @@ function find() {
             } else { // 사용자가 지번 주소를 선택했을 경우(J)
                 addr = data.jibunAddress;
             }
-            console.log($("input [name='address']"));
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
             $("input[name='zipCode']").val(data.zonecode);
             $("input[name='address']").val(addr);
             // 커서를 상세주소 필드로 이동한다.
             $("input[name='addressDetail']")[0].focus();
+            $('#searchAddressBtn').parent().next().hide();
+            checkSubmit();
         }
     }).open();
 }
@@ -28,12 +30,13 @@ const $moreSelect = $('div.inputCos');
 const $moreSelectList = $('div.moreSelectWrap');
 const $moreSelectItems = $('div.moreSelectItem');
 const $inputBank = $('input[name = "bank"]');
+const existingBank = $('#bank').val();
 
 $moreSelectItems.on('click', function () {
-    console.log($(this).text());
     $inputBank.css("color", '#303441');
     $inputBank.val($(this).text());
     $moreSelectList.hide();
+    checkSubmit();
 })
 
 document.addEventListener('click', function (e) {
@@ -49,70 +52,50 @@ document.addEventListener('click', function (e) {
 })
 
 /*--------------------------게시글 작성 글자수 제한----------------------------*/
+const $content = $('#content');
 const $textareaCos = $('.textareaCos');
 const $contentLength = $('.contentLength');
 const maxContent = 500;
 
-$textareaCos.keyup(function (e) {
-    $contentLength.text($textareaCos.val().length)
-    if ($textareaCos.val().length > maxContent) {
-        $textareaCos.val($textareaCos.val().substring(0, maxContent));
+$content.focusin(function () {
+    $textareaCos.css("border", "1px solid rgb(118, 118, 118)")
+})
+$content.focusout(function () {
+    $textareaCos.css("border", "1px solid rgb(228, 229, 237)")
+})
+
+$content.keyup(function (e) {
+    $contentLength.text($content.val().length)
+    if ($content.val().length > maxContent) {
+        $content.val($content.val().substring(0, maxContent));
         $contentLength.text(maxContent);
     }
 })
 
 
-/*-----------------------------------사진 슬라이드-------------------------------*/
-/*사진 추가 썸네일*/
-// const $fileTest = $(`#schoolImg`);
-// const $thumbnail = $(`.profile`);
-//
-// $fileTest.on('change',function(e){
-//     var reader = new FileReader();
-//     let text = "";
-//     reader.readAsDataURL(e.target.files[0]);
-//     reader.onload = function(e){
-//         console.log("안들어왔니?");
-//         let url = e.target.result;
-//         text += `<div class = "imgsWrap">`;
-//         if(url.includes('image')){
-//             text += `<img src="` + url +`" width="136" height="100">`;
-//             // $thumbnail.css('background-image', "url('" + url + "')");
-//         }else{
-//             text += `<img src="/imgs/fix/normalProfile.png" width="136" height="100">`;
-//             // $thumbnail.css('background-image', "url('imgs/fix/normalProfile.png')");
-//         }
-//         text += `</div>`;
-//         console.log(text);
-//         console.log("text");
-//         $('.imgList').append(text);
-//     }
-//
-// })
-
 /*사진 추가 썸네일*/
 const $fileTest = $(`#schoolImg`);
 const $thumbnail = $(`.profile`);
 
-$fileTest.on('change',function(e){
+$fileTest.on('change', function (e) {
     var reader = new FileReader();
     let text = "";
     reader.readAsDataURL(e.target.files[0]);
-    reader.onload = function(e){
+    reader.onload = function (e) {
         let url = e.target.result;
         text += `<div class = "imgsWrap">`;
-        if(url.includes('image')){
-            text += `<img src="` + url +`" width="136" height="100">`;
+        if (url.includes('image')) {
+            text += `<img src="` + url + `" width="136" height="100">`;
             // $thumbnail.css('background-image', "url('" + url + "')");
-        }else{
+        } else {
             text += `<img src="/imgs/fix/normalProfile.png" width="136" height="100">`;
             // $thumbnail.css('background-image', "url('imgs/fix/normalProfile.png')");
         }
         text += `</div>`;
         $('.imgList').append(text);
-        if($('.imgsWrap').length > 0){
+        if ($('.imgsWrap').length > 0) {
             $('.imgBox').show();
-        }else{
+        } else {
             $('.imgBox').hide();
         }
     }
@@ -121,4 +104,237 @@ $fileTest.on('change',function(e){
 
 /*-----------------------------------유효성 검사-------------------------------*/
 
+/*보육원 주소*/
+const $address = $('#address');
+const existingAddress = $address.val();
+const addressCheckFlag = false;
 
+/*보육원 상세 주소*/
+const $addressDetail = $('#addressDetail');
+const existingAddressDetail = $addressDetail.val();
+
+$addressDetail.on('click', function () {
+    $warningMsg = $(this).prev().prev();
+    if (!$address.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("주소 검색 버튼을 눌러주세요")
+    }
+})
+
+$addressDetail.on('blur', function () {
+    $warningMsg = $(this).next();
+    if (!$addressDetail.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("상세주소를 입력해 주세요. 상세주소가 없다면 주소지의 특징을 입력해 주세요.")
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*원장님 이름*/
+const $name = $('#name');
+var nameCheck = /^[가-힣]{2,15}$/;
+const existingName = $name.val();
+
+$name.on('blur', function () {
+    $warningMsg = $(this).next();
+    if (!$name.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("원장님 이름을 입력해 주세요.")
+    } else if (!nameCheck.test($name.val())) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("이름을 정확히 입력해 주세요.")
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*연락처*/
+const $phone = $('#phone');
+const existingPhone = $phone.val().replace(/-/g, "");
+
+const phoneCheck = /^[0-9]{11,11}$/;
+
+let phone;
+
+$phone.on('blur', function () {
+    $warningMsg = $(this).next();
+    phone = $(this).val().replace(/-/g, "");
+    $phone.val(phone);
+    if (!phone) {
+        $warningMsg.hide();
+        return;
+    } else if (!phoneCheck.test(phone)) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("전화번호를 정확히 입력해 주세요.")
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*보육원 교사 수*/
+const $teacherPersonnel = $("#teacherPersonnel");
+const existingTeacherPersonnel = $teacherPersonnel.val();
+
+$teacherPersonnel.on("keyup", function () {
+    let teacherPersonnel = $teacherPersonnel.val();
+    teacherPersonnel = $teacherPersonnel.val().replace(/[^0-9]/g, '');
+    $teacherPersonnel.val(teacherPersonnel);
+    checkSubmit();
+})
+
+/*보육원 아이들 수*/
+const $childPersonnel = $("#childPersonnel");
+const existingChildPersonnel = $childPersonnel.val();
+
+$childPersonnel.on("keyup", function () {
+    let childPersonnel = $childPersonnel.val();
+    childPersonnel = $childPersonnel.val().replace(/[^0-9]/g, '');
+    $childPersonnel.val(childPersonnel);
+})
+
+$childPersonnel.on('blur', function () {
+    $warningMsg = $(this).next();
+    if (!$childPersonnel.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("아이들 수를 입력해 주세요.");
+        $childPersonnel.val("");
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*1년 예산*/
+const $budget = $("#budget");
+const existingBudget = $budget.val();
+
+$budget.on("keyup", function () {
+    let budget = $budget.val();
+    budget = $budget.val().replace(/[^0-9]/g, '');
+    $budget.val(budget);
+    checkSubmit();
+})
+
+/*은행*/
+
+/*계좌번호*/
+const $accountNumber = $("#accountNumber");
+const existingAccountNumber = $accountNumber.val();
+
+$accountNumber.on("keyup", function () {
+    let accountNumber = $accountNumber.val();
+    accountNumber = $accountNumber.val().replace(/[^0-9]/g, '');
+    $accountNumber.val(accountNumber);
+})
+
+$accountNumber.on('blur', function () {
+    $warningMsg = $(this).next();
+    if (!$accountNumber.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("계좌번호를 입력해 주세요.");
+        $accountNumber.val("");
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*소개글 제목*/
+const $title = $('#title');
+const existingTitle = $title.val();
+
+$title.on('blur', function () {
+    $warningMsg = $(this).next();
+    if (!$title.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("소개글 제목을 입력해 주세요.");
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*소개글*/
+const existingContent = $content.val();
+
+$content.on("blur", function () {
+    $warningMsg = $(this).closest('.relative').next();
+    console.log("안녕")
+    if (!$content.val()) {
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("내용을 작성해 주세요.");
+    } else {
+        $warningMsg.hide();
+    }
+    checkSubmit();
+})
+
+/*서브밋 최종확인*/
+// existingAddress
+// existingAddressDetail
+// existingName
+// existingPhone
+// existingTeacherPersonnel
+// existingChildPersonnel
+// existingBudget
+// existingAccountNumber
+// existingTitle
+// existingContent
+
+
+function checkSubmit() {
+    /*나의 정보중 바뀐정보가 있다면*/
+    /*수정하기 버튼 활성화*/
+    if (existingAddress != $address.val() || existingAddressDetail != $addressDetail.val() || existingName != $name.val() || existingPhone != $phone.val().replace(/-/g, "") ||
+        existingTeacherPersonnel != $teacherPersonnel.val() || existingChildPersonnel != $childPersonnel.val() ||
+        existingBudget != $budget.val() || existingBank != $('#bank').val() || existingAccountNumber != $accountNumber.val() || existingTitle != $title.val() || existingContent != $content.val()) {
+        $submitBtn.attr("disabled", false)
+    } else {
+        $submitBtn.attr("disabled", true)
+    }
+
+    // /*정보가 바뀌었고 검사가 통과했을 때에는 무시*/
+    // /*이메일*/
+    // if (existingEmail != $email.val()) {
+    //     if (!(emailCheckFlag)) {
+    //         $email.focus();
+    //         return;
+    //     }
+    // }
+    // /*이름*/
+    // if (existingName != $name.val()) {
+    //     if (!(nameCheckFlag)) {
+    //         $name.focus();
+    //         return;
+    //     }
+    // }
+    // /*닉네임*/
+    // if (existingNickName != $nickName.val()) {
+    //     if (!(nickNameCheckFlag)) {
+    //         $nickName.focus();
+    //         return;
+    //     }
+    // }
+    // /*휴대전화*/
+    // if (existingPhone != $phone.val().replace(/-/g, "")) {
+    //     if (!(phoneCheckFlag)) {
+    //         $phone.focus();
+    //         return;
+    //     }
+    // }
+
+    return true;
+}
+
+const $submitBtn = $('.submitBtn');
+
+$submitBtn.on('click', function (e) {
+    e.preventDefault();
+    if (checkSubmit()) {
+        updateForm.submit();
+    }
+})
