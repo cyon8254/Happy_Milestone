@@ -1,6 +1,6 @@
 
 /*  작은지역들 플래그 */
-let check = false;
+// let check = false;
 /* 하트 플래그 */
 let check2 = false;
 
@@ -26,15 +26,12 @@ $(".wholeLocation").click(function() {
 $(".location2").click(function(){
     $(".wholeLocation").css({"background-color":"#f2f3f7"})
     $(".wholeLocation").css({"border":"none"})
-
-    if(!check){
+    if($(this).css('background-color')=='rgb(242, 243, 247)'){
         $(this).css({"background-color":"transparent"})
         $(this).css({"border":"solid 1px black"})
-        check =true;
     }else{
         $(this).css({"background-color":"#f2f3f7"})
         $(this).css({"border":"none"})
-        check=false;
     }
 })
 
