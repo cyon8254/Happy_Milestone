@@ -14,4 +14,3 @@ $file.on('change',function(e){
         }
     }
 })
-console.log($file);
