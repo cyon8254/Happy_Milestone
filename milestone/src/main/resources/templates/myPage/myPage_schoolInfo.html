@@ -141,6 +141,7 @@
                                 <div class="inputCos flex" style="padding: 0;">
                                     <div class="inputSpace flexRow">
                                         <input type=text name="bank" id="bank" placeholder="은행을 선택해주세요" disabled>
+                                        <input type=text id="bankFocus">
                                     </div>
                                     <div class="arrowWrap">
                                         <svg height="20" width="20" class="arrowColor">
@@ -150,6 +151,9 @@
                                         </svg>
                                     </div>
                                 </div>
+                                <div class="margin-top-6" style="display: none;">
+                                    <div class="warningMsg">이름을 정확히 입력해 주세요.</div>
+                                </div>
                             </div>
                             <div class="margin-bottom-8 flexRow">
                                 <div class="inputTitle">보육원 계좌 번호</div>
@@ -157,6 +161,9 @@
                             </div>
                             <input class="inputCos" name="accountNumber" id="accountNumber" type="text"
                                    placeholder=" - 를 제외한 숫자만 입력해 주세요">
+                            <div class="margin-top-6" style="display: none;">
+                                <div class="warningMsg">이름을 정확히 입력해 주세요.</div>
+                            </div>
                         </div>
 
                         <div class="margin-bottom-20">
@@ -186,7 +193,7 @@
                         </div>
                         <div class="flex">
                             <div style="flex-grow : 1"></div>
-                            <button class="submitBtn" disabled>등록하기</button>
+                            <button type="button" onmousedown="" class="submitBtn" disabled>등록하기</button>
                         </div>
                     </form>
                 </div>
