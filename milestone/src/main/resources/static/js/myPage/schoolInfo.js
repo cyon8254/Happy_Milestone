@@ -20,7 +20,6 @@ function find() {
             // 커서를 상세주소 필드로 이동한다.
             $("input[name='addressDetail']")[0].focus();
             $('#searchAddressBtn').parent().next().hide();
-            checkSubmit();
         }
     }).open();
 }
@@ -38,7 +37,6 @@ $moreSelectItems.on('click', function () {
     $moreSelectList.hide();
     $warningMsg = $bank.closest(".inputCos").next();
     $warningMsg.hide();
-    checkSubmit();
 })
 
 document.addEventListener('click', function (e) {
