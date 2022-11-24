@@ -176,6 +176,7 @@ $($talentBox).on('click', function () {
 $('.css-nh621w').on('click', function () {
     $talentmodal.hide();
     $modalWrap.hide();
+    $writePlease.hide();
     $category.val("") & $cateDate.val("") & $cateTitle.val("") & $cateContent.val("");
     $telent.val("");
     body.css('overflow', 'auto');
