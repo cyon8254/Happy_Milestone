@@ -728,6 +728,7 @@ input[type = 'checkbox']:checked + .checkboxCos {
 
 .profile-menu3 {
     cursor: pointer;
+    list-style: none;
 }
 
 #login-profile-menu1 {
@@ -810,9 +811,19 @@ input[type = 'checkbox']:checked + .checkboxCos {
     padding-bottom: 35px;
 }
 
+.message8{
+    text-decoration: none;
+}
 .message8 :hover{
     background-color: #e1e1e1;
 }
 .message1{
    display: none;
+}
+.line1{
+    text-decoration: none;
+}
+
+.list1{
+    list-style: none;
 }
