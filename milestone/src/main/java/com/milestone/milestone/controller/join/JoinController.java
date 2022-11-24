@@ -8,11 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/join/*")
 public class JoinController {
 
-    @GetMapping("join")
-    public void join(){};
+    @GetMapping("/user")
+    public String user(){
+        return "/join/joinUser";
+    };
 
-    @GetMapping("joinway")
-    public void joinWay(){};
+    @GetMapping("/school")
+    public String school(){
+        return "/join/joinSchool";
+    };
+
+    @GetMapping("/way")
+    public String way(){
+        return "/join/joinWay";
+    };
 
 
 }
