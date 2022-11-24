@@ -29,13 +29,15 @@ function find() {
 const $moreSelect = $('div.inputCos');
 const $moreSelectList = $('div.moreSelectWrap');
 const $moreSelectItems = $('div.moreSelectItem');
-const $inputBank = $('input[name = "bank"]');
-const existingBank = $('#bank').val();
+const $bank = $('#bank');
+const existingBank = $bank.val();
 
 $moreSelectItems.on('click', function () {
-    $inputBank.css("color", '#303441');
-    $inputBank.val($(this).text());
+    $bank.css("color", '#303441');
+    $bank.val($(this).text());
     $moreSelectList.hide();
+    $warningMsg = $bank.closest(".inputCos").next();
+    $warningMsg.hide();
     checkSubmit();
 })
 
@@ -107,7 +109,6 @@ $fileTest.on('change', function (e) {
 /*보육원 주소*/
 const $address = $('#address');
 const existingAddress = $address.val();
-const addressCheckFlag = false;
 
 /*보육원 상세 주소*/
 const $addressDetail = $('#addressDetail');
@@ -121,7 +122,7 @@ $addressDetail.on('click', function () {
     }
 })
 
-$addressDetail.on('blur', function () {
+$addressDetail.on('keyup', function () {
     $warningMsg = $(this).next();
     if (!$addressDetail.val()) {
         $warningMsg.show();
@@ -136,8 +137,10 @@ $addressDetail.on('blur', function () {
 const $name = $('#name');
 var nameCheck = /^[가-힣]{2,15}$/;
 const existingName = $name.val();
+let nameCheckFlag = false;
 
-$name.on('blur', function () {
+$name.on('keyup', function () {
+    nameCheckFlag = false;
     $warningMsg = $(this).next();
     if (!$name.val()) {
         $warningMsg.show();
@@ -146,6 +149,7 @@ $name.on('blur', function () {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").text("이름을 정확히 입력해 주세요.")
     } else {
+        nameCheckFlag = true;
         $warningMsg.hide();
     }
     checkSubmit();
@@ -154,12 +158,14 @@ $name.on('blur', function () {
 /*연락처*/
 const $phone = $('#phone');
 const existingPhone = $phone.val().replace(/-/g, "");
+let phoneCheckFlag = false;
 
 const phoneCheck = /^[0-9]{11,11}$/;
 
 let phone;
 
-$phone.on('blur', function () {
+$phone.on('keyup', function () {
+    phoneCheckFlag = false;
     $warningMsg = $(this).next();
     phone = $(this).val().replace(/-/g, "");
     $phone.val(phone);
@@ -170,6 +176,7 @@ $phone.on('blur', function () {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").text("전화번호를 정확히 입력해 주세요.")
     } else {
+        phoneCheckFlag = true;
         $warningMsg.hide();
     }
     checkSubmit();
@@ -189,6 +196,7 @@ $teacherPersonnel.on("keyup", function () {
 /*보육원 아이들 수*/
 const $childPersonnel = $("#childPersonnel");
 const existingChildPersonnel = $childPersonnel.val();
+let childPersonnel = false;
 
 $childPersonnel.on("keyup", function () {
     let childPersonnel = $childPersonnel.val();
@@ -196,13 +204,15 @@ $childPersonnel.on("keyup", function () {
     $childPersonnel.val(childPersonnel);
 })
 
-$childPersonnel.on('blur', function () {
+$childPersonnel.on('keyup', function () {
+    childPersonnel = false;
     $warningMsg = $(this).next();
     if (!$childPersonnel.val()) {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").text("아이들 수를 입력해 주세요.");
         $childPersonnel.val("");
     } else {
+        childPersonnel = true;
         $warningMsg.hide();
     }
     checkSubmit();
@@ -219,8 +229,6 @@ $budget.on("keyup", function () {
     checkSubmit();
 })
 
-/*은행*/
-
 /*계좌번호*/
 const $accountNumber = $("#accountNumber");
 const existingAccountNumber = $accountNumber.val();
@@ -231,7 +239,7 @@ $accountNumber.on("keyup", function () {
     $accountNumber.val(accountNumber);
 })
 
-$accountNumber.on('blur', function () {
+$accountNumber.on('keyup', function () {
     $warningMsg = $(this).next();
     if (!$accountNumber.val()) {
         $warningMsg.show();
@@ -247,7 +255,7 @@ $accountNumber.on('blur', function () {
 const $title = $('#title');
 const existingTitle = $title.val();
 
-$title.on('blur', function () {
+$title.on('keyup', function () {
     $warningMsg = $(this).next();
     if (!$title.val()) {
         $warningMsg.show();
@@ -261,9 +269,8 @@ $title.on('blur', function () {
 /*소개글*/
 const existingContent = $content.val();
 
-$content.on("blur", function () {
+$content.on("keyup", function () {
     $warningMsg = $(this).closest('.relative').next();
-    console.log("안녕")
     if (!$content.val()) {
         $warningMsg.show();
         $warningMsg.find(".warningMsg").text("내용을 작성해 주세요.");
@@ -274,18 +281,6 @@ $content.on("blur", function () {
 })
 
 /*서브밋 최종확인*/
-// existingAddress
-// existingAddressDetail
-// existingName
-// existingPhone
-// existingTeacherPersonnel
-// existingChildPersonnel
-// existingBudget
-// existingAccountNumber
-// existingTitle
-// existingContent
-
-
 function checkSubmit() {
     /*나의 정보중 바뀐정보가 있다면*/
     /*수정하기 버튼 활성화*/
@@ -297,44 +292,125 @@ function checkSubmit() {
         $submitBtn.attr("disabled", true)
     }
 
-    // /*정보가 바뀌었고 검사가 통과했을 때에는 무시*/
-    // /*이메일*/
-    // if (existingEmail != $email.val()) {
-    //     if (!(emailCheckFlag)) {
-    //         $email.focus();
-    //         return;
-    //     }
-    // }
-    // /*이름*/
-    // if (existingName != $name.val()) {
-    //     if (!(nameCheckFlag)) {
-    //         $name.focus();
-    //         return;
-    //     }
-    // }
-    // /*닉네임*/
-    // if (existingNickName != $nickName.val()) {
-    //     if (!(nickNameCheckFlag)) {
-    //         $nickName.focus();
-    //         return;
-    //     }
-    // }
-    // /*휴대전화*/
-    // if (existingPhone != $phone.val().replace(/-/g, "")) {
-    //     if (!(phoneCheckFlag)) {
-    //         $phone.focus();
-    //         return;
-    //     }
-    // }
+    return true;
+}
 
+function nullCheck() {
+    /*주소*/
+    if (!$address.val()) {
+        $warningMsg = $address.parent().next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("주소 검색 버튼을 눌러주세요.")
+        window.scrollTo(500, 0);
+        return;
+    }
+    /*상세 주소*/
+    if (!$addressDetail.val()) {
+        $warningMsg = $addressDetail.next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("상세주소를 입력해 주세요. 상세주소가 없다면 주소지의 특징을 입력해 주세요.")
+        setTimeout(() => {
+            $addressDetail.focus();
+        }, 0)
+        return;
+    }
+    /*원장님 이름*/
+    if (!$name.val()) {
+        $warningMsg = $name.next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("원장님 이름을 입력해 주세요.")
+        setTimeout(() => {
+            $name.focus();
+        }, 0)
+        return;
+    }
+    /*이름*/
+    if (existingName != $name.val()) {
+        if (!(nameCheckFlag)) {
+            setTimeout(() => {
+                console.log("ㄴㅇ러ㅣㄴ어리")
+                $name.focus();
+            }, 0)
+            return;
+        }
+    }
+    /*휴대전화*/
+    if (existingPhone != $phone.val().replace(/-/g, "")) {
+        if (!(phoneCheckFlag)) {
+            setTimeout(() => {
+                $phone.focus();
+            }, 0)
+            return;
+        }
+    }
+    /*아이들 수*/
+    if (!$childPersonnel.val()) {
+        $warningMsg = $childPersonnel.next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("아이들 수를 입력해 주세요.");
+        setTimeout(() => {
+            $childPersonnel.focus();
+        }, 0)
+        return;
+    }
+    /*은행*/
+    if (!$bank.val()) {
+        $warningMsg = $bank.closest(".inputCos").next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("은행을 선택해 주세요.");
+        setTimeout(() => {
+            $('#bankFocus').focus();
+        }, 0)
+        return;
+    }
+    /*계좌번호*/
+    if (!$accountNumber.val()) {
+        $warningMsg = $accountNumber.next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("계좌번호를 입력해 주세요.");
+        setTimeout(() => {
+            $accountNumber.focus();
+        }, 0)
+        return;
+    }
+    /*소개글 제목*/
+    if (!$title.val()) {
+        $warningMsg = $title.next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("소개글 제목을 입력해 주세요.");
+        setTimeout(() => {
+            $title.focus();
+        }, 0)
+        return;
+    }
+    /*소개글 내용*/
+    if (!$content.val()) {
+        $warningMsg = $content.closest(".relative").next();
+        $warningMsg.show();
+        $warningMsg.find(".warningMsg").text("내용을 작성해 주세요.");
+        setTimeout(() => {
+            $content.focus();
+        }, 0)
+        return;
+    }
     return true;
 }
 
 const $submitBtn = $('.submitBtn');
 
 $submitBtn.on('click', function (e) {
-    e.preventDefault();
-    if (checkSubmit()) {
+    if (checkSubmit() && nullCheck()) {
         updateForm.submit();
     }
 })
+// $submitBtn.on('click', function (e) {
+//     e.preventDefault();
+//     setTimeout(() => {
+//         if (nullCheck()) {
+//             if (checkSubmit()) {
+//                 updateForm.submit();
+//             }
+//         }
+//     }, 500);
+// })
+

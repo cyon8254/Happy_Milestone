@@ -84,3 +84,11 @@
     bottom: 4px;
     right: 10px;
 }
+
+#bankFocus {
+    height: 1px;
+    width: 1px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
