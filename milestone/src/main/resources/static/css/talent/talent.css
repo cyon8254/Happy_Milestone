@@ -136,8 +136,12 @@ body {
     height: 180px;
     border: 1px solid rgb(228, 229, 237);
     border-radius: 8px;
+    cursor: pointer
 }
 
+.talentBox:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
 
 .talentBox2 {
     display: flex;
@@ -854,6 +858,32 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.talentModal {
+    display: none;
+    z-index: 21;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.talentScope {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1rem;
+    padding-bottom: 50px;
+}
+.talentHead {
+    padding: 0 1.8rem;
+}
 
 .modalScope {
     position: fixed;
@@ -1089,6 +1119,53 @@ input[name = "talent"]::placeholder {
     outline: none;
 }
 
+/*========*/
+
+#euiyeob::-webkit-scrollbar {
+    padding-right: 4px;
+    width: 4px;
+}
+
+#euiyeob::-webkit-scrollbar-thumb {
+    height: 85%;
+    background: rgb(200, 201, 207);
+    border-radius: 10px;
+}
+#euiyeob {
+    width: 370px;
+    height: 80px;
+    border: none;
+    background-color: rgb(250, 250, 252);
+    resize: none;
+}
+
+#euiyeob:hover {
+    border:none;
+}
+#euiyeob:focus {
+    outline: none;
+}
+
+#talText:hover {
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#talText:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+}
+#talText {
+    width: 400px;
+    background-color: rgb(250, 250, 252);
+    color: #303441;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    padding: 0px 14px;
+    height: 125px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+/*=========*/
 
 div.dropdown{
     display: flex;
