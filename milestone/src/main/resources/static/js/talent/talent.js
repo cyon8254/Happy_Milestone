@@ -166,6 +166,8 @@ document.addEventListener('click', function (e) {
 let $talentBox = $('.talentBox');
 let $talentmodal = $('.talentModal');
 
+let talentModal = document.querySelector('.talentModal');
+
 $talentmodal.hide();
 
 $($talentBox).on('click', function () {
@@ -180,6 +182,18 @@ $('.css-nh621w').on('click', function () {
     $category.val("") & $cateDate.val("") & $cateTitle.val("") & $cateContent.val("");
     $telent.val("");
     body.css('overflow', 'auto');
+})
+
+document.addEventListener('click', function (e) {
+    if (e.target == talentModal || e.target == $modalBtn[1]) {
+
+        $category.val("") & $cateDate.val("") & $cateTitle.val("") & $cateContent.val("");
+        $telent.val("");
+        $talentmodal.hide();
+
+        body.css('overflow', 'auto');
+    }
+    console.log(e.target);
 })
 
 /*==================================================================================================================================================*/
