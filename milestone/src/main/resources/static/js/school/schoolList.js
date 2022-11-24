@@ -23,16 +23,40 @@ $(".wholeLocation").click(function() {
     $(".location2").css({"border":"none"})
 })
 
+/* 지역저장 */
+let save = [];
+
+/* 지역선택시 지역저장 */
 $(".location2").click(function(){
     $(".wholeLocation").css({"background-color":"#f2f3f7"})
     $(".wholeLocation").css({"border":"none"})
+
     if($(this).css('background-color')=='rgb(242, 243, 247)'){
         $(this).css({"background-color":"transparent"})
         $(this).css({"border":"solid 1px black"})
+        /* 담긴게 없다면 무조건 push */
+        if(save.length==0){
+            save.push($(this).text());
+        }else if(save.length>0){
+            for (var i = 0; i < save.length; i++) {
+                /* 담을 지역이 담은 지역과 겹치는게 없다면 push */
+                if(save[i] != $(this).text()){
+                    save.push($(this).text());
+                    break;
+                }
+            }
+        }
     }else{
         $(this).css({"background-color":"#f2f3f7"})
         $(this).css({"border":"none"})
+        save.forEach(element => {
+            /* 담을 지역이 담은 지역과 겹치는게 있다면 splice */
+            if(element == $(this).text()){
+                save.splice(save.indexOf(element),1);
+            }
+        });
     }
+    console.log(save);
 })
 
 
@@ -84,14 +108,15 @@ if (window.matchMedia('(max-width: 768px)').matches){
     $('div.totalCount2').css('display','none');
 }
 
-window.onresize = function(){
-    document.location.reload();
-};
 
+
+/*=====================반응형 지역선택=========================*/
 
 var checkDrop=false;
 var checkLocal={checkSeoul:false,checkKyungki:false,checkKangwon:false,
-    checkChungcheong:false,checkJeolla:false,checheckGyeong:false,checkJeju:false}
+    checkChungcheong:false,checkJeolla:false,checheckGyeong:false,checkJeju:false};
+
+/* 사용자가 선택한 지역 */
 var saveLocal=[];
 
 /* 드롭다운 버튼 */
